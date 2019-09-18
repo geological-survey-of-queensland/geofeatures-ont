@@ -1,0 +1,8 @@
+# JetBrains tools
+.idea/
+
+# Mac
+.DS_Store
+
+# Protege
+catalog-*
