@@ -16,9 +16,9 @@
                                                             sdo:affiliation [ rdf:type sdo:Organization ;
                                                                               sdo:name "SURROUND Australia Pty Ltd"
                                                                             ] ;
-                                                            sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-                                                            sdo:name "Nicholas J. Car" ;
                                                             sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+                                                            sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+                                                            sdo:name "Nicholas J. Car"
                                                           ] ;
                                               dct:description """This Features Ontology describes classes of geospatial Feature relevant to the duties of the Geological Survey of Queensland. 
 
@@ -47,6 +47,10 @@ dct:creator rdf:type owl:AnnotationProperty .
 sdo:affiliation rdf:type owl:AnnotationProperty .
 
 
+###  https://schema.org/email
+sdo:email rdf:type owl:AnnotationProperty .
+
+
 ###  https://schema.org/identifier
 sdo:identifier rdf:type owl:AnnotationProperty .
 
@@ -59,48 +63,106 @@ sdo:name rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://linked.data.gov.au/def/gsq-features#AdministrativeFeature
+###  http://linked.data.gov.au/def/gsq-features#Cranton
+:Cranton rdf:type owl:Class ;
+         rdfs:subClassOf :StructuralFrameworkFeature ;
+         rdfs:label "Cranton" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#NonStratigraphicFeature
+:NonStratigraphicFeature rdf:type owl:Class ;
+                         rdfs:subClassOf :GeologicalFeature ;
+                         rdfs:label "Non-Stratigraphic Feature" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#Orogen
+:Orogen rdf:type owl:Class ;
+        rdfs:subClassOf :StructuralFrameworkFeature ;
+        rdfs:label "Orogen" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#Permit
+:Permit rdf:type owl:Class ;
+        rdfs:subClassOf :AdministrativeFeature ;
+        rdfs:label "Permit" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#Province
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf :StructuralFrameworkFeature ;
+          rdfs:label "Province" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#StratigraphicFeature
+:StratigraphicFeature rdf:type owl:Class ;
+                      rdfs:subClassOf :GeologicalFeature ;
+                      rdfs:label "Stratigraphic Feature" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#StructuralFrameworkFeature
+:StructuralFrameworkFeature rdf:type owl:Class ;
+                            rdfs:subClassOf :GeologicalFeature ;
+                            rdfs:label "Structural Framework Feature" .
+
+
+###  http://linked.data.gov.au/def/gsq-features#Sub-Province
+:Sub-Province rdf:type owl:Class ;
+              rdfs:subClassOf :StructuralFrameworkFeature ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty geo:sfWithin ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Province
+                              ] ;
+              rdfs:label "Sub-Province" .
+
+
+###  http://linked.data.gov.au/def/gsq-foi#AdministrativeFeature
 :AdministrativeFeature rdf:type owl:Class ;
                        rdfs:subClassOf geo:Feature ;
                        rdfs:comment "An Administrative Feature is a geo:Feature that is defined by adminstrative processes such as legislation, regulation, policy or procedure."@en ;
                        rdfs:label "Administrative Feature" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#Basin
+###  http://linked.data.gov.au/def/gsq-foi#Basin
 :Basin rdf:type owl:Class ;
-       rdfs:subClassOf :GeologicalFeature ;
-       rdfs:comment "A Basin is a Geological Feature that is or was defined by hydrological processes. Basins are not necissarily any longer related to hydrological processes as they could have been created by hydrological actions long in the past and have been altered by other geological processes since."@en ;
+       rdfs:subClassOf :StructuralFrameworkFeature ;
+       rdfs:comment "A Basin is a Structural Framework Feature that is or was defined by hydrological processes. Basins are not necissarily any longer related to hydrological processes as they could have been created by hydrological actions long in the past and have been altered by other geological processes since."@en ;
        rdfs:label "Basin" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#Block
+###  http://linked.data.gov.au/def/gsq-foi#Block
 :Block rdf:type owl:Class ;
        rdfs:subClassOf :AdministrativeFeature ;
        rdfs:comment """Blocks are Administrative Features that are defined for the adminstration of mining leases.
 
-Individual Blocks are defined by the Queensland Department of Natural Resources, Mines and Energy's Geological Survey of Queensland's Permit Administration unit."""@en .
+Individual Blocks are defined by the Queensland Department of Natural Resources, Mines and Energy's Geological Survey of Queensland's Permit Administration unit."""@en ;
+       rdfs:label "Block" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#GeologicalFeature
+###  http://linked.data.gov.au/def/gsq-foi#GeologicalFeature
 :GeologicalFeature rdf:type owl:Class ;
                    rdfs:subClassOf geo:Feature ;
                    rdfs:comment "A Geological Feature is a geospatial Feature that is a result of geological processes."@en ;
                    rdfs:label "Geological Feature" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#GroundwaterBasin
+###  http://linked.data.gov.au/def/gsq-foi#GroundwaterBasin
 :GroundwaterBasin rdf:type owl:Class ;
                   rdfs:subClassOf :Basin ;
+                  rdfs:comment "A Groundwater Basin is a subsurface, three-dimensional, water-storage system contained by porous sediments and/or sedimentary rocks comprising an aquifer or a succession of stacked aquifers that are separated by non-porous and generally impermeable sediments or rocks (termed acquitards or, if completely impermeable, aquicludes). Groundwater Basins have recharge and discharge zones, the latter where water flows back to the surface at springs or into rivers, lakes, etc."@en ;
                   rdfs:label "Groundwater Basin" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#SedimentaryBasin
+###  http://linked.data.gov.au/def/gsq-foi#SedimentaryBasin
 :SedimentaryBasin rdf:type owl:Class ;
                   rdfs:subClassOf :Basin ;
+                  rdfs:comment """A Sedimentary Basin comprises a three-dimensional region in which sediments accumulate or have accumulated from a range of varying geological/tectonic causes.
+
+Present-day sedimentary basins include the internal-draining Lake Eyre Basin (central Australia), but, from a geological perspective, primary focus is given to resource-rich, Sedimentary Basins that formed, and were subsequently terminated by a causative event (e.g., tectonic uplift), at varying times in the geological past."""@en ;
                   rdfs:label "Sedimentary Basin" .
 
 
-###  http://linked.data.gov.au/def/gsq-features#SubBlock
+###  http://linked.data.gov.au/def/gsq-foi#SubBlock
 :SubBlock rdf:type owl:Class ;
           rdfs:subClassOf :AdministrativeFeature ,
                           [ rdf:type owl:Restriction ;
@@ -126,7 +188,7 @@ sdo:Person rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://linked.data.gov.au/def/gsq-features#bowenBasin
+###  http://linked.data.gov.au/def/gsq-foi#bowenBasin
 :bowenBasin rdf:type owl:NamedIndividual ,
                      :Basin ;
             rdfs:label "Bowen Basin" .
@@ -136,9 +198,22 @@ sdo:Person rdf:type owl:Class .
   sdo:affiliation [ rdf:type sdo:Organization ;
                     sdo:name "SURROUND Australia Pty Ltd"
                   ] ;
+  sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
   sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
   sdo:name "Nicholas J. Car"
 ] .
+
+[ rdf:type sdo:Organization ;
+   sdo:name "Geological Survey of Queensland"
+ ] .
+
+[ rdf:type sdo:Person ;
+   sdo:affiliation [ rdf:type sdo:Organization ;
+                     sdo:name "SURROUND Australia Pty Ltd"
+                   ] ;
+   sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+   sdo:name "Nicholas J. Car"
+ ] .
 
 [ rdf:type sdo:Organization ;
    sdo:name "Geological Survey of Queensland"
