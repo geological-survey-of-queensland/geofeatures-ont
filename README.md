@@ -33,7 +33,7 @@ Figure 3 shows the subclasses of `Structural Framework Feature` and Figure 4 sho
 **Figure 2**: Subclasses of the `Structural Framework Feature` class
 
 
-![](images/basin.svg)
+<img src="images/basin.svg" style="width: 65%;" /><br />
 **Figure 3**: Subclasses of the `Basin` class
 
 
