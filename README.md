@@ -1,23 +1,44 @@
 <img src="style/gsq.jpg" style="width:25%" />  
 
-# GSQ Features Ontology
-This Features Ontology describes classes of geospatial Feature relevant to the duties of the Geological Survey of Queensland. 
+# GSQ Geo Admin Features Ontology
+This ontology describes classes of geological and administrative Feature relevant to the duties of the Geological Survey of Queensland.
 
-Within the GeoSPARQL Ontology's Feature class, here refered to as 'geospatial Feature', this ontology defines 'Geological Feature' and 'Administrative Feature'. Within those two main feature classes, a series of subclasses are defined.
+As subclasses of the GeoSPARQL Ontology's `Feature` class, this ontology defines `Geological Feature` and `Administrative Feature`. Multiple subclasses of those two main classes are also defined.
 
-Most of the subclasses of Geological Features defined here are not disjoint with other subclasses in recognition of the fact that a real-world Feature may be classed in multiple ways. Admininstrative Feature subclasses, however, are all disjoint having been defined disjointly by people.
+Most of the subclasses of `Geological Feature` defined here are not disjoint with other subclasses of it in recognition of the fact that a real-world Feature may be classed in multiple ways. `Administrative Feature` subclasses, however, are all disjoint having been defined disjointly by people.
+
+References to and positioning of other Features defined elsewhere are made, such as placing the HY_Features model's `Catchment` and `CatchmentAggregate` classes as subclasses of this ontology's `Basin` class (a subclass of `Geological Feature`). As a result, the classes of object within the LocI project's [Geofabric dataset](http://linked.data.gov.au/dataset/geofabric))can be related to objects classified using this ontology.
 
 ## Online
 This ontology will soon be visible online at its namespace URI location:
 
-* <http://linked.data.gov.au/def/gsq-features>
+* <http://linked.data.gov.au/def/geoadminfeatures>
 
 
-![](images/model.svg)
-**Figure 1**: a diagrammatic version of this ontology's model
+## Overview
+At a high level, the classes of this ontology are shown in Figure 1.
+
+![](images/overview.svg)
+**Figure 1**: A diagrammatic overview of the top-level classes in this ontology
+
+## Details
+This ontology contains detailed subclasses of some of its high-level classes. Currently, the two main areas of subclasses are:
+
+1. `Structural Framework Feature`
+2. `Basin`
+
+Figure 3 shows the subclasses of `Structural Framework Feature` and Figure 4 shows subclasses of `Basin`, including hydrological basins from other ontologies.
+
+![](images/sfs.svg)
+**Figure 2**: Subclasses of the `Structural Framework Feature` class
+
+
+![](images/basins.svg)
+**Figure 3**: Subclasses of the `Basin` class
+
 
 ## Repository Contents
-This repository contains both the machein-readable ontology file in the RDF Turtle format, [gsq-features.ttl](gsq-features.ttl), and an HTML web page version of it for people to use [gsq-features.html](gsq-features.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
+This repository contains both the machine-readable ontology file in the RDF Turtle format, [geoadminfeatures.ttl](geoadminfeatures.ttl), and an HTML web page version of it for people to use [geoadminfeatures.html](geoadminfeatures.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
 
 
 ## License
@@ -27,7 +48,7 @@ The content of this API is licensed for use under the [Creative Commons 4.0 Lice
 ## Citation
 If you wish to cite this profile, please do so like this:
 
-Geological Survey of Queensland (2019) "GSQ Features Ontology". An OWL ontology defining classes of geospatial Feature relevant to the duties of the Geological Survey of Queensland. http://linked.data.gov.au/def/gsq-features
+Geological Survey of Queensland (2019) "Geo-Admin Features Ontology". An OWL ontology defining classes of geospatial Feature relevant to the duties of the Geological Survey of Queensland. http://linked.data.gov.au/def/gsq-features
 
 
 ## Contacts
