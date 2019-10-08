@@ -6,3 +6,7 @@
 
 # Protege
 catalog-*
+
+# TopBraid
+.project
+

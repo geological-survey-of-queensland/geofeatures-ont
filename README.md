@@ -29,11 +29,11 @@ This ontology contains detailed subclasses of some of its high-level classes. Cu
 
 Figure 3 shows the subclasses of `Structural Framework Feature` and Figure 4 shows subclasses of `Basin`, including hydrological basins from other ontologies.
 
-![](images/sfs.svg)
+![](images/structuralframeworkfeature.svg)
 **Figure 2**: Subclasses of the `Structural Framework Feature` class
 
 
-![](images/basins.svg)
+![](images/basin.svg)
 **Figure 3**: Subclasses of the `Basin` class
 
 
