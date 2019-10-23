@@ -75,10 +75,8 @@ geoaf:AdministrativeFeature
 .
 geoaf:Block
   a owl:Class ;
-  rdfs:prefLabel "Block" ;
   rdfs:subClassOf geoaf:AdministrativeFeature ;
-  skos:definition """Blocks are Administrative Features that are defined for the adminstration of mining leases.
-Individual Blocks are defined by the Queensland Department of Natural Resources, Mines and Energy's Geological Survey of Queensland's Permit Administration unit."""@en ;
+  skos:definition """A Block is an administrative division of the State of Queensland that is used for tenure management. A Block is defined as five minutes of latitude by five minutes of longitude. Blocks are grouped by 1:1,000,000 map sheet areas, the names of which provide the containing Blocks with a four letter prefix (e.g. Clermont 1:1,000,000 provides CLER). Each sheet area contains 3456 Blocks, with the Blocks numbered between 1 and 3456 inclusive. A Block is divided into 25 Sub-Blocks."""@en ;
   skos:prefLabel "Block" ;
 .
 geoaf:GeologicalFeature
@@ -97,29 +95,31 @@ geoaf:LithodemicFeature
 .
 geoaf:Permit
   a owl:Class ;
-  rdfs:prefLabel "Permit" ;
   rdfs:subClassOf geoaf:AdministrativeFeature ;
+  skos:definition """Permits are a license granted over a spatial region within the State of Queensland. Permits govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."""@en ;
   skos:prefLabel "Permit" ;
 .
-geoaf:ResourceAccumulationFeature
+geoaf:GeoResourceAccumulationFeature
   a owl:Class ;
-  rdfs:subClassOf geoaf:GeologicalFeature ;
-  skos:prefLabel "Resource Accumulation Feature" ;
+  rdfs:subClassOf geoaf:GeologicalFeature ;  
+  skos:definition """Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."""@en ;
+  skos:prefLabel "GeoResource Accumulation Feature" ;
 .
 geoaf:StratigraphicFeature
   a owl:Class ;
   rdfs:subClassOf geoaf:GeologicalFeature ;
   owl:disjointWith geoaf:LithodemicFeature ;
+  skos:definition """Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016)."""@en ;
   skos:prefLabel "Stratigraphic Feature" ;
 .
 geoaf:TechtonicAndStructuralFrameworkFeature
   a owl:Class ;
   rdfs:subClassOf geoaf:GeologicalFeature ;
+  skos:definition """A Tectonic and Structural Framework Feature is a Tectonic, Tectonostratigraphic or Structural element. Tectonic Elements include cratons, orogens, provinces and sedimentary basins; Tectonostratigraphic Elements include nappes and klippen; and Structural Elements include synclines, anticlines, faults and half-grabens."""@en ;
   skos:prefLabel "Techtonic And Structural Framework Feature" ;
 .
 geoaf:SubBlock
   a owl:Class ;
-  rdfs:prefLabel "Sub-Block" ;
   rdfs:subClassOf geoaf:AdministrativeFeature ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -133,7 +133,6 @@ geoaf:SubBlock
       owl:onProperty geo:sfWithin ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition """A Sub-Block is an Adminstrative Feature that is always fully contained within a larger Block.
-Individual Sub-Blocks are defined by the Queensland Department of Natural Resources, Mines and Energy's Geological Survey of Queensland's Permit Administration unit."""@en ;
+  skos:definition """A Sub-Block is an administrative sub-division of a Block. Each Block is divided into 25 Sub-Blocks. A Sub-Block is defined as one minute of latitude by one minute of longitude. The Sub-Blocks are prefixed with their corresponding Block name and are labelled from A to Z, excluding I. Labels are allocated from left to right, top to bottom, starting from the northwest corner."""@en ;
   skos:prefLabel "Sub-Block" ;
 .
