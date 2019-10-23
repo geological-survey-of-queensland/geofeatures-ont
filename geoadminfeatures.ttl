@@ -99,11 +99,11 @@ geoaf:Permit
   skos:definition """Permits are a license granted over a spatial region within the State of Queensland. Permits govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."""@en ;
   skos:prefLabel "Permit" ;
 .
-geoaf:GeoResourceAccumulationFeature
+geoaf:GeoResourceAccumulation
   a owl:Class ;
   rdfs:subClassOf geoaf:GeologicalFeature ;  
   skos:definition """Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."""@en ;
-  skos:prefLabel "GeoResource Accumulation Feature" ;
+  skos:prefLabel "GeoResource Accumulation" ;
 .
 geoaf:StratigraphicFeature
   a owl:Class ;
