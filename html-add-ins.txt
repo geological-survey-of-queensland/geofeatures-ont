@@ -1,0 +1,9 @@
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <a href="images/overview.svg">
+            <img src="images/overview.svg" alt="overview image" />
+        </a>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
