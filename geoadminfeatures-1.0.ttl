@@ -136,17 +136,6 @@ geoaf:StratigraphicFeature rdf:type owl:Class ;
                            skos:prefLabel "Stratigraphic Feature" .
 
 
-###  http://linked.data.gov.au/def/geoadminfeatures#StratographicEvent
-geoaf:StratographicEvent rdf:type owl:Class ;
-                         rdfs:subClassOf geoaf:StratigraphicFeature .
-
-
-###  http://linked.data.gov.au/def/geoadminfeatures#StratographicUnit
-geoaf:StratographicUnit rdf:type owl:Class ;
-                        rdfs:subClassOf geoaf:StratigraphicFeature ;
-                        skos:prefLabel "Stratographic Unit" .
-
-
 ###  http://linked.data.gov.au/def/geoadminfeatures#SubBlock
 geoaf:SubBlock rdf:type owl:Class ;
                rdfs:subClassOf geoaf:AdministrativeFeature ,
