@@ -1,5 +1,5 @@
 @prefix : <http://linked.data.gov.au/def/geoadminfeatures#> .
-@prefix ns1: <https://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -8,32 +8,45 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix schema: <http://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
 @base <http://linked.data.gov.au/def/geoadminfeatures> .
 
 <http://linked.data.gov.au/def/geoadminfeatures> rdf:type owl:Ontology ;
-                                                  owl:versionIRI <http://linked.data.gov.au/def/geoadminfeatures/2.0> ;
                                                   owl:imports <http://www.opengis.net/ont/geosparql> ;
-                                                  dcterms:contributor [ ] ;
-dcterms:creator [ ] ,
-[ ] ,
-[ ] ;
-dcterms:description """This ontology describes classes of geological and administrative feature relevant to the duties of the Geological Survey of Queensland.
+                                                  dct:contributor [ rdf:type sdo:Person ;
+                                                                        sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+                                                                        sdo:email <mailto:andrew.isles@dnrme.qld.gov.au> ;
+                                                                        sdo:name "Andrew Isles"
+                                                                      ] ;
+                                                  dct:creator [ rdf:type sdo:Person ;
+                                                                    sdo:affiliation [ rdf:type sdo:Organization ;
+                                                                                      sdo:identifier <https://surroundaustralia.com> ;
+                                                                                      sdo:name "SURROUND Australia Pty Ltd"
+                                                                                    ] ;
+                                                                    sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+                                                                    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+                                                                    sdo:name "Nicholas J. Car"
+                                                                  ] ,
+                                                                  [ rdf:type sdo:Person ;
+                                                                    sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+                                                                    sdo:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
+                                                                    sdo:name "John McKellar"
+                                                                  ] ;
+                                                  dct:description """This ontology describes classes of geological and administrative feature relevant to the duties of the Geological Survey of Queensland.
 
 As subclasses of the GeoSPARQL Ontology's `Feature` class, this ontology defines `Geological Feature` and `Administrative Feature`. Multiple subclasses of those two main classes are also defined.
 
 Most of the subclasses of `Geological Feature` defined here are not disjoint with other subclasses of it in recognition of the fact that a real-world `Feature` may be classed in multiple ways. `Administrative Feature` subclasses, however, are all disjoint having been defined disjointly by people.
 
 References to and positioning of other Features defined elsewhere are made, such as placing the HY_Features model's `Catchment` and `CatchmentAggregate` classes as subclasses of this ontology's `Basin` class (a subclass of `Geological Feature`). As a result, the classes of object within the LocI project's Geofabric dataset can be related to objects classified using this ontology."""@en ;
-dcterms:hasVersion 0.5 ;
-dcterms:modified "2019-10-08"^^xsd:date ;
-dcterms:publisher <http://linked.data.gov.au/org/gsq> ,
-                  [ ] ,
-[ ] ;
-dcterms:title "Geological and Administrative Features Ontology"@en ;
-prov:wasGeneratedBy [ ] ,
-[ ] .
+                                                  dct:hasVersion 0.5 ;
+                                                  dct:modified "2019-10-08"^^xsd:date ;
+                                                  dct:publisher <http://linked.data.gov.au/org/gsq> ;
+                                                  dct:title "Geological and Administrative Features Ontology"@en ;
+                                                  prov:wasGeneratedBy [ rdf:type doap:Project ,
+                                                                                 prov:Activity ;
+                                                                        doap:repository <https://github.com/geological-survey-of-queensland/gsq-geoadminfeatures-ont>
+                                                                      ] .
 
 #################################################################
 #    Annotation properties
@@ -52,19 +65,19 @@ prov:wasGeneratedBy rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/affiliation
-ns1:affiliation rdf:type owl:AnnotationProperty .
+schema:affiliation rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/email
-ns1:email rdf:type owl:AnnotationProperty .
+schema:email rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/identifier
-ns1:identifier rdf:type owl:AnnotationProperty .
+schema:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/name
-ns1:name rdf:type owl:AnnotationProperty .
+schema:name rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -209,109 +222,3 @@ Individual Sub-Blocks are defined by the Queensland Department of Natural Resour
                                         rdfs:subClassOf :GeologicalFeature ;
                                         skos:definition "A Tectonic and Structural Framework Feature is a Tectonic, Tectonostratigraphic or Structural element. Tectonic Elements include cratons, orogens, provinces and sedimentary basins; Tectonostratigraphic Elements include nappes and klippen; and Structural Elements include synclines, anticlines, faults and half-grabens."@en ;
                                         skos:prefLabel "Techtonic And Structural Framework Feature" .
-
-
-###  http://usefulinc.com/ns/doap#Project
-doap:Project rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/prov#Activity
-prov:Activity rdf:type owl:Class .
-
-
-###  https://schema.org/Organization
-ns1:Organization rdf:type owl:Class .
-
-
-###  https://schema.org/Person
-ns1:Person rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://linked.data.gov.au/org/gsq
-<http://linked.data.gov.au/org/gsq> rdf:type owl:NamedIndividual ,
-                                             ns1:Organization ;
-                                    ns1:identifier <http://linked.data.gov.au/org/gsq> ;
-                                    ns1:name "Geological Survey of Queensland" .
-
-
-[ rdf:type ns1:Person ;
-  ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-  ns1:email <mailto:andrew.isles@dnrme.qld.gov.au> ;
-  ns1:name "Andrew Isles"
-] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-   ns1:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
-   ns1:name "John McKellar"
- ] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation [ rdf:type ns1:Organization ;
-                     ns1:name "SURROUND Australia Pty Ltd"
-                   ] ;
-   ns1:email <mailto:nicholas.car@surroundaustralia.com> ;
-   ns1:identifier <http://orcid.org/0000-0002-8742-7730> ;
-   ns1:name "Nicholas J. Car"
- ] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation [ rdf:type ns1:Organization ;
-                     ns1:identifier <https://surroundaustralia.com> ;
-                     ns1:name "SURROUND Australia Pty Ltd"
-                   ] ;
-   ns1:email <mailto:nicholas.car@surroundaustralia.com> ;
-   ns1:identifier <http://orcid.org/0000-0002-8742-7730> ;
-   ns1:name "Nicholas J. Car"
- ] .
-
-[ rdf:type ns1:Organization ;
-   ns1:name "Geological Survey of Queensland"
- ] .
-
-[ rdf:type ns1:Organization ;
-   ns1:name "Geological Survey of Queensland"
- ] .
-
-[ rdf:type doap:Project ,
-            prov:Activity ;
-   doap:repository <https://github.com/geological-survey-of-queensland/gsq-geoadminfeatures-ont>
- ] .
-
-[ rdf:type doap:Project ,
-            prov:Activity ;
-   doap:repository <https://github.com/geological-survey-of-queensland/gsq-geoadminfeatures-ont>
- ] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-   ns1:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
-   ns1:name "John McKellar"
- ] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation [ rdf:type ns1:Organization ;
-                     ns1:identifier <https://surroundaustralia.com> ;
-                     ns1:name "SURROUND Australia Pty Ltd"
-                   ] ;
-   ns1:email <mailto:nicholas.car@surroundaustralia.com> ;
-   ns1:identifier <http://orcid.org/0000-0002-8742-7730> ;
-   ns1:name "Nicholas J. Car"
- ] .
-
-[ rdf:type ns1:Person ;
-   ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-   ns1:email <mailto:andrew.isles@dnrme.qld.gov.au> ;
-   ns1:name "Andrew Isles"
- ] .
-
-[ rdf:type doap:Project ,
-            prov:Activity ;
-   doap:repository <https://github.com/geological-survey-of-queensland/gsq-geoadminfeatures-ont>
- ] .
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
