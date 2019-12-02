@@ -20,8 +20,8 @@
                                                   owl:imports <http://www.opengis.net/ont/geosparql> ;
                                                   dcterms:contributor [ rdf:type sdo:Person ;
                                                                         sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
-                                                                        sdo:email <mailto:andrew.isles@dnrme.qld.gov.au> ;
-                                                                        sdo:name "Andrew Isles"
+                                                                        sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
+                                                                        sdo:name "GSQ Informatics Staff"
                                                                       ] ;
                                                   dcterms:creator [ rdf:type sdo:Person ;
                                                                     sdo:affiliation [ rdf:type sdo:Organization ;
