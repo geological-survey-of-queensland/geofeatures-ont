@@ -1,8 +1,10 @@
+<img src="style/gsq.jpg" alt="GSQ Logo" />
+
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <a href="images/overview.svg">
-            <img src="images/overview.svg" alt="overview image" />
+        <a href="images/sweetgeofeatures.svg">
+            <img src="images/sweetgeofeatures.svg" alt="overview image" />
         </a>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SWEET Geological Features Profile Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+#pylode {
+    position: fixed;
+    top: 80px;
+    left: -60px;
+    font-size: small;
+    transform: rotate(-90deg);
+    color: grey;
+}
+#pylode a {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #005A9C;
+}
+#pylode a:hover {
+    color: #333;
+}
+
+.cardinality {
+    font-style: italic;
+    color: #aa00aa;
+}
+
+dt {
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+}
+
+ul.hlist {
+    list-style-type: none;
+    border: 1px solid navy;
+    padding:5px;
+    background-color: #F4FFFF;
+}
+
+
+ul.hlist li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.entity {
+    border: 1px solid navy;
+    margin:5px 0 5px 0;
+    padding: 5px;
+}
+
+.entity th {
+    width: 150px;
+    vertical-align: top;
+}
+
+.entity th,
+.entity td {
+    padding-bottom: 20px;
+}
+
+.entity table th {
+    text-align: left;
+}
+
+section#overview img {
+    max-width: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left
+}
+h1, h2, h3 {
+    color: #005A9C; background: white
+}
+h1 {
+    font: 170% sans-serif;
+    line-height: 110%;
+}
+h2 {
+    font: 140% sans-serif;
+    margin-top:40px;
+}
+h3 {
+    font: 120% sans-serif;
+    margin-top: 3px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid navy;
+}
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+
+body {
+    padding: 2em 70px 2em 70px;
+    margin: 0;
+    font-family: sans-serif;
+    color: black;
+    background: white;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: justify;
+}
+
+section {
+    max-width: 1500px;
+}
+
+.figure {
+    margin-bottom: 20px;
+}
+
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+a:active { color: #C00; background: transparent }
+
+.sup-c,
+.sup-op,
+.sup-fp,
+.sup-dp,
+.sup-ap,
+.sup-p,
+.sup-ni {
+    cursor:help;
+    margin-left: 3px;
+}
+
+.sup-c {
+    color:orange;
+}
+
+.sup-op {
+    color:navy;
+}
+
+.sup-fp {
+    color:lightskyblue;
+}
+
+.sup-dp {
+    color:green;
+}
+
+.sup-ap {
+    color:darkred;
+}
+
+.sup-p {
+    color:black;
+}
+
+.sup-ni {
+    color:brown;
+}
+
+code {
+    font-size: large;
+    color: darkred;
+}
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "http://linked.data.gov.au/def/sweetgeofeatures",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/codeRepository": [
+      {
+        "@id": "https://github.com/geological-survey-of-queensland/gsq-geoadminfeatures-ont"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This OWL ontology describes classes of geological feature relevant to the duties of the Geological Survey of Queensland.</p>\n<p>All elements of this ontology are extracted from the comprehensive set of <a href=\"https://github.com/ESIPFed/sweet\">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies, therefore this ontology is a <em>profile</em> of SWEET. The details of the <em>profile</em> are described using the <a href=\"https://www.w3.org\">W3C</a>'s <a href=\"https://www.w3.org/TR/dx-prof/\">Profiles Vocabulary</a>.</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "SWEET Geological Features Profile Ontology"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<img src="style/gsq.jpg" alt="GSQ Logo" />
+<h1>SWEET Geological Features Profile Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>http://linked.data.gov.au/def/sweetgeofeatures</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            <a href="mailto:john.mckellar@dnrme.qld.gov.au">John McKellar</a> of Geological Survey of Queensland<br/>
+            <a href="mailto:nicholas.car@surroundaustralia.com">Nicholas J. Car</a> of <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2020-01-08</dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
+        </dd>
+        <dt>Ontology Source</dt>
+        <dd><a href="geoadminfeatures.ttl">RDF (turtle)</a></dd>
+        <dt>Code Repository</dt>
+        <dd><a href="https://github.com/geological-survey-of-queensland/sweet-geological-features-profile-ont">https://github.com/geological-survey-of-queensland/sweet-geological-features-profile-ont</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This OWL ontology describes classes of geological feature relevant to the duties of the Geological Survey of Queensland.</p>
+<p>All elements of this ontology are extracted from the comprehensive set of <a href="https://github.com/ESIPFed/sweet">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies, therefore this ontology is a <em>profile</em> of SWEET. The details of the <em>profile</em> are described using the <a href="https://www.w3.org">W3C</a>'s <a href="https://www.w3.org/TR/dx-prof/">Profiles Vocabulary</a>.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <a href="images/sweetgeofeatures.svg">
+            <img src="images/sweetgeofeatures.svg" alt="overview image" />
+        </a>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#GeoResourceAccumulation">GeoResource Accumulation</a></li>
+        <li><a href="#GeologicFeature">Geologic Feature</a></li>
+        <li><a href="#Geosphere">Geosphere</a></li>
+        <li><a href="#LithodemicFeature">Lithodemic Feature</a></li>
+        <li><a href="#PlanetaryRealm">PlanetaryRealm</a></li>
+        <li><a href="#StratigraphicFeature">Stratigraphic Feature</a></li>
+        <li><a href="#TechtonicAndStructuralFrameworkFeature">Techtonic And Structural Framework Feature</a></li>
+    </ul>
+    <div class="entity class" id="GeoResourceAccumulation">
+        <h3>GeoResource Accumulation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/sweetgeofeatures/GeoResourceAccumulation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="LithodemicFeature">
+        <h3>Lithodemic Feature<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/sweetgeofeatures/LithodemicFeature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Lithodemic Feature is a Geological Feature that was not created by sedimentation proceeses.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="StratigraphicFeature">
+        <h3>Stratigraphic Feature<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/sweetgeofeatures/StratigraphicFeature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TechtonicAndStructuralFrameworkFeature">
+        <h3>Techtonic And Structural Framework Feature<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/sweetgeofeatures/TechtonicAndStructuralFrameworkFeature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Tectonic and Structural Framework Feature is a Tectonic, Tectonostratigraphic or Structural element. Tectonic Elements include cratons, orogens, provinces and sedimentary basins; Tectonostratigraphic Elements include nappes and klippen; and Structural Elements include synclines, anticlines, faults and half-grabens.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Geosphere">
+        <h3>Geosphere<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://sweetontology.net/realm/Geosphere</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PlanetaryRealm">
+        <h3>PlanetaryRealm<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://sweetontology.net/realm/PlanetaryRealm</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="GeologicFeature">
+        <h3>Geologic Feature<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://sweetontology.net/realmGeol/GeologicFeature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Geological (or Geological) Feature is a geospatial Feature that is a result of geological processes.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://sweetontology.net/realm/PlanetaryRealm">sorea:PlanetaryRealm</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://sweetontology.net/rela/hasRealm">sorel:hasRealm</a> <span class="cardinality">only</span> <a href="http://sweetontology.net/realm/Geosphere">sorea:Geosphere</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#TechtonicAndStructuralFrameworkFeature">sweetgf:TechtonicAndStructuralFrameworkFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#GeoResourceAccumulation">sweetgf:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#LithodemicFeature">sweetgf:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#StratigraphicFeature">sweetgf:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt><em>default (:)</em></dt>
+        <dd><code>http://linked.data.gov.au/def/sweetgeofeatures/</code></dd>
+        <dt>dct</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>geo</dt>
+        <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>sorea</dt>
+        <dd><code>http://sweetontology.net/realm/</code></dd>
+        <dt>soreag</dt>
+        <dd><code>http://sweetontology.net/realmGeol/</code></dd>
+        <dt>sorel</dt>
+        <dd><code>http://sweetontology.net/rela/</code></dd>
+        <dt>sweetgf</dt>
+        <dd><code>http://linked.data.gov.au/def/sweetgeofeatures/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
+</body>
+</html>
