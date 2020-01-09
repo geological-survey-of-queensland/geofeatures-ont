@@ -1,6 +1,6 @@
 <img src="style/gsq.jpg" style="width:25%" />  
 
-# GSQ Geo Admin Features Ontology
+# SWEET Geological Features Profile Ontology
 This ontology describes classes of geological and administrative Feature relevant to the duties of the Geological Survey of Queensland.
 
 As subclasses of the GeoSPARQL Ontology's `Feature` class, this ontology defines `Geological Feature` and `Administrative Feature`. Multiple subclasses of those two main classes are also defined.
