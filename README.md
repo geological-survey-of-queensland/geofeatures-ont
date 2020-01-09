@@ -12,33 +12,11 @@ References to and positioning of other Features defined elsewhere are made, such
 ## Online
 This ontology will soon be visible online at its namespace URI location:
 
-* <http://linked.data.gov.au/def/geoadminfeatures>
-
-
-## Overview
-At a high level, the classes of this ontology are shown in Figure 1.
-
-![](images/overview.svg)
-**Figure 1**: A diagrammatic overview of the top-level classes in this ontology
-
-## Details
-This ontology contains detailed subclasses of some of its high-level classes. Currently, the two main areas of subclasses are:
-
-1. `Structural Framework Feature`
-2. `Basin`
-
-Figure 3 shows the subclasses of `Structural Framework Feature` and Figure 4 shows subclasses of `Basin`, including hydrological basins from other ontologies.
-
-![](images/structuralframeworkfeature.svg)
-**Figure 2**: Subclasses of the `Structural Framework Feature` class
-
-
-<img src="images/basin.svg" style="width: 65%;" /><br />
-**Figure 3**: Subclasses of the `Basin` class
+* <http://linked.data.gov.au/def/sweetgeofeatures>
 
 
 ## Repository Contents
-This repository contains both the machine-readable ontology file in the RDF Turtle format, [geoadminfeatures.ttl](geoadminfeatures.ttl), and an HTML web page version of it for people to use [geoadminfeatures.html](geoadminfeatures.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
+This repository contains both the machine-readable ontology file in the RDF Turtle format, [sweetgeofeatures.ttl](sweetgeofeatures.ttl), and an HTML web page version of it for people to use [sweetgeofeatures.html](sweetgeofeatures.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
 
 
 ## License
@@ -61,6 +39,6 @@ Geological Survey of Queensland (2019) "Geo-Admin Features Ontology". An OWL ont
 
 *author*:  
 **Nicholas Car**  
-SURROUND Australia Pty Ltd  
+[SURROUND Australia Pty Ltd](https://surroundaustralia.com)  
 <nicholas.car@surroundaustralia.com>  
 <http://orcid.org/0000-0002-8742-7730>  
