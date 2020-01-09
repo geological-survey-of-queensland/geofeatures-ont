@@ -1,13 +1,12 @@
 <img src="style/gsq.jpg" style="width:25%" />  
 
 # SWEET Geological Features Profile Ontology
-This ontology describes classes of geological and administrative Feature relevant to the duties of the Geological Survey of Queensland.
+This OWL ontology describes sub-classes of geological feature relevant to the duties of the Geological Survey of Queensland.
 
-As subclasses of the GeoSPARQL Ontology's `Feature` class, this ontology defines `Geological Feature` and `Administrative Feature`. Multiple subclasses of those two main classes are also defined.
+All elements of this ontology are extracted from the comprehensive set of [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies, therefore this ontology is a *profile* of SWEET. 
 
-Most of the subclasses of `Geological Feature` defined here are not disjoint with other subclasses of it in recognition of the fact that a real-world Feature may be classed in multiple ways. `Administrative Feature` subclasses, however, are all disjoint having been defined disjointly by people.
+The details of the *profile* are described using the [W3C](https://www.w3.org)'s [Profiles Vocabulary](https://www.w3.org/TR/dx-prof/).
 
-References to and positioning of other Features defined elsewhere are made, such as placing the HY_Features model's `Catchment` and `CatchmentAggregate` classes as subclasses of this ontology's `Basin` class (a subclass of `Geological Feature`). As a result, the classes of object within the LocI project's [Geofabric dataset](http://linked.data.gov.au/dataset/geofabric))can be related to objects classified using this ontology.
 
 ## Online
 This ontology will soon be visible online at its namespace URI location:
