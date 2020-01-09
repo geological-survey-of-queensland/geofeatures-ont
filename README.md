@@ -25,7 +25,7 @@ The content of this API is licensed for use under the [Creative Commons 4.0 Lice
 ## Citation
 If you wish to cite this profile, please do so like this:
 
-Geological Survey of Queensland (2019) "Geo-Admin Features Ontology". An OWL ontology defining classes of geospatial Feature relevant to the duties of the Geological Survey of Queensland. http://linked.data.gov.au/def/gsq-features
+Geological Survey of Queensland (2020) "SWEET Geological Features Profile Ontology". An OWL ontology profile of SWEET. http://linked.data.gov.au/def/sweetgeofeatures
 
 
 ## Contacts
