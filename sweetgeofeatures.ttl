@@ -276,9 +276,15 @@ sweetgf:GeologicallySignificantSite
 .
 sweetgf:Geopark
   a owl:Class ;
+  dct:source <https://unesdoc.unesco.org/ark:/48223/pf0000150007> ;
   rdfs:subClassOf sweetgf:GeologicallySignificantSite ;
-  skos:definition "Geoparks are UNESCO-recognised, geographical areas containing sites and landscapes of international geological significance, for their protection, sustainable development, and educational provision. At present, there are 147 UNESCO Global Geoparks in 41 countries. [UNESCO; December 2019]."@en ;
-  skos:example "Three examples of UNESCO-designated Geoparks are: 1.Papuk Nature Part in Slavonia, Croatia; 2.Kanawinka Geopark, South Australia, Australia; and 3.Kyffhäuser, Thuringia & Saxony-Anhalt, Germany"@en ;
+  skos:definition "A Geopark is a nationally protected area containing a number of geological heritage sites of particular importance, rarity or aesthetic appeal. These Earth heritage sites are part of an integrated concept of protection, education and sustainable development. [UNESCO; December 2019]."@en ;
+  skos:example """Four UNESCO-designated Geoparks (from http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/) are: 
+  
+  1. Papuk UNESCO Global Geopark in Slavonia, Croatia (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/croatia/papuk/); 
+  2. Lesvos Island Global Geopark (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/greece/lesvos-island/); 
+  3. Muskauer Faltenboen / Łuk Mużakowa UNESCO Global Geopark, Germany & Poland (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/germanypoland/muskauer-faltenbogenluk-muzakowa/); and 
+  4. Alxa Desert UNESCO Global Geopark, China (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/china/alxa-desert/)."""@en ;
   skos:prefLabel "Geopark"@en ;
 .
 sweetgf:GeophysicalDomain
