@@ -99,7 +99,7 @@
 .
 
 # GRADSTEIN, F.M, OGG, J.G, SCHMITZ, M.D. & OGG, G. (Eds), 2012: The Geologic Time Scale 2012. Elsevier, Amsterdam.
-<http://pid.geoscience.gov.au/dataset/ga/70149>
+<https://www.elsevier.com/books/the-geologic-time-scale-2012/gradstein/978-0-444-59425-9>
     a sohur:Publication , owl:NamedIndividual ;
     dcterms:type biblio:Book , wiki:Q571 ;
     dcterms:creator (
@@ -115,6 +115,16 @@
 .
 
 # ICS, Online: Stratigraphic Guide. International Commission on Stratigraphy; http://www.stratigraphy.org/index.php/ics-stratigraphicguide
+<http://www.stratigraphy.org/index.php/ics-stratigraphicguide>
+    a sohur:Publication , owl:NamedIndividual ;
+    dcterms:type wiki:Q35127 , sdo:WebSite ;
+    dcterms:creator "International Commission on Stratigraphy" ;
+    dcterms:created "2013"^^xsd:gYear ;
+    dcterms:publisher "International Commission on Stratigraphy" ;
+    sdo:lastReviewed "2020-02-20"^^xsd:date ;
+.
+
+
 <http://resource.geosciml.org/vocabulary/timescale/gts2018>
     a sohur:Publication , owl:NamedIndividual ;
     dcterms:type skos:ConceptScheme ;
@@ -214,7 +224,7 @@
     dcterms:identifier "ISBN: 978-3-540-65790-3" ;
 .
 
-# MURPHY, M.A. & SALVADOR, A., 1998: International Stratigraphic Guide—An Abridged Version. International Subcommission on Stratigraphic Classification of IUGS, International Commission on Stratigraphy. Episodes, 22(4), 255–271.
+# MURPHY, M.A. & SALVADOR, A., 1998: International Stratigraphic Guide — An Abridged Version. International Subcommission on Stratigraphic Classification of IUGS, International Commission on Stratigraphy. Episodes, 22(4), 255–271.
 <https://doi.org/10.1130/9780813774022>
     a sohur:Publication , owl:NamedIndividual ;
     dcterms:type biblio:Book , wiki:Q571 ;
