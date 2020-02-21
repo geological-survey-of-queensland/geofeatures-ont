@@ -329,6 +329,45 @@
     ] ;
 .
 
+# [Geological Society of Australia]
+<https://www.gsa.org.au/Public/Geoheritage/ACT_Geoheritage/Public/Geoheritage/ACT_Geoheritage.aspx?hkey=396c84ce-9cb1-47d9-91c7-5770f97a8896>
+    a sohur:Publication , owl:NamedIndividual ;
+    dcterms:type wiki:Q35127 ; # website
+    dcterms:creator "Geological Society of Australia" ;
+    dcterms:date "2020"^^xsd:gYear ;
+    dcterms:title "ACT Geoheritage" ;
+    dcterms:publisher "Geological Society of Australia" ;
+    sdo:url <https://www.gsa.org.au/Public/Geoheritage/ACT_Geoheritage/Public/Geoheritage/ACT_Geoheritage.aspx?hkey=396c84ce-9cb1-47d9-91c7-5770f97a8896> ;
+.
+
+# [Geological Society of Australia 2]
+<https://www.gsa.org.au/Public/Geotourism/Geotourism%20and%20Geotrails/Public/Geotourism/Geotourism%20and%20Geotrails.aspx?hkey=f3ee82ea-de9a-44eb-82f7-377d2d28d2ba>
+    a sohur:Publication , owl:NamedIndividual ;
+    dcterms:type wiki:Q35127 ; # website
+    dcterms:creator "Geological Society of Australia" ;
+    dcterms:date "2020"^^xsd:gYear ;
+    dcterms:title "Geotourism and Geotrails" ;
+    dcterms:publisher "Geological Society of Australia" ;
+    sdo:url <https://www.gsa.org.au/Public/Geotourism/Geotourism%20and%20Geotrails/Public/Geotourism/Geotourism%20and%20Geotrails.aspx?hkey=f3ee82ea-de9a-44eb-82f7-377d2d28d2ba> ;
+.
+
+
+# ROSENBAUM, G., 2018: The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia. Annual Review of Earth and Planetary Sciences, 46 291–325. https://doi.org/10.1146/annurev-earth-082517-010146
+<https://doi.org/10.1146/annurev-earth-082517-010146>
+    a sohur:Publication , owl:NamedIndividual ;
+    dcterms:type biblio:Article , wiki:Q191067 ;
+    dcterms:creator "Gideon Rosenbaum" ;
+    dcterms:date "2018"^^xsd:gYear ;
+    dcterms:title "The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia" ;
+    dcterms:publisher "Annual Reviews" ;
+    npg:hasJournal [
+		a npg:Journal ;
+		sdo:name "Annual Review of Earth and Planetary Sciences" ;
+    	npg:volume "46" ;
+    	npg:pages "291-325" ;
+    ] ;    
+.
+
 
 
 # http://purl.org/net/biblio#Article
