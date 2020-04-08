@@ -353,8 +353,8 @@ sweetgf:GeophysicalDomain
   dcterms:source <http://pid.geoscience.gov.au/dataset/ga/14909> ;
   dcterms:source <https://doi.org/10.1016/j.tecto.2012.02.022> ;
   rdfs:subClassOf sweetgf:GeophysicalFeature ;
-  skos:defintion "Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete \"volumes\" of middle to lower crust. (Terminology based on usage of Shaw et al., 1996; Korsch et al., 2012)"@en ;
-  skos:prefLabel "geophysical domain"@en ;
+  skos:definition """Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete "volumes" of middle to lower crust. (Terminology based on usage of Shaw et al., 1996; Korsch et al., 2012)""" ;
+  skos:prefLabel "Geophysical domain"@en ;
 .
 sweetgf:GeophysicalFeature
   a owl:Class ;
@@ -1200,6 +1200,3 @@ owl:Thing
   dcterms:type biblio:Book ;
   dcterms:type wiki:Q571 ;
 .
-[
-  skos:definition ""@en ;
-].
