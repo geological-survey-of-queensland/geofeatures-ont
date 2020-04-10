@@ -7,6 +7,9 @@ g = rdflib.Graph().parse("../geofeatures.ttl", format="turtle")
 g_skos = rdflib.Graph()
 g_skos.bind('skos', rdflib.namespace.SKOS)
 g_skos.bind('dcterms', rdflib.namespace.DCTERMS)
+g_skos.bind('prof', rdflib.Namespace("http://www.w3.org/ns/dx/prof/"))
+g_skos.bind('owl', rdflib.Namespace("http://www.w3.org/2002/07/owl#"))
+g_skos.bind('sdo', rdflib.Namespace("https://schema.org/"))
 g_skos.bind('geof', rdflib.Namespace("http://linked.data.gov.au/def/geofeatures/"))
 
 # get Classes as Concepts
@@ -104,5 +107,5 @@ WHERE {
 """
 g_skos += g.query(q)
 
-with open("../geofeatures.skos.ttl", "w") as f:
+with open("../geologic-feature-types.ttl", "w") as f:
     f.write(g_skos.serialize(format="turtle").decode("utf-8"))

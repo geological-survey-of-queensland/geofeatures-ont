@@ -1,10 +1,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geof: <http://linked.data.gov.au/def/geofeatures/> .
-@prefix ns1: <https://schema.org/> .
-@prefix ns2: <http://www.w3.org/ns/dx/prof/> .
-@prefix ns3: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -731,9 +731,9 @@ geof:Window a skos:Concept ;
     skos:notation "gfwnw" ;
     skos:prefLabel "window"@en .
 
-<http://linked.data.gov.au/org/ga> a ns1:Organization ;
-    ns1:name "Geoscience Australia" ;
-    ns1:url <https://www.ga.gov.au> .
+<http://linked.data.gov.au/org/ga> a sdo:Organization ;
+    sdo:name "Geoscience Australia" ;
+    sdo:url <https://www.ga.gov.au> .
 
 geof:GeophysicalFeature a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
@@ -743,19 +743,19 @@ geof:GeophysicalFeature a skos:Concept ;
     skos:notation "gfgpf" ;
     skos:prefLabel "geophysical feature"@en .
 
-<https://orcid.org/0000-0001-5489-9590> a ns3:NamedIndividual,
-        ns1:Person ;
-    ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-    ns1:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
-    ns1:name "John L. McKellar" .
+<https://orcid.org/0000-0001-5489-9590> a owl:NamedIndividual,
+        sdo:Person ;
+    sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+    sdo:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
+    sdo:name "John L. McKellar" .
 
-<https://orcid.org/0000-0002-8742-7730> a ns3:NamedIndividual,
-        ns1:Person ;
-    ns1:affiliation [ a ns1:Organization ;
-            ns1:name "SURROUND Australia Pty Ltd" ;
-            ns1:url <https://surroundaustralia.com> ] ;
-    ns1:email <mailto:nicholas.car@surroundaustralia.com> ;
-    ns1:name "Nicholas J. Car" .
+<https://orcid.org/0000-0002-8742-7730> a owl:NamedIndividual,
+        sdo:Person ;
+    sdo:affiliation [ a sdo:Organization ;
+            sdo:name "SURROUND Australia Pty Ltd" ;
+            sdo:url <https://surroundaustralia.com> ] ;
+    sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+    sdo:name "Nicholas J. Car" .
 
 geof:GeophysicalDomain a skos:Concept ;
     dcterms:source <http://pid.geoscience.gov.au/dataset/ga/14909>,
@@ -817,11 +817,11 @@ geof:LithodemicFeature a skos:Concept ;
     skos:notation "gfldf" ;
     skos:prefLabel "lithodemic feature"@en .
 
-<http://linked.data.gov.au/org/gsq> a ns3:NamedIndividual,
-        ns1:Organization ;
-    ns1:email <mailto:geological_info@dnrme.qld.gov.au> ;
-    ns1:name "Geological Survey of Queensland" ;
-    ns1:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+<http://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
+        sdo:Organization ;
+    sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 geof:DenudationalFeature a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
@@ -877,25 +877,25 @@ geof:StructuralFeature a skos:Concept ;
     skos:notation "gfstr" ;
     skos:prefLabel "structural feature"@en .
 
-<http://linked.data.gov.au/def/geofeatures> a ns3:NamedIndividual,
-        ns3:Ontology,
+<http://linked.data.gov.au/def/geofeatures> a owl:NamedIndividual,
+        owl:Ontology,
         skos:ConceptScheme,
-        ns2:Profile ;
-    dcterms:contributor [ a ns3:NamedIndividual,
-                ns1:Person ;
-            ns1:affiliation <http://linked.data.gov.au/org/gsq> ;
-            ns1:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
-            ns1:name "Derek Hoy" ],
+        prof:Profile ;
+    dcterms:contributor [ a owl:NamedIndividual,
+                sdo:Person ;
+            sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+            sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:name "Derek Hoy" ],
         <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-23"^^xsd:date ;
     dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
         <https://orcid.org/0000-0002-8742-7730> ;
     dcterms:modified "2020-03-10"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    ns3:imports <http://www.opengis.net/ont/geosparql>,
+    owl:imports <http://www.opengis.net/ont/geosparql>,
         <http://www.w3.org/2004/02/skos/core> ;
-    ns3:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
-    ns3:versionInfo "Most ontology content but not complte diagrammatic coverage." ;
+    owl:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
+    owl:versionInfo "Most ontology content but not complte diagrammatic coverage." ;
     skos:definition """This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
 
 Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
@@ -903,8 +903,8 @@ Elements of this ontology are designed to fit within other, broader, ontologies,
 The core of this ontology is a clacc hierarchy starting with "geologic province", as it is defined in SWEET, and exnteding down into multiple subclasses of it."""@en ;
     skos:hasTopConcept <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:prefLabel "Geologic Features Ontology"@en ;
-    ns2:hasResource [ ],
+    prof:hasResource [ ],
         [ ] ;
-    ns2:isProfileOf <http://sweetontology.net/realmGeol> ;
-    ns1:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
+    prof:isProfileOf <http://sweetontology.net/realmGeol> ;
+    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
 
