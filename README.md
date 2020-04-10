@@ -1,21 +1,21 @@
-<img src="style/gsq.jpg" style="width:25%" />  
+<img src="images/gsq.jpg" style="width:25%" />  
 
 # SWEET Geological Features Profile Ontology
-This OWL ontology describes sub-classes of geological feature relevant to the duties of the Geological Survey of Queensland.
+This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
 
-All elements of this ontology are extracted from the comprehensive set of [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies, therefore this ontology is a *profile* of SWEET. 
+Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
 
-The details of the *profile* are described using the [W3C](https://www.w3.org)'s [Profiles Vocabulary](https://www.w3.org/TR/dx-prof/).
+The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it.
 
 
 ## Online
-This ontology will soon be visible online at its namespace URI location:
+This ontology is accessible via its persistent URI:
 
-* <http://linked.data.gov.au/def/sweetgeofeatures>
+* <http://linked.data.gov.au/def/geofeatures>
 
 
 ## Repository Contents
-This repository contains both the machine-readable ontology file in the RDF Turtle format, [sweetgeofeatures.ttl](sweetgeofeatures.ttl), and an HTML web page version of it for people to use [sweetgeofeatures.html](sweetgeofeatures.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
+This repository contains both the machine-readable ontology file in the RDF Turtle format, [geofeatures.ttl](sweetgeofeatures.ttl), and an HTML web page version of it for people to use [geofeatures.html](geofeatures.html). The HTML web page is generated semi-automatically from the RDF file and will soon be displayed online at this ontology's namespace location indicated above.
 
 
 ## License
@@ -25,7 +25,7 @@ The content of this API is licensed for use under the [Creative Commons 4.0 Lice
 ## Citation
 If you wish to cite this profile, please do so like this:
 
-Geological Survey of Queensland (2020) "SWEET Geological Features Profile Ontology". An OWL ontology profile of SWEET. http://linked.data.gov.au/def/sweetgeofeatures
+Geological Survey of Queensland (2020) "Geologic Features Ontology". An OWL ontology. http://linked.data.gov.au/def/geofeatures
 
 
 ## Contacts
