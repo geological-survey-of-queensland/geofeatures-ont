@@ -10,3 +10,5 @@ catalog-*
 # TopBraid
 .project
 
+# jetBrainz tools
+.idea/

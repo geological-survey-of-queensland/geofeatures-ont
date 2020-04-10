@@ -35,14 +35,14 @@
   dcterms:created "2020-01-23"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0001-5489-9590> ;
   dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
-  dcterms:description """This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
+  skos:definition """This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
 
 Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
 
 The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it."""@en ;
   dcterms:modified "2020-03-10"^^xsd:date ;
   dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-  dcterms:title "Geologic Features Ontology"@en ;
+  skos:prefLabel "Geologic Features Ontology"@en ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
@@ -53,6 +53,13 @@ The core of this ontology is a clacc hierarchy starting with \"geologic province
       skos:prefLabel "Ontology document"@en ;
       prof:hasArtifact <http://linked.data.gov.au/def/geofeatures.ttl> ;
       prof:hasRole <http://www.w3.org/ns/dx/prof/role/schema> ;
+    ] ,
+    [
+      dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
+      dcterms:format <https://w3id.org/mediatypes/text/html> ;
+      skos:prefLabel "Ontology documentation"@en ;
+      prof:hasArtifact <http://linked.data.gov.au/def/geofeatures.html> ;
+      prof:hasRole <http://www.w3.org/ns/dx/prof/role/guidance> ;
     ] ;
   prof:isProfileOf <http://sweetontology.net/realmGeol> ;
   sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> ;
@@ -264,14 +271,13 @@ geof:Escarpment
   skos:altLabel "scarpland"@en ;
   skos:definition "(a) A long, more or less continuous cliff or relatively steep slope facing in one general direction, breaking the continuity of the land by separating two levels of gently sloping surfaces, and produced by erosion or faulting. The term is often used synonymously with scarp, although escarpment is more often applied to a cliff formed by differential erosion;  (b) A steep, abrupt face of rock, often presented by the highest strata in a line of cliffs, and generally marking the outcrop of a resistant layer occurring in a series of gently dipping softer strata, specifically the steep face of a cuesta; (c) A term used loosely in Great Britain as a synonym of cuesta. (Neuendorf et al., 2011)"@en ;
   skos:notation "gfecp" ;
-  skos:prefLabel "cuesta"@es ;
   skos:prefLabel "escarpment"@en ;
 .
 geof:ExtendedCrustProvince
   a owl:Class ;
   dcterms:source <https://earthquake.usgs.gov/data/crust/definitions.html> ;
   rdfs:subClassOf geof:TectonicEntity ;
-  skos:definition "A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico." ;
+  skos:definition "A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico."@en ;
   skos:notation "gfxcp" ;
   skos:prefLabel "extended crust province"@en ;
   skos:scopeNote "The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)" ;
