@@ -1,3 +1,7 @@
+# baseURI: http://linked.data.gov.au/def/geofeatures
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.w3.org/2004/02/skos/core
+
 @prefix biblio: <http://purl.org/net/biblio#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -16,17 +20,6 @@
 @prefix wiki: <https://www.wikidata.org/wiki/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://doi.org/10.22459/SN.08.2012>
-  a sohur:Publication ;
-  a owl:NamedIndividual ;
-  dcterms:creator "Richard S. Blewett" ;
-  dcterms:date "2012"^^xsd:gYear ;
-  dcterms:identifier "ISBN: 9781921862823" ;
-  dcterms:publisher "ANU Press" ;
-  dcterms:title "Shaping a Nation: A Geology of Australia" ;
-  dcterms:type biblio:Book ;
-  dcterms:type wiki:Q571 ;
-.
 <http://linked.data.gov.au/def/geofeatures>
   a owl:NamedIndividual ;
   a owl:Ontology ;
@@ -46,12 +39,14 @@
 
 Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
 
-The details of the *profile* are described using the [W3C](https://www.w3.org)'s [Profiles Vocabulary](https://www.w3.org/TR/dx-prof/)."""@en ;
-  dcterms:modified "2020-01-10"^^xsd:date ;
+The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it."""@en ;
+  dcterms:modified "2020-03-10"^^xsd:date ;
   dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
   dcterms:title "Geologic Features Ontology"@en ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
+  owl:versionInfo "Most ontology content but not complte diagrammatic coverage." ;
   prof:hasResource [
       dcterms:conformsTo <https://www.w3.org/TR/owl2-overview/> ;
       dcterms:format <https://w3id.org/mediatypes/text/turtle> ;
@@ -69,6 +64,13 @@ geof:AbundanceZone
   skos:definition "The body of strata in which the abundance of a particular taxon or specified group of taxa is significantly greater than is usual in the adjacent parts of the section. (ICS, Online, December 2019)"@en ;
   skos:notation "gfabz" ;
   skos:prefLabel "abundance zone"@en ;
+.
+geof:AncientContinent
+  a owl:Class ;
+  dcterms:source <http://linked.data.gov.au/def/geofeatures> ;
+  rdfs:subClassOf geof:Continent ;
+  skos:definition "A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)"@en ;
+  skos:prefLabel "ancient continent"@en ;
 .
 geof:Anticline
   a owl:Class ;
@@ -200,7 +202,7 @@ geof:Continent
 geof:Craton
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A craton is part of Earth's continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata. (Neuendorf et al., 2011)"@en ;
   skos:notation "gfcrn" ;
   skos:prefLabel "craton"@en ;
@@ -264,6 +266,15 @@ geof:Escarpment
   skos:notation "gfecp" ;
   skos:prefLabel "cuesta"@es ;
   skos:prefLabel "escarpment"@en ;
+.
+geof:ExtendedCrustProvince
+  a owl:Class ;
+  dcterms:source <https://earthquake.usgs.gov/data/crust/definitions.html> ;
+  rdfs:subClassOf geof:TectonicEntity ;
+  skos:definition "A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico." ;
+  skos:notation "gfxcp" ;
+  skos:prefLabel "extended crust province"@en ;
+  skos:scopeNote "The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)" ;
 .
 geof:Fault
   a owl:Class ;
@@ -442,7 +453,7 @@ geof:Horst
 geof:IgneousProvince
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:altLabel "Petrographic province"@en ;
   skos:definition "A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity. (Neuendorf et al., 2011)"@en ;
   skos:notation "gfigp" ;
@@ -476,7 +487,7 @@ geof:Klippe
 geof:LargeIgneousProvince
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than \"normal\" seafloor spreading (Coffin & Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong & Java Oceanic Plateaus), and North Atlantic volcanic passive margins. Abbrev: LIP. (Neuendorf et al., 2011)"@en ;
   skos:notation "gflip" ;
   skos:prefLabel "large igneous province"@en ;
@@ -562,7 +573,7 @@ geof:Member
 geof:MineralProvince
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:altLabel "Metallogenic province"@en ;
   skos:definition "An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)"@en ;
   skos:notation "gfmnp" ;
@@ -589,7 +600,7 @@ geof:Nappe
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
   dcterms:source <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-  rdfs:subClassOf geof:TechtonostratigraphicEntity ;
+  rdfs:subClassOf geof:tectonostratigraphicEntity ;
   skos:definition "A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After Neuendorf et al., 2011; Allaby, 2013)"@en ;
   skos:notation "gfnpp" ;
   skos:prefLabel "nappe"@en ;
@@ -597,7 +608,7 @@ geof:Nappe
 geof:NappeComplex
   a owl:Class ;
   dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-  rdfs:subClassOf geof:TechtonostratigraphicEntity ;
+  rdfs:subClassOf geof:tectonostratigraphicEntity ;
   skos:definition "A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)"@en ;
   skos:notation "gfnpx" ;
   skos:prefLabel "nappe complex"@en ;
@@ -605,7 +616,7 @@ geof:NappeComplex
 geof:Orogen
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks. (Alt obsolete term: geosyncline). (Modified from Neuendorf et al., 2011; Hoy, pers. comm.)"@en ;
   skos:notation "gforn" ;
   skos:prefLabel "orogen"@en ;
@@ -614,7 +625,7 @@ geof:OrogenicCollage
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
   dcterms:source <https://doi.org/10.1146/annurev-earth-082517-010146> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)"@en ;
   skos:notation "gforg" ;
   skos:prefLabel "orogenic collage"@en ;
@@ -655,23 +666,12 @@ geof:Peneplain
   skos:notation "gfpnn" ;
   skos:prefLabel "peneplain"@en ;
 .
-geof:Plate
+geof:PresentContinent
   a owl:Class ;
-  dcterms:source <http://www.glossaryofgeology.org> ;
-  dcterms:source <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-  rdfs:subClassOf geof:TectonicEntity ;
-  skos:altLabel "Tectonic Plate"@en ;
-  skos:definition "The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. (e.g., Neuendorf et al., 2011; Allaby, 2013)"@en ;
-  skos:notation "gfplt" ;
-  skos:prefLabel "plate"@en ;
-.
-geof:Province
-  a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/def/gsq> ;
-  rdfs:subClassOf geof:TectonicEntity ;
-  skos:definition "Tectonic Provinces include cratons/shields (in the continental realm), orogens, sedimentary basins, and tectonised/metamorphosed and/or mineralised regions, as well as large igneous provinces (LIPs). (Definition created here)"@en ;
-  skos:notation "gfpvn" ;
-  skos:prefLabel "province"@en ;
+  rdfs:subClassOf geof:Continent ;
+  skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)"@en ;
+  skos:prefLabel "present continent"@en ;
+  skos:scopeNote "One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust."@en ;
 .
 geof:RangeZone
   a owl:Class ;
@@ -693,7 +693,7 @@ geof:Ridge
 geof:SedimentaryBasin
   a owl:Class ;
   dcterms:source <https://doi.org/10.1007/978-3-662-03999-1> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)"@en ;
   skos:notation "gfsdb" ;
   skos:prefLabel "sedimentary basin"@en ;
@@ -727,7 +727,7 @@ geof:ShearZone
 geof:Shield
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian. (Neuendorf et al., 2011)"@en ;
   skos:notation "gfshd" ;
   skos:prefLabel "shield"@en ;
@@ -803,14 +803,33 @@ geof:Supercontinent
   a owl:Class ;
   dcterms:source <http://doi.org/10.22459/SN.08.2012> ;
   rdfs:subClassOf geof:TectonicEntity ;
-  skos:definition "A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)"@en ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom geof:Continent ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:hasPart ;
+    ] ;
+  skos:definition """A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)
+
+Due to mantle convection and heat anomalies that build up slowly below the mantle-insulating continental lithosphere (relative to the less insulating oceanic lithosphere), continents go through a prolonged cycle (Wilson Cycle) of formation into a supercontinent which subsequently breaks up into continents again. Continents after breakup are generally not the same as those before."""@en ;
   skos:notation "gfspc" ;
   skos:prefLabel "supercontinent"@en ;
 .
 geof:Supercraton
   a owl:Class ;
   dcterms:source <http://doi.org/10.22459/SN.08.2012> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom geof:Craton ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:hasPart ;
+    ] ;
   skos:definition "A large, ancestral (largely Archean) landmass consisting of two or more cratons. (Blewett, 2012)"@en ;
   skos:notation "gfspn" ;
   skos:prefLabel "supercraton"@en ;
@@ -863,13 +882,13 @@ geof:TaxonRangeZone
   skos:notation "gftrz" ;
   skos:prefLabel "taxon range zone"@en ;
 .
-geof:TechtonostratigraphicEntity
+geof:tectonostratigraphicEntity
   a owl:Class ;
   dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
   rdfs:subClassOf geof:TectonicFeature ;
   skos:definition "Tectonostratigraphic Entities/Units, separately distinguished from Tectonic Entities/Units (following Kumpulainen, 2017), encompass generally flat-lying, scale-independent, tectonic units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes, as well as accreted terranes"@en ;
   skos:notation "gftse" ;
-  skos:prefLabel "techtonostratigraphic entity"@en ;
+  skos:prefLabel "tectonostratigraphic entity"@en ;
 .
 geof:TectonicEntity
   a owl:Class ;
@@ -877,7 +896,7 @@ geof:TectonicEntity
   rdfs:subClassOf geof:TectonicFeature ;
   skos:definition "Tectonic Entitities include the lithosphere, continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins. (Modified from Kumpulainen, 2017)"@en ;
   skos:notation "gftey" ;
-  skos:prefLabel "techtonic entity"@en ;
+  skos:prefLabel "tectonic entity"@en ;
   skos:scopeNote "The current definition does not explain what gives rise to a tectonic entity. This should be added."@en ;
 .
 geof:TectonicFeature
@@ -886,12 +905,24 @@ geof:TectonicFeature
   rdfs:subClassOf soreag:GeologicFeature ;
   skos:definition "Tectonic Features include Tectonic Entities and Tectonostratigraphic Entities. The former encompass Geological Provinces (e.g., cratons/shields, orogens, sedimentary basins, igneous/petrographic provinces, etc.), and the latter, tectonostratigraphic units, such as nappes and terranes. (Modified from Kumpulainen, 2017). Collectively, they constitute continents, past and present, and, when previously formed, supercontinents"@en ;
   skos:notation "gftcr" ;
-  skos:prefLabel "techtonic feature"@en ;
+  skos:prefLabel "tectonic feature"@en ;
+.
+geof:TectonicPlate
+  a owl:Class ;
+  dcterms:source <https://pubs.usgs.gov/gip/dynamic/tectonic.html> ;
+  rdfs:subClassOf geof:TectonicEntity ;
+  skos:altLabel "lithospheric plate"@en ;
+  skos:altLabel "plate"@en ;
+  skos:definition """The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. 
+
+Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999)."""@en ;
+  skos:notation "gfplt" ;
+  skos:prefLabel "tectonic plate"@en ;
 .
 geof:TectonisedMetomorphosedProvince
   a owl:Class ;
   dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
-  rdfs:subClassOf geof:Province ;
+  rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)"@en ;
   skos:notation "gftmp" ;
   skos:prefLabel "tectonised metomorphosed province"@en ;
@@ -899,7 +930,7 @@ geof:TectonisedMetomorphosedProvince
 geof:Terrane
   a owl:Class ;
   dcterms:source <http://www.glossaryofgeology.org> ;
-  rdfs:subClassOf geof:TechtonostratigraphicEntity ;
+  rdfs:subClassOf geof:tectonostratigraphicEntity ;
   skos:definition "A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion. (After  Neuendorf et al., 2011)"@en ;
   skos:notation "gftrn" ;
   skos:prefLabel "terrane"@en ;
@@ -991,14 +1022,12 @@ geof:ref02
   dcterms:type biblio:Book ;
   dcterms:type wiki:Q571 ;
 .
-
 soreag:GeologicFeature
   a owl:Class ;
   skos:altLabel "Geologic Feature"@en ;
   skos:altLabel "Geological Feature"@en ;
   skos:definition "A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes"@en ;
   skos:example "Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province"@en ;
-  skos:prefLabel "cechy geologiczne"@pl ;
   skos:prefLabel "geologic feature"@en ;
   skos:scopeNote "Geologic Features include sedimentary basins, stratigraphic units, non-stratigraphic (lithodemic) units, stratigraphic event features, provinces, tectonic and structural features, georesource accumulations, and geologically significant sites, among others"@en ;
 .
@@ -1023,6 +1052,7 @@ soreag:GeologicFeature
   dcterms:created "2013"^^xsd:gYear ;
   dcterms:creator "International Commission on Stratigraphy" ;
   dcterms:publisher "International Commission on Stratigraphy" ;
+  dcterms:title "Stratigraphic Guide" ;
   dcterms:type sdo:WebSite ;
   dcterms:type wiki:Q35127 ;
   sdo:lastReviewed "2020-02-20"^^xsd:date ;
@@ -1256,6 +1286,29 @@ soreag:GeologicFeature
   dcterms:type biblio:Article ;
   dcterms:type wiki:Q191067 ;
 .
+<https://earthquake.usgs.gov/data/crust/definitions.html>
+  a sohur:Publication ;
+  a owl:NamedIndividual ;
+  dcterms:created "2017"^^xsd:gYear ;
+  dcterms:creator "US Geological Survey" ;
+  dcterms:publisher "US Geological Survey" ;
+  dcterms:source "The Glossary of Geology (1980)" ;
+  dcterms:title "A listing of the geologic provinces and their subcategories" ;
+  dcterms:type sdo:WebSite ;
+  dcterms:type wiki:Q35127 ;
+  sdo:lastReviewed "2020-04-10"^^xsd:date ;
+.
+<https://en.wikipedia.org/wiki/Geologic_province>
+  a sohur:Publication ;
+  a owl:NamedIndividual ;
+  dcterms:created "2020"^^xsd:gYear ;
+  dcterms:creator "Wikipedia contributors" ;
+  dcterms:publisher "Wikipedia" ;
+  dcterms:title "Geologic province" ;
+  dcterms:type sdo:WebSite ;
+  dcterms:type wiki:Q35127 ;
+  sdo:lastReviewed "2020-04-10"^^xsd:date ;
+.
 <https://orcid.org/0000-0001-5489-9590>
   a owl:NamedIndividual ;
   a sdo:Person ;
@@ -1274,6 +1327,17 @@ soreag:GeologicFeature
   sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
   sdo:name "Nicholas J. Car" ;
 .
+<https://pubs.usgs.gov/gip/dynamic/tectonic.html>
+  a sohur:Publication ;
+  a owl:NamedIndividual ;
+  dcterms:created "1999"^^xsd:gYear ;
+  dcterms:creator "US Geological Survey" ;
+  dcterms:publisher "US Geological Survey" ;
+  dcterms:title "What is a tectonic plate?" ;
+  dcterms:type sdo:WebSite ;
+  dcterms:type wiki:Q35127 ;
+  sdo:lastReviewed "2020-04-10"^^xsd:date ;
+.
 <https://www.elsevier.com/books/the-geologic-time-scale-2012/gradstein/978-0-444-59425-9>
   a sohur:Publication ;
   a owl:NamedIndividual ;
@@ -1287,6 +1351,17 @@ soreag:GeologicFeature
   dcterms:identifier "ISBN: 978-0-444-59448-8" ;
   dcterms:publisher "Elsevier, Amsterdam" ;
   dcterms:title "The Geologic Time Scale 2012" ;
+  dcterms:type biblio:Book ;
+  dcterms:type wiki:Q571 ;
+.
+<http://doi.org/10.22459/SN.08.2012>
+  a sohur:Publication ;
+  a owl:NamedIndividual ;
+  dcterms:creator "Richard S. Blewett" ;
+  dcterms:date "2012"^^xsd:gYear ;
+  dcterms:identifier "ISBN: 9781921862823" ;
+  dcterms:publisher "ANU Press" ;
+  dcterms:title "Shaping a Nation: A Geology of Australia" ;
   dcterms:type biblio:Book ;
   dcterms:type wiki:Q571 ;
 .

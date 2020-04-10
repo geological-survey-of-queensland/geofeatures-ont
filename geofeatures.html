@@ -179,7 +179,7 @@ code {
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>\n<p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href=\"https://github.com/ESIPFed/sweet\">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>\n<p>The details of the <em>profile</em> are described using the <a href=\"https://www.w3.org\">W3C</a>'s <a href=\"https://www.w3.org/TR/dx-prof/\">Profiles Vocabulary</a>.</p>"
+        "@value": "<p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>\n<p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href=\"https://github.com/ESIPFed/sweet\">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>\n<p>The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it.</p>"
       }
     ],
     "https://schema.org/name": [
@@ -210,13 +210,13 @@ code {
         </dd>
         <dt>Contributors(s)</dt>
         <dd>
-            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
             <a href="mailto:derek.hoy@dnrme.qld.gov.au">Derek Hoy</a> of <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
+            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
         </dd>
         <dt>Created</dt>
         <dd>2020-01-23</dd>
         <dt>Modified</dt>
-        <dd>2020-01-10</dd>
+        <dd>2020-03-10</dd>
         <dt>Imports</dt>
         <dd>
             <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
@@ -231,7 +231,7 @@ code {
     <div id="description">
         <p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>
 <p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href="https://github.com/ESIPFed/sweet">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>
-<p>The details of the <em>profile</em> are described using the <a href="https://www.w3.org">W3C</a>'s <a href="https://www.w3.org/TR/dx-prof/">Profiles Vocabulary</a>.</p>
+<p>The core of this ontology is a clacc hierarchy starting with "geologic province", as it is defined in SWEET, and exnteding down into multiple subclasses of it.</p>
     </div>
 </section>
 <section id="toc">
@@ -246,14 +246,19 @@ code {
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <div style="width:500px; height:500px; background-color: black;">&nbsp;</div>
-        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+        <object type="image/svg+xml" data="images/element-key.svg"></object>
+        <div class="caption"><strong>Figure 1:</strong> Diagramatic elements used in all figures.</div>
+    </div>
+    <div class="figure">
+        <object type="image/svg+xml" data="images/hierarchy-geologicfeature.svg"></object>
+        <div class="caption"><strong>Figure 2:</strong> Ontology main class hierarchy, starting with <a href="#geologicfeature">geologic feature</a>.</div>
     </div>
 </section>
 <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#abundancezone">abundance zone</a></li>
+        <li><a href="#ancientcontinent">ancient continent</a></li>
         <li><a href="#anticline">anticline</a></li>
         <li><a href="#anticlinorium">anticlinorium</a></li>
         <li><a href="#antiform">antiform</a></li>
@@ -271,12 +276,13 @@ code {
         <li><a href="#continent">continent</a></li>
         <li><a href="#craton">craton</a></li>
         <li><a href="#crustalelement">crustal element</a></li>
+        <li><a href="#cuesta">cuesta</a></li>
         <li><a href="#denudationalfeature">denudational feature</a></li>
         <li><a href="#depression">depression</a></li>
         <li><a href="#dome">dome</a></li>
         <li><a href="#duplex">duplex</a></li>
         <li><a href="#embayment">embayment</a></li>
-        <li><a href="#escarpment">escarpment</a></li>
+        <li><a href="#extendedcrustprovince">extended crust province</a></li>
         <li><a href="#fault">fault</a></li>
         <li><a href="#faultscarp">fault scarp</a></li>
         <li><a href="#faultset">fault set</a></li>
@@ -323,8 +329,7 @@ code {
         <li><a href="#overturnedfold">overturned fold</a></li>
         <li><a href="#pedostratigraphicunit">pedostratigraphic unit</a></li>
         <li><a href="#peneplain">peneplain</a></li>
-        <li><a href="#plate">plate</a></li>
-        <li><a href="#province">province</a></li>
+        <li><a href="#presentcontinent">present continent</a></li>
         <li><a href="#rangezone">range zone</a></li>
         <li><a href="#ridge">ridge</a></li>
         <li><a href="#sedimentarybasin">sedimentary basin</a></li>
@@ -349,8 +354,9 @@ code {
         <li><a href="#synform">synform</a></li>
         <li><a href="#taxonrangezone">taxon range zone</a></li>
         <li><a href="#techtonicentity">techtonic entity</a></li>
-        <li><a href="#techtonicfeature">techtonic feature</a></li>
+        <li><a href="#tectonicfeature">techtonic feature</a></li>
         <li><a href="#techtonostratigraphicentity">techtonostratigraphic entity</a></li>
+        <li><a href="#tectonicplate">tectonic plate</a></li>
         <li><a href="#tectonisedmetomorphosedprovince">tectonised metomorphosed province</a></li>
         <li><a href="#terrane">terrane</a></li>
         <li><a href="#trough">trough</a></li>
@@ -380,6 +386,33 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#biostratigraphicunit">geof:BiostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ancientcontinent">
+        <h3>ancient continent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geofeatures/AncientContinent</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://linked.data.gov.au/def/geofeatures">http://linked.data.gov.au/def/geofeatures</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -583,7 +616,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1080/08120098508729316">https://doi.org/10.1080/08120098508729316</a>
+                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
                 </td>
             </tr>
             <tr>
@@ -656,13 +689,13 @@ code {
                 <th>Sub-classes</th>
                 <td>
                     <a href="#associationzone">geof:AssociationZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#assemblagezone">geof:AssemblageZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#concurrentrangezone">geof:ConcurrentRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#taxonrangezone">geof:TaxonRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lineagezone">geof:LineageZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#intervalzone">geof:IntervalZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#concurrentrangezone">geof:ConcurrentRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#assemblagezone">geof:AssemblageZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#abundancezone">geof:AbundanceZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#intervalzone">geof:IntervalZone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -704,7 +737,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
+                    <a href="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824">https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824</a>
                 </td>
             </tr>
             <tr>
@@ -785,7 +818,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://doi.org/10.22459/SN.08.2012">http://doi.org/10.22459/SN.08.2012</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
@@ -798,6 +831,13 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ancientcontinent">geof:AncientContinent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#presentcontinent">geof:PresentContinent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -824,7 +864,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -885,11 +925,11 @@ code {
                 <th>Sub-classes</th>
                 <td>
                     <a href="#unconformity">geof:Unconformity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#klippe">geof:Klippe</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#outlier">geof:Outlier</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#peneplain">geof:Peneplain</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#window">geof:Window</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#peneplain">geof:Peneplain</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#inlier">geof:Inlier</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#outlier">geof:Outlier</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#klippe">geof:Klippe</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1002,8 +1042,8 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="escarpment">
-        <h3>escarpment<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="cuesta">
+        <h3>cuesta<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -1025,6 +1065,39 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="extendedcrustprovince">
+        <h3>extended crust province<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://earthquake.usgs.gov/data/crust/definitions.html">https://earthquake.usgs.gov/data/crust/definitions.html</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico.
+                </td>
+            </tr>
+            <tr>
+                <th>Usage Note</th>
+                <td>
+                    The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1322,6 +1395,10 @@ code {
     </div>
     <div class="entity class" id="geologicallysignificantsite">
         <h3>geologically significant site<sup title="class" class="sup-c">c</sup></h3>
+        <div class="figure">
+            <object type="image/svg+xml" data="images/hierarchy-geologicallysignificantsite.svg"></object>
+            <div class="caption"><strong>Figure 3:</strong> geologically significant site and related classes</div>
+        </div>
         <table>
             <tr>
                 <th>IRI</th>
@@ -1349,8 +1426,8 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geologicalheritagesite">geof:GeologicalHeritageSite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geopark">geof:Geopark</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1404,7 +1481,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1016/j.tecto.2012.02.022">https://doi.org/10.1016/j.tecto.2012.02.022</a>
+                    <a href="http://pid.geoscience.gov.au/dataset/ga/14909">http://pid.geoscience.gov.au/dataset/ga/14909</a>
                 </td>
             </tr>
             <tr>
@@ -1422,8 +1499,8 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#crustalelement">geof:CrustalElement</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#seismicprovince">geof:SeismicProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#crustalelement">geof:CrustalElement</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1618,7 +1695,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1726,7 +1803,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1813,9 +1890,9 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#lithodeme">geof:Lithodeme</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#suite">geof:Suite</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supersuite">geof:Supersuite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lithodeme">geof:Lithodeme</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#complex">geof:Complex</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1849,14 +1926,14 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#subgroup">geof:Subgroup</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#flow">geof:Flow</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#member">geof:Member</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#group">geof:Group</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#beds">geof:Beds</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supergroup">geof:Supergroup</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#formation">geof:Formation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#member">geof:Member</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#subgroup">geof:Subgroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#flow">geof:Flow</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#bed">geof:Bed</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supergroup">geof:Supergroup</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1898,7 +1975,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://pid.geoscience.gov.au/dataset/ga/70149">http://pid.geoscience.gov.au/dataset/ga/70149</a>
+                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
                 </td>
             </tr>
             <tr>
@@ -1925,7 +2002,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
+                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
                 </td>
             </tr>
             <tr>
@@ -2026,7 +2103,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2161,7 +2238,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2188,7 +2265,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2257,7 +2334,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
+                    <a href="https://doi.org/10.1306/05230505015">https://doi.org/10.1306/05230505015</a>
                 </td>
             </tr>
             <tr>
@@ -2284,7 +2361,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
@@ -2301,65 +2378,29 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="plate">
-        <h3>plate<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="presentcontinent">
+        <h3>present continent<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Plate</code></td>
-            </tr>
-            <tr>
-                <th>Source</th>
-                <td>
-                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
-                </td>
+                <td><code>http://linked.data.gov.au/def/geofeatures/PresentContinent</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. (e.g., Neuendorf et al., 2011; Allaby, 2013)
+                    A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)
+                </td>
+            </tr>
+            <tr>
+                <th>Usage Note</th>
+                <td>
+                    One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust.
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="province">
-        <h3>province<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Province</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Tectonic Provinces include cratons/shields (in the continental realm), orogens, sedimentary basins, and tectonised/metamorphosed and/or mineralised regions, as well as large igneous provinces (LIPs). (Definition created here)
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#tectonisedmetomorphosedprovince">geof:TectonisedMetomorphosedProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#sedimentarybasin">geof:SedimentaryBasin</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#igneousprovince">geof:IgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#largeigneousprovince">geof:LargeIgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shield">geof:Shield</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2440,15 +2481,15 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#superbasin">geof:Superbasin</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#subbasin">geof:Subbasin</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#trough">geof:Trough</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#superbasin">geof:Superbasin</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2490,7 +2531,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1080/11035897.2016.1178666">https://doi.org/10.1080/11035897.2016.1178666</a>
+                    <a href="https://doi.org/10.1127/0078-0421/2011/0011">https://doi.org/10.1127/0078-0421/2011/0011</a>
                 </td>
             </tr>
             <tr>
@@ -2556,7 +2597,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2598,7 +2639,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1080/11035897.2016.1178666">https://doi.org/10.1080/11035897.2016.1178666</a>
+                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
                 </td>
             </tr>
             <tr>
@@ -2616,8 +2657,8 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#stratigraphicevent">geof:StratigraphicEvent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#stratigraphicunit">geof:StratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#stratigraphicevent">geof:StratigraphicEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2632,7 +2673,7 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
+                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
                 </td>
             </tr>
             <tr>
@@ -2650,12 +2691,12 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#magnetostratigraphicunit">geof:MagnetostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithostratigraphicunit">geof:LithostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#pedostratigraphicunit">geof:PedostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#chronostratigraphicunit">geof:ChronostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#magnetostratigraphicunit">geof:MagnetostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#pedostratigraphicunit">geof:PedostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#biostratigraphicunit">geof:BiostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lithostratigraphicunit">geof:LithostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2688,36 +2729,36 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#embayment">geof:Embayment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#foldbelt">geof:FoldBelt</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#graben">geof:Graben</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#halfgraben">geof:HalfGraben</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultset">geof:FaultSet</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#arch">geof:Arch</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#escarpment">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultsystem">geof:FaultSystem</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#mylonitezone">geof:MyloniteZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#antiformalstack">geof:AntiformalStack</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#anticlinorium">geof:Anticlinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultscarp">geof:FaultScarp</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#cuesta">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#graben">geof:Graben</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultset">geof:FaultSet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultsystem">geof:FaultSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#anticline">geof:Anticline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#halfgraben">geof:HalfGraben</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#foldbelt">geof:FoldBelt</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultscarp">geof:FaultScarp</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#mylonitezone">geof:MyloniteZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#antiformalstack">geof:AntiformalStack</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#embayment">geof:Embayment</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2829,12 +2870,20 @@ code {
                 <th>Description</th>
                 <td>
                     A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)
+
+Due to mantle convection and heat anomalies that build up slowly below the mantle-insulating continental lithosphere (relative to the less insulating oceanic lithosphere), continents go through a prolonged cycle (Wilson Cycle) of formation into a supercontinent which subsequently breaks up into continents again. Continents after breakup are generally not the same as those before.
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
                     <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
                 </td>
             </tr>
         </table>
@@ -2861,7 +2910,14 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">only</span> <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
                 </td>
             </tr>
         </table>
@@ -3050,15 +3106,15 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
                     <a href="#nappe">geof:Nappe</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#terrane">geof:Terrane</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#nappecomplex">geof:NappeComplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#terrane">geof:Terrane</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3091,21 +3147,31 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="#tectonicplate">geof:TectonicPlate</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#extendedcrustprovince">geof:ExtendedCrustProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#igneousprovince">geof:IgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#largeigneousprovince">geof:LargeIgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#sedimentarybasin">geof:SedimentaryBasin</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shield">geof:Shield</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supercontinent">geof:Supercontinent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#plate">geof:Plate</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonisedmetomorphosedprovince">geof:TectonisedMetomorphosedProvince</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="techtonicfeature">
+    <div class="entity class" id="tectonicfeature">
         <h3>techtonic feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
@@ -3139,6 +3205,35 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity class" id="tectonicplate">
+        <h3>tectonic plate<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geofeatures/TectonicPlate</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://pubs.usgs.gov/gip/dynamic/tectonic.html">https://pubs.usgs.gov/gip/dynamic/tectonic.html</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. 
+
+Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="tectonisedmetomorphosedprovince">
         <h3>tectonised metomorphosed province<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -3155,7 +3250,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#province">geof:Province</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3290,13 +3385,13 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#georesourceaccumulation">geof:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lithodemicfeature">geof:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#techtonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#stratigraphicfeature">geof:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geophysicalfeature">geof:GeophysicalFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#stratigraphicfeature">geof:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3305,6 +3400,7 @@ code {
     <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#ADictionaryofGeologyandEarthSciences(FourthEdition)">A Dictionary of Geology and Earth Sciences (Fourth Edition)</a></li>
+        <li><a href="#Alistingofthegeologicprovincesandtheirsubcategories">A listing of the geologic provinces and their subcategories</a></li>
         <li><a href="#ACTGeoheritage">ACT Geoheritage</a></li>
         <li><a href="#AustralianCrustalElementsMap.AustralianGeologicalSurveyOrganisation">Australian Crustal Elements Map. Australian Geological Survey Organisation</a></li>
         <li><a href="#CrustalArchitectureandGeodynamicsofNorthQueensland,Australia:InsightsfromDeepSeismicReflectionProfiling">Crustal Architecture and Geodynamics of North Queensland, Australia: Insights from Deep Seismic Reflection Profiling</a></li>
@@ -3312,6 +3408,7 @@ code {
         <li><a href="#FieldGeologist'sGuidetoLithostratigraphicNomenclatureinAustralia">Field Geologist's Guide to Lithostratigraphic Nomenclature in Australia</a></li>
         <li><a href="#FromtheTransantarcticBasintotheFerrarLargeIgneousProvinceNewPalynostratigraphicAgeConstraintsforTriassicJurassicSedimentationandMagmatisminEastAntarctica">From the Transantarctic Basin to the Ferrar Large Igneous Province — New Palynostratigraphic Age Constraints for Triassic–Jurassic Sedimentation and Magmatism in East Antarctica</a></li>
         <li><a href="#GeologicFeaturesOntology">Geologic Features Ontology</a></li>
+        <li><a href="#Geologicprovince">Geologic province</a></li>
         <li><a href="#GeologicalSurveyofQueensland">Geological Survey of Queensland</a></li>
         <li><a href="#GeotourismandGeotrails">Geotourism and Geotrails</a></li>
         <li><a href="#GlossaryofGeology(FifthEditionRevised)">Glossary of Geology (Fifth Edition Revised)</a></li>
@@ -3326,9 +3423,10 @@ code {
         <li><a href="#SequenceStratigraphy:MethodologyandNomenclature">Sequence Stratigraphy: Methodology and Nomenclature</a></li>
         <li><a href="#ShapingaNation:AGeologyofAustralia">Shaping a Nation: A Geology of Australia</a></li>
         <li><a href="#SouthAustraliaSeismicandMTWorkshop2010:ExtendedAbstracts">South Australia Seismic and MT Workshop 2010: Extended Abstracts</a></li>
+        <li><a href="#StratigraphicGuide">Stratigraphic Guide</a></li>
         <li><a href="#TheGeologicTimeScale2012">The Geologic Time Scale 2012</a></li>
         <li><a href="#TheTasmanides:PhanerozoicTectonicEvolutionofEasternAustralia">The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia</a></li>
-        <li><a href="#ics-stratigraphicguide">ics-stratigraphicguide</a></li>
+        <li><a href="#Whatisatectonicplate?">What is a tectonic plate?</a></li>
     </ul>
     <div class="entity named_individual" id="ShapingaNation:AGeologyofAustralia">
         <h3>Shaping a Nation: A Geology of Australia<sup title="named individual" class="sup-ni">ni</sup></h3>
@@ -3372,7 +3470,7 @@ code {
 
 Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
 
-The details of the *profile* are described using the [W3C](https://www.w3.org)'s [Profiles Vocabulary](https://www.w3.org/TR/dx-prof/).
+The core of this ontology is a clacc hierarchy starting with "geologic province", as it is defined in SWEET, and exnteding down into multiple subclasses of it.
                 </td>
             </tr>
         </table>
@@ -3485,8 +3583,8 @@ The details of the *profile* are described using the [W3C](https://www.w3.org)'s
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="ics-stratigraphicguide">
-        <h3>ics-stratigraphicguide<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="StratigraphicGuide">
+        <h3>Stratigraphic Guide<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3725,6 +3823,48 @@ The details of the *profile* are described using the [W3C](https://www.w3.org)'s
             </dd>
         </table>
     </div>
+    <div class="entity named_individual" id="Alistingofthegeologicprovincesandtheirsubcategories">
+        <h3>A listing of the geologic provinces and their subcategories<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://earthquake.usgs.gov/data/crust/definitions.html
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
+            </dd>
+            <tr>
+                <th>Source</th>
+                <td>
+                    The Glossary of Geology (1980)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Geologicprovince">
+        <h3>Geologic province<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://en.wikipedia.org/wiki/Geologic_province
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
+            </dd>
+        </table>
+    </div>
     <div class="entity named_individual" id="JohnL.McKellar">
         <h3>John L. McKellar<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
@@ -3758,6 +3898,24 @@ The details of the *profile* are described using the [W3C](https://www.w3.org)'s
             <dt>Classes(s)</dt>
             <dd>
                 <a href="https://schema.org/Person">sdo:Person</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Whatisatectonicplate?">
+        <h3>What is a tectonic plate?<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://pubs.usgs.gov/gip/dynamic/tectonic.html
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
             </dd>
         </table>
     </div>
