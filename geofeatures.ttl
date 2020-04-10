@@ -39,14 +39,14 @@
 
 Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
 
-The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it."""@en ;
+The core of this ontology is a class hierarchy starting with \"geologic province\", as it is defined in SWEET, and extending down into multiple subclasses of it."""@en ;
   dcterms:modified "2020-03-10"^^xsd:date ;
   dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
   skos:prefLabel "Geologic Features Ontology"@en ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
-  owl:versionInfo "Most ontology content but not complte diagrammatic coverage." ;
+  owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
   prof:hasResource [
       dcterms:conformsTo <https://www.w3.org/TR/owl2-overview/> ;
       dcterms:format <https://w3id.org/mediatypes/text/turtle> ;
