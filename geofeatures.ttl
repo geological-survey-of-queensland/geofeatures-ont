@@ -77,6 +77,7 @@ geof:AncientContinent
   dcterms:source <http://linked.data.gov.au/def/geofeatures> ;
   rdfs:subClassOf geof:Continent ;
   skos:definition "A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)"@en ;
+  skos:notation "gfanc" ;
   skos:prefLabel "ancient continent"@en ;
 .
 geof:Anticline
@@ -678,6 +679,7 @@ geof:PresentContinent
   skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)"@en ;
   skos:prefLabel "present continent"@en ;
   skos:scopeNote "One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust."@en ;
+  skos:notation "gfprc"
 .
 geof:RangeZone
   a owl:Class ;
@@ -1036,6 +1038,7 @@ soreag:GeologicFeature
   skos:example "Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province"@en ;
   skos:prefLabel "geologic feature"@en ;
   skos:scopeNote "Geologic Features include sedimentary basins, stratigraphic units, non-stratigraphic (lithodemic) units, stratigraphic event features, provinces, tectonic and structural features, georesource accumulations, and geologically significant sites, among others"@en ;
+  skos:notation "gfeat"
 .
 <http://www.glossaryofgeology.org>
   a sohur:Publication ;

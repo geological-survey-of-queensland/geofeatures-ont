@@ -95,11 +95,9 @@ WHERE {
         skos:prefLabel ?pl ;
         skos:definition ?def .
 
-    OPTIONAL {
-        ?s rdfs:subClassOf ?s2 ;
-           dcterms:source ?source ;
-           skos:notation ?n .
-    }
+    OPTIONAL { ?s rdfs:subClassOf ?s2 . }
+    OPTIONAL { ?s dcterms:source ?source . }
+    OPTIONAL { ?s skos:notation ?n . }
 }
 """
 g_skos += g.query(q)
@@ -136,3 +134,7 @@ g_skos += g.query(q)
 
 with open("../geologic-feature-types.ttl", "w") as f:
     f.write(g_skos.serialize(format="turtle").decode("utf-8"))
+
+for s, p, o in g.triples((None, rdflib.namespace.RDF.type, rdflib.namespace.OWL.Class)):
+    if not (s, rdflib.namespace.SKOS.notation, None) in g:
+        print("missing: {}".format(s))

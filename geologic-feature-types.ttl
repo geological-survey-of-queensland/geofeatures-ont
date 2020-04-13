@@ -18,8 +18,11 @@ geof:AbundanceZone a skos:Concept ;
     skos:prefLabel "abundance zone"@en .
 
 geof:AncientContinent a skos:Concept ;
+    dcterms:source <http://linked.data.gov.au/def/geofeatures> ;
+    skos:broader geof:Continent ;
     skos:definition "A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfanc" ;
     skos:prefLabel "ancient continent"@en .
 
 geof:Anticline a skos:Concept ;
@@ -130,15 +133,6 @@ geof:ConcurrentRangeZone a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfcrz" ;
     skos:prefLabel "concurrent range zone"@en .
-
-geof:Continent a skos:Concept ;
-    dcterms:source <http://doi.org/10.22459/SN.08.2012>,
-        <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
-    skos:definition "One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfcnt" ;
-    skos:prefLabel "continent"@en .
 
 geof:Craton a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
@@ -278,8 +272,10 @@ geof:Formation a skos:Concept ;
     skos:prefLabel "formation"@en .
 
 geof:GeoResourceAccumulation a skos:Concept ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfgra" ;
     skos:prefLabel "georesource accumulation"@en .
 
 geof:GeologicalHeritageSite a skos:Concept ;
@@ -524,8 +520,10 @@ geof:Peneplain a skos:Concept ;
     skos:prefLabel "peneplain"@en .
 
 geof:PresentContinent a skos:Concept ;
+    skos:broader geof:Continent ;
     skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfprc" ;
     skos:prefLabel "present continent"@en .
 
 geof:RangeZone a skos:Concept ;
@@ -543,14 +541,6 @@ geof:Ridge a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfrdg" ;
     skos:prefLabel "ridge"@en .
-
-geof:SedimentaryBasin a skos:Concept ;
-    dcterms:source <https://doi.org/10.1007/978-3-662-03999-1> ;
-    skos:broader geof:TectonicEntity ;
-    skos:definition "A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfsdb" ;
-    skos:prefLabel "sedimentary basin"@en .
 
 geof:SeismicProvince a skos:Concept ;
     dcterms:source <http://pid.geoscience.gov.au/dataset/ga/70149>,
@@ -595,13 +585,17 @@ geof:StratigraphicEvent a skos:Concept ;
     skos:prefLabel "stratigraphic event"@en .
 
 geof:Subbasin a skos:Concept ;
+    skos:broader geof:SedimentaryBasin ;
     skos:definition "A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high. (Definition created here: Paul Blake, John McKellar)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfsbn" ;
     skos:prefLabel "subbasin"@en .
 
 geof:Subgroup a skos:Concept ;
+    skos:broader geof:LithostratigraphicUnit ;
     skos:definition "A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfsbg" ;
     skos:prefLabel "subgroup"@en .
 
 geof:Suite a skos:Concept ;
@@ -613,8 +607,10 @@ geof:Suite a skos:Concept ;
     skos:prefLabel "suite"@en .
 
 geof:Superbasin a skos:Concept ;
+    skos:broader geof:SedimentaryBasin ;
     skos:definition "A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfspb" ;
     skos:prefLabel "superbasin"@en .
 
 geof:Supercontinent a skos:Concept ;
@@ -697,8 +693,10 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
     skos:prefLabel "tectonic plate"@en .
 
 geof:TectonisedMetomorphosedProvince a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
     skos:definition "A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gftmp" ;
     skos:prefLabel "tectonised metomorphosed province"@en .
 
 geof:Terrane a skos:Concept ;
@@ -710,8 +708,10 @@ geof:Terrane a skos:Concept ;
     skos:prefLabel "terrane"@en .
 
 geof:Trough a skos:Concept ;
+    skos:broader geof:SedimentaryBasin ;
     skos:definition "A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings. (Definition created here)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gftrh" ;
     skos:prefLabel "trough"@en .
 
 geof:Unconformity a skos:Concept ;
@@ -757,6 +757,15 @@ geof:GeophysicalFeature a skos:Concept ;
     sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
     sdo:name "Nicholas J. Car" .
 
+geof:Continent a skos:Concept ;
+    dcterms:source <http://doi.org/10.22459/SN.08.2012>,
+        <http://www.glossaryofgeology.org> ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfcnt" ;
+    skos:prefLabel "continent"@en .
+
 geof:GeophysicalDomain a skos:Concept ;
     dcterms:source <http://pid.geoscience.gov.au/dataset/ga/14909>,
         <https://doi.org/10.1016/j.tecto.2012.02.022> ;
@@ -801,6 +810,14 @@ geof:MagnetostratigraphicUnit a skos:Concept ;
     skos:notation "gfmsu" ;
     skos:prefLabel "magnetostratigraphic unit"@en .
 
+geof:SedimentaryBasin a skos:Concept ;
+    dcterms:source <https://doi.org/10.1007/978-3-662-03999-1> ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfsdb" ;
+    skos:prefLabel "sedimentary basin"@en .
+
 geof:tectonostratigraphicEntity a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
     skos:broader geof:TectonicFeature ;
@@ -840,6 +857,14 @@ geof:StratigraphicUnit a skos:Concept ;
     skos:notation "gfstu" ;
     skos:prefLabel "stratigraphic unit"@en .
 
+geof:BiostratigraphicUnit a skos:Concept ;
+    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
+    skos:broader geof:StratigraphicUnit ;
+    skos:definition "Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria. (ICS, Online, December 2019)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfbst" ;
+    skos:prefLabel "biostratigraphic unit"@en .
+
 geof:LithostratigraphicUnit a skos:Concept ;
     dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
     skos:broader geof:StratigraphicUnit ;
@@ -851,15 +876,8 @@ geof:LithostratigraphicUnit a skos:Concept ;
 <http://sweetontology.net/realmGeol/GeologicFeature> a skos:Concept ;
     skos:definition "A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfeat" ;
     skos:prefLabel "geologic feature"@en .
-
-geof:BiostratigraphicUnit a skos:Concept ;
-    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    skos:broader geof:StratigraphicUnit ;
-    skos:definition "Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria. (ICS, Online, December 2019)"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfbst" ;
-    skos:prefLabel "biostratigraphic unit"@en .
 
 geof:TectonicEntity a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
@@ -902,5 +920,5 @@ geof:StructuralFeature a skos:Concept ;
     prof:hasResource [ ],
         [ ] ;
     prof:isProfileOf <http://sweetontology.net/realmGeol> ;
-    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
+    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geofeatures-ont> .
 
