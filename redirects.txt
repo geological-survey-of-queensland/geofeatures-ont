@@ -1,3 +1,5 @@
+RewriteEngine on
+
 # http://linked.data.gov.au/def/geofeatures
 #   Profiles: alt, skos, owl
 #   Media Types: HTML, RDF (turtle)
@@ -6,60 +8,70 @@
 RewriteCond %{QUERY_STRING} _profile=alt
 RewriteCond %{QUERY_STRING} _mediatype=text/turtle
 RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
-#        RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr
-#        RewriteCond %{QUERY_STRING} _mediatype=text/turtle
-#        RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
-#        RewriteCond %{HTTP:Accept-Profile} <http://www.w3.org/ns/dx/conneg/altr> [NC]
-#        RewriteCond %{QUERY_STRING} _mediatype=text/turtle
-#        RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr
+RewriteCond %{QUERY_STRING} _mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+RewriteCond %{HTTP:Accept-Profile} \<http://www.w3.org/ns/dx/conneg/altr\> [NC]
+RewriteCond %{QUERY_STRING} _mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
 RewriteCond %{QUERY_STRING} _profile=alt
 RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
-#        RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr
-#        RewriteCond %{HTTP:Accept} text/turtle [NC]
-#        RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
-#        RewriteCond %{HTTP:Accept-Profile} <http://www.w3.org/ns/dx/conneg/altr> [NC]
-#        RewriteCond %{HTTP:Accept} text/turtle [NC]
-#        RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+RewriteCond %{HTTP:Accept-Profile} \<http://www.w3.org/ns/dx/conneg/altr\> [NC]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+
+RewriteCond %{QUERY_STRING} _profile=alt [OR]
+RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr [OR]
+RewriteCond %{HTTP:Accept-Profile} \<http://www.w3.org/ns/dx/conneg/altr\> [NC]
+RewriteRule ^/def/geofeatures.ttl(.*)$                  https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.ttl? [R=302,L]
+
 
 # profile: Alt, mediatype: (default) HTML
 RewriteCond %{QUERY_STRING} _profile=alt [OR]
 RewriteCond %{QUERY_STRING} _profile=http://www.w3.org/ns/dx/conneg/altr [OR]
-RewriteCond %{QUERY_STRING} _profile=http%3A%2F%2Fwww.w3.org%2Fns%2Fdx%2Fconneg%2Faltr [OR]
-RewriteCond %{HTTP:Accept-Profile} <http://www.w3.org/ns/dx/conneg/altr> [NC]
-RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/profiles.html? [R=302,L]
+RewriteCond %{HTTP:Accept-Profile} \<http://www.w3.org/ns/dx/conneg/altr\> [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://github.com/geological-survey-of-queensland/geofeatures-ont/blob/master/profiles.md? [R=302,L]
 
 # profile: SKOS, meadiatype: turtle
 RewriteCond %{QUERY_STRING} _profile=skos
 RewriteCond %{QUERY_STRING} _mediatype=text/turtle
-RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_pro
-#        RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/
-#        RewriteCond %{QUERY_STRING} _mediatype=text/turtle
-#        RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_profile=skos\&_mediatype=text/turtle
-#        RewriteCond %{HTTP:Accept-Profile} <https://www.w3.org/TR/skos-reference/> [NC]
-#        RewriteCond %{QUERY_STRING} _mediatype=text/turtle
-#        RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/
+RewriteCond %{QUERY_STRING} _mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteCond %{HTTP:Accept-Profile} \<https://www.w3.org/TR/skos-reference/\> [NC]
+RewriteCond %{QUERY_STRING} _mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
 RewriteCond %{QUERY_STRING} _profile=skos
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_profile=skos\&_mediatype=text/turtle
-#        RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/
-#        RewriteCond %{HTTP:Accept} text/turtle [NC]
-#        RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_profile=skos\&_mediatype=text/turtle
-#        RewriteCond %{HTTP:Accept-Profile} <https://www.w3.org/TR/skos-reference/> [NC]
-#        RewriteCond %{HTTP:Accept} text/turtle [NC]
-#        RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
+RewriteCond %{HTTP:Accept-Profile} \<https://www.w3.org/TR/skos-reference/\> [NC]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle
+
+RewriteCond %{QUERY_STRING} _profile=skos [OR]
+RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/ [OR]
+RewriteCond %{HTTP:Accept-Profile} \<https://www.w3.org/TR/skos-reference/\> [NC]
+RewriteRule ^/def/geofeatures.ttl(.*)$                 https://vocabs.gsq.digital/vocabulary/geofeatures?_profile=skos\&_mediatype=text/turtle [R=302,L]
 
 # profile:SKOS, mediatype: (default) HTML
 RewriteCond %{QUERY_STRING} _profile=skos [OR]
 RewriteCond %{QUERY_STRING} _profile=https://www.w3.org/TR/skos-reference/ [OR]
-RewriteCond %{QUERY_STRING} _profile=https%3A%2F%2Fwww.w3.org%2FTR%2Fskos-reference%2F [NC,OR]
-RewriteCond %{HTTP:Accept-Profile} <https://www.w3.org/TR/skos-reference/> [NC]
-RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/sweetgeofeatures? [R=302,L]
+RewriteCond %{HTTP:Accept-Profile} \<https://www.w3.org/TR/skos-reference/\> [NC]
+RewriteRule ^/def/geofeatures(.*)$                      https://vocabs.gsq.digital/vocabulary/geofeatures? [R=302,L]
 
 # profile: OWL, mediatype: turtle
 RewriteCond %{QUERY_STRING} _mediatype=text/turtle [OR]
 RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/geofeatures.ttl? [R=302,L]
+RewriteRule ^/def/geofeatures.ttl(.*)$                  https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/geofeatures.ttl? [R=302,L]
 
 # profile: OWL, mediatype: (default) HTML
 RewriteRule ^/def/geofeatures(.*)$                      https://raw.githack.com/geological-survey-of-queensland/geofeatures-ont/master/geofeatures.html$1 [R=302,L]

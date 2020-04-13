@@ -8,7 +8,7 @@
 
 <http://linked.data.gov.au/def/geofeatures>
     a rdf:Resource ;
-    skos:prefLabel "Geologic Features Ontology" ;
+    skos:prefLabel "Geologic Features Ontology"@en ;
     altr:hasRepresentation _:rep-1 , _:rep-2 , _:rep-3 , _:rep-4 ;
     altr:hasDefaultRepresentation _:rep-1 .
 
