@@ -62,7 +62,7 @@ The core of this ontology is a class hierarchy starting with \"geologic province
       prof:hasRole <http://www.w3.org/ns/dx/prof/role/guidance> ;
     ] ;
   prof:isProfileOf <http://sweetontology.net/realmGeol> ;
-  sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> ;
+  sdo:codeRepository <https://github.com/geological-survey-of-queensland/geofeatures-ont> ;
 .
 geof:AbundanceZone
   a owl:Class ;
