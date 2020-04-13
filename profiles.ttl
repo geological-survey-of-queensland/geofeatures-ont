@@ -1,0 +1,55 @@
+@prefix altr: <http://www.w3.org/ns/dx/connegp/altr#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<http://linked.data.gov.au/def/geofeatures>
+    a rdf:Resource ;
+    skos:prefLabel "Geologic Features Ontology" ;
+    altr:hasRepresentation _:rep-1 , _:rep-2 , _:rep-3 , _:rep-4 ;
+    altr:hasDefaultRepresentation _:rep-1 .
+
+_:rep-1
+    a altr:Representation ;
+    dcterms:conformsTo <https://www.w3.org/TR/owl2-rdf-based-semantics/> ;  # OWL
+    dcterms:format "text/html" ;                                            # HTML
+    prof:token "owl" ;
+.
+
+_:rep-2
+    a altr:Representation ;
+    dcterms:conformsTo <https://www.w3.org/TR/owl2-rdf-based-semantics/> ;  # OWL
+    dcterms:format "text/turtle" ;                                          # RDF (Turtle)
+    prof:token "owl" ;
+.
+
+_:rep-3
+    a altr:Representation ;
+    dcterms:conformsTo <https://www.w3.org/TR/skos-reference/> ;            # SKOS
+    dcterms:format "text/html" ;                                            # HTML
+    prof:token "skos" ;
+.
+
+_:rep-4
+    a altr:Representation ;
+    dcterms:conformsTo <https://www.w3.org/TR/skos-reference/> ;            # SKOS    
+    dcterms:format "text/turtle" ;                                          # RDF (Turtle)
+    prof:token "skos" ;
+.
+
+<https://www.w3.org/TR/owl2-rdf-based-semantics/>
+    a prof:Profile ;
+    skos:prefLabel "Web Ontology Language (OWL)"@en ;
+    skos:definition "The OWL 2 Web Ontology Language, informally OWL 2, is an ontology language for the Semantic Web with formally defined meaning. OWL 2 ontologies provide classes, properties, individuals, and data values and are stored as Semantic Web documents."@en ;
+    prof:isProfileOf <http://www.w3.org/TR/rdf11-concepts/> ;               # RDF 1.1
+.
+
+<https://www.w3.org/TR/skos-reference/>
+    a prof:Profile ;
+    skos:prefLabel "Simple Knowledge Organization System (SKOS)"@en ;
+    skos:definition "A common data model for sharing and linking knowledge organization systems, such as thesauri, taxonomies, classification schemes and subject heading systems."@en ;
+    prof:isProfileOf <https://www.w3.org/TR/owl2-rdf-based-semantics/> ;    # OWL 2
+.  
