@@ -5,163 +5,179 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <style>
-#pylode {
-    position: fixed;
-    top: 80px;
-    left: -60px;
-    font-size: small;
-    transform: rotate(-90deg);
-    color: grey;
-}
-#pylode a {
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #005A9C;
-}
-#pylode a:hover {
-    color: #333;
-}
+        #pylode {
+            position: fixed;
+            top: 80px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
 
-.cardinality {
-    font-style: italic;
-    color: #aa00aa;
-}
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
 
-dt {
-    font-weight: bold;
-    padding: 5px 0 5px 0;
-}
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
 
-ul.hlist {
-    list-style-type: none;
-    border: 1px solid navy;
-    padding:5px;
-    background-color: #F4FFFF;
-}
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
 
-
-ul.hlist li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.entity {
-    border: 1px solid navy;
-    margin:5px 0 5px 0;
-    padding: 5px;
-}
-
-.entity th {
-    width: 150px;
-    vertical-align: top;
-}
-
-.entity th,
-.entity td {
-    padding-bottom: 20px;
-}
-
-.entity table th {
-    text-align: left;
-}
-
-section#overview img {
-    max-width: 1000px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-align: left
-}
-h1, h2, h3 {
-    color: #005A9C; background: white
-}
-h1 {
-    font: 170% sans-serif;
-    line-height: 110%;
-}
-h2 {
-    font: 140% sans-serif;
-    margin-top:40px;
-}
-h3 {
-    font: 120% sans-serif;
-    margin-top: 3px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid navy;
-}
-h4 { font: bold 100% sans-serif }
-h5 { font: italic 100% sans-serif }
-h6 { font: small-caps 100% sans-serif }
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
 
 
-body {
-    padding: 2em 70px 2em 70px;
-    margin: 0;
-    font-family: sans-serif;
-    color: black;
-    background: white;
-    background-position: top left;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: justify;
-}
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
 
-section {
-    max-width: 1500px;
-}
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
 
-.figure {
-    margin-bottom: 20px;
-}
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
 
-:link { color: #00C; background: transparent }
-:visited { color: #609; background: transparent }
-a:active { color: #C00; background: transparent }
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
 
-.sup-c,
-.sup-op,
-.sup-fp,
-.sup-dp,
-.sup-ap,
-.sup-p,
-.sup-ni {
-    cursor:help;
-    margin-left: 3px;
-}
+        .entity table th {
+            text-align: left;
+        }
 
-.sup-c {
-    color:orange;
-}
+        section#overview img {
+            max-width: 1000px;
+        }
 
-.sup-op {
-    color:navy;
-}
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
 
-.sup-fp {
-    color:lightskyblue;
-}
 
-.sup-dp {
-    color:green;
-}
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
 
-.sup-ap {
-    color:darkred;
-}
+        section {
+            max-width: 1500px;
+        }
 
-.sup-p {
-    color:black;
-}
+        .figure {
+            margin-bottom: 20px;
+        }
 
-.sup-ni {
-    color:brown;
-}
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
 
-code {
-    font-size: large;
-    color: darkred;
-}
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
 
     </style>
     
@@ -179,7 +195,7 @@ code {
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>\n<p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href=\"https://github.com/ESIPFed/sweet\">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>\n<p>The core of this ontology is a clacc hierarchy starting with \"geologic province\", as it is defined in SWEET, and exnteding down into multiple subclasses of it.</p>"
+        "@value": "<p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>\n<p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href=\"https://github.com/ESIPFed/sweet\">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>\n<p>The core of this ontology is a class hierarchy starting with \"geologic province\", as it is defined in SWEET, and extending down into multiple subclasses of it.</p>"
       }
     ],
     "https://schema.org/name": [
@@ -202,22 +218,77 @@ code {
         <dd><code>http://linked.data.gov.au/def/geofeatures</code></dd>
         <dt>Publisher(s)</dt>
         <dd>
-            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
+            
+    <a href="http://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
+    (<a href="mailto:geological_info@dnrme.qld.gov.au">geological_info@dnrme.qld.gov.au</a>)<br/>
         </dd>
         <dt>Creator(s)</dt>
         <dd>
-            <a href="mailto:nicholas.car@surroundaustralia.com">Nicholas J. Car</a> of <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
-            <a href="mailto:john.mckellar@dnrme.qld.gov.au">John L. McKellar</a> of <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
+            
+    <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+    <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
+    <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
+            
+    <a href="https://orcid.org/0000-0001-5489-9590">John L. McKellar</a>
+    <a href="https://orcid.org/0000-0001-5489-9590"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:john.mckellar@dnrme.qld.gov.au">john.mckellar@dnrme.qld.gov.au</a>) of 
+    <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
         </dd>
         <dt>Contributors(s)</dt>
         <dd>
-            <a href="mailto:derek.hoy@dnrme.qld.gov.au">Derek Hoy</a> of <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
-            <a href="mailto:geological_info@dnrme.qld.gov.au">Geological Survey of Queensland</a><br/>
+            
+    Derek Hoy
+    (<a href="mailto:derek.hoy@dnrme.qld.gov.au">derek.hoy@dnrme.qld.gov.au</a>) of 
+    <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
+            
+    <a href="http://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
+    (<a href="mailto:geological_info@dnrme.qld.gov.au">geological_info@dnrme.qld.gov.au</a>)<br/>
         </dd>
         <dt>Created</dt>
         <dd>2020-01-23</dd>
         <dt>Modified</dt>
         <dd>2020-03-10</dd>
+        <dt>Version Information</dt>
+        <dd>Most ontology content but not complete diagrammatic coverage.</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="http://linked.data.gov.au/def/geofeatures/0.5">geof:0.5</a></dd>
         <dt>Imports</dt>
         <dd>
             <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
@@ -226,13 +297,13 @@ code {
         <dt>Ontology RDF</dt>
         <dd><a href="geofeatures.ttl">RDF (turtle)</a></dd>
         <dt>Code Repository</dt>
-        <dd><a href="https://github.com/geological-survey-of-queensland/geologic-features-ont">https://github.com/geological-survey-of-queensland/geologic-features-ont</a></dd>
+        <dd><a href="https://github.com/geological-survey-of-queensland/geofeatures-ont">https://github.com/geological-survey-of-queensland/geofeatures-ont</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
         <p>This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.</p>
 <p>Elements of this ontology are designed to fit within other, broader, ontologies, in particular <a href="https://github.com/ESIPFed/sweet">Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies</a> ontologies. </p>
-<p>The core of this ontology is a clacc hierarchy starting with "geologic province", as it is defined in SWEET, and exnteding down into multiple subclasses of it.</p>
+<p>The core of this ontology is a class hierarchy starting with "geologic province", as it is defined in SWEET, and extending down into multiple subclasses of it.</p>
     </div>
 </section>
 <section id="toc">
@@ -277,12 +348,12 @@ code {
         <li><a href="#continent">continent</a></li>
         <li><a href="#craton">craton</a></li>
         <li><a href="#crustalelement">crustal element</a></li>
-        <li><a href="#cuesta">cuesta</a></li>
         <li><a href="#denudationalfeature">denudational feature</a></li>
         <li><a href="#depression">depression</a></li>
         <li><a href="#dome">dome</a></li>
         <li><a href="#duplex">duplex</a></li>
         <li><a href="#embayment">embayment</a></li>
+        <li><a href="#escarpment">escarpment</a></li>
         <li><a href="#extendedcrustprovince">extended crust province</a></li>
         <li><a href="#fault">fault</a></li>
         <li><a href="#faultscarp">fault scarp</a></li>
@@ -354,11 +425,11 @@ code {
         <li><a href="#synclinorium">synclinorium</a></li>
         <li><a href="#synform">synform</a></li>
         <li><a href="#taxonrangezone">taxon range zone</a></li>
-        <li><a href="#techtonicentity">techtonic entity</a></li>
-        <li><a href="#tectonicfeature">techtonic feature</a></li>
-        <li><a href="#techtonostratigraphicentity">techtonostratigraphic entity</a></li>
+        <li><a href="#tectonicentity">tectonic entity</a></li>
+        <li><a href="#tectonicfeature">tectonic feature</a></li>
         <li><a href="#tectonicplate">tectonic plate</a></li>
         <li><a href="#tectonisedmetomorphosedprovince">tectonised metomorphosed province</a></li>
+        <li><a href="#tectonostratigraphicentity">tectonostratigraphic entity</a></li>
         <li><a href="#terrane">terrane</a></li>
         <li><a href="#trough">trough</a></li>
         <li><a href="#unconformity">unconformity</a></li>
@@ -380,7 +451,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata in which the abundance of a particular taxon or specified group of taxa is significantly greater than is usual in the adjacent parts of the section. (ICS, Online, December 2019)
+                    <p>The body of strata in which the abundance of a particular taxon or specified group of taxa is significantly greater than is usual in the adjacent parts of the section. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -407,7 +478,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)
+                    <p>A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)</p>
                 </td>
             </tr>
             <tr>
@@ -434,7 +505,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A fold, generally convex upward, whose core contains the stratigraphically older rocks. (Neuendorf et al., 2011)
+                    <p>A fold, generally convex upward, whose core contains the stratigraphically older rocks. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -461,7 +532,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A composite anticlinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)
+                    <p>A composite anticlinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -488,7 +559,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Any convex-upward, concave downward fold. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically younger rock. (Neuendorf et al., 2011)
+                    <p>Any convex-upward, concave downward fold. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically younger rock. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -515,7 +586,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A duplex in which the trailing branch lines coincide and the leading branch lines either nearly coincide or lie vertically above each other. This results in a stack of horses and leads to a local culmination in thrust sheet. (Neuendorf et al. (2011) citing Boyer & Elliott (1982))
+                    <p>A duplex in which the trailing branch lines coincide and the leading branch lines either nearly coincide or lie vertically above each other. This results in a stack of horses and leads to a local culmination in thrust sheet. (Neuendorf et al. (2011) citing Boyer &amp; Elliott (1982))</p>
                 </td>
             </tr>
             <tr>
@@ -542,7 +613,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A broad, open anticlinal fold on a regional scale; it is usually a basement doming. (Neuendorf et al., 2011)
+                    <p>A broad, open anticlinal fold on a regional scale; it is usually a basement doming. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -569,7 +640,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata characterized by an assemblage of three or more fossil taxa that, taken together, distinguishes it in biostratigraphic character from adjacent strata. (ICS, Online, December 2019)
+                    <p>The body of strata characterized by an assemblage of three or more fossil taxa that, taken together, distinguishes it in biostratigraphic character from adjacent strata. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -596,7 +667,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata between two designated biostratigraphical horizons, which represent the boundaries of the unit and separate it from any preceding or succeeding biozone. These bounding horizons may be delimited individually by: the level of the first stratigraphical appearance (lowermost or oldest occurrence) of a specified taxon (species, genus) in any one stratigraphical section; or another specified biostratigraphical feature considered to approximate a time horizon. The zone is further delimited by specified taxa (preferably, at least three), which have first appearances within the zone. (de Jersey & McKellar, 2013; Bomfleur et al., 2014)
+                    <p>The body of strata between two designated biostratigraphical horizons, which represent the boundaries of the unit and separate it from any preceding or succeeding biozone. These bounding horizons may be delimited individually by: the level of the first stratigraphical appearance (lowermost or oldest occurrence) of a specified taxon (species, genus) in any one stratigraphical section; or another specified biostratigraphical feature considered to approximate a time horizon. The zone is further delimited by specified taxa (preferably, at least three), which have first appearances within the zone. (de Jersey &amp; McKellar, 2013; Bomfleur et al., 2014)</p>
                 </td>
             </tr>
             <tr>
@@ -617,13 +688,13 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
+                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    Bed (Beds) is the smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; ICS Online, January 2020). Customarily, only distinctive beds (commonly known as marker beds), which are particularly useful for stratigraphic purposes, like correlation or reference, are given proper names and considered formal lithostratigraphic units (Staines, 1985)
+                    <p>Bed (Beds) is the smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; ICS Online, January 2020). Customarily, only distinctive beds (commonly known as marker beds), which are particularly useful for stratigraphic purposes, like correlation or reference, are given proper names and considered formal lithostratigraphic units (Staines, 1985)</p>
                 </td>
             </tr>
             <tr>
@@ -650,7 +721,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    beds (uncapitalised): an informal unit applied to a sequence of poorly known strata until further work is carried out, as advised in the Field Geologist’s Guide to Lithostratigraphic Nomenclature in Australia (Staines, 1985), and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia.
+                    <p>beds (uncapitalised): an informal unit applied to a sequence of poorly known strata until further work is carried out, as advised in the Field Geologist’s Guide to Lithostratigraphic Nomenclature in Australia (Staines, 1985), and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia.</p>
                 </td>
             </tr>
             <tr>
@@ -677,7 +748,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria. (ICS, Online, December 2019)
+                    <p>Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -689,14 +760,14 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#associationzone">geof:AssociationZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#concurrentrangezone">geof:ConcurrentRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#taxonrangezone">geof:TaxonRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lineagezone">geof:LineageZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#assemblagezone">geof:AssemblageZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#abundancezone">geof:AbundanceZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#associationzone">geof:AssociationZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#intervalzone">geof:IntervalZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lineagezone">geof:LineageZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#concurrentrangezone">geof:ConcurrentRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#taxonrangezone">geof:TaxonRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -717,7 +788,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A block of the crust that has been displaced by movement on a fault. (Neuendorf et al., 2011)
+                    <p>A block of the crust that has been displaced by movement on a fault. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -738,13 +809,13 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824">https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824</a>
+                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units.
+                    <p>As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units.</p>
                 </td>
             </tr>
             <tr>
@@ -771,7 +842,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    In the classification of Kumpulainen (2016), a complex is a non-ranked lithodemic unit that corresponds to a suite or supersuite. Its usage applies to the organisation and classification of an assemblage of two or more genetically different rock types (i.e. igneous, metamorphic and/or sedimentary). For example, a tectonic amalgamation of igneous, sedimentary and metamorphic rocks may form a structural complex; and a volcanic complex may comprise extrusive, sedimentary and the related intrusive components.
+                    <p>In the classification of Kumpulainen (2016), a complex is a non-ranked lithodemic unit that corresponds to a suite or supersuite. Its usage applies to the organisation and classification of an assemblage of two or more genetically different rock types (i.e. igneous, metamorphic and/or sedimentary). For example, a tectonic amalgamation of igneous, sedimentary and metamorphic rocks may form a structural complex; and a volcanic complex may comprise extrusive, sedimentary and the related intrusive components.</p>
                 </td>
             </tr>
             <tr>
@@ -798,7 +869,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata including the overlapping parts of the range zones of two specified taxa. (ICS, Online, December 2019)
+                    <p>The body of strata including the overlapping parts of the range zones of two specified taxa. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -825,13 +896,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces.
+                    <p>One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces.</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -859,13 +930,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A craton is part of Earth's continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata. (Neuendorf et al., 2011)
+                    <p>A craton is part of Earth's continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -886,7 +957,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Crustal Elements are geophysical domains that represent upper-crustal segments showing some overall commonality of geophysical properties, primarily magnetic and gravity data sets. Crustal elements are not geologically defined features, such as basement provinces. The latter are defined on the basis of geological criteria and are three-dimensional bodies that have a definite thickness and represent time-rock units whose maximum and minimum ages are generally, but not always, well established. Some crustal elements could represent a set of overlying or overlapping basement provinces. (Shaw et al., 1996)
+                    <p>Crustal Elements are geophysical domains that represent upper-crustal segments showing some overall commonality of geophysical properties, primarily magnetic and gravity data sets. Crustal elements are not geologically defined features, such as basement provinces. The latter are defined on the basis of geological criteria and are three-dimensional bodies that have a definite thickness and represent time-rock units whose maximum and minimum ages are generally, but not always, well established. Some crustal elements could represent a set of overlying or overlapping basement provinces. (Shaw et al., 1996)</p>
                 </td>
             </tr>
             <tr>
@@ -913,7 +984,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Structures shaped by weathering and erosion; include inlier, outlier, window, klippe, unconformity and peneplain (Kumpulainen, 2017)
+                    <p>Structures shaped by weathering and erosion; include inlier, outlier, window, klippe, unconformity and peneplain (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -925,12 +996,12 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="#klippe">geof:Klippe</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#unconformity">geof:Unconformity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#window">geof:Window</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#peneplain">geof:Peneplain</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#inlier">geof:Inlier</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#outlier">geof:Outlier</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#klippe">geof:Klippe</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#inlier">geof:Inlier</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#peneplain">geof:Peneplain</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -951,7 +1022,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A structurally low area formed in the crust, with various mechanisms of formation. (Modified from Neuendorf et al., 2011)
+                    <p>A structurally low area formed in the crust, with various mechanisms of formation. (Modified from Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -978,7 +1049,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An uplift or anticlinal structure, either circular or elliptical in outline, in which the rocks dip gently away in all directions. A dome may be small or many kilometers in diameter. Domes include diapirs, volcanic domes, and cratonic uplifts. (Neuendorf et al., 2011)
+                    <p>An uplift or anticlinal structure, either circular or elliptical in outline, in which the rocks dip gently away in all directions. A dome may be small or many kilometers in diameter. Domes include diapirs, volcanic domes, and cratonic uplifts. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1005,7 +1076,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011) citing Dahlstrom (1970), Boyer (1976))
+                    <p>A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011) citing Dahlstrom (1970), Boyer (1976))</p>
                 </td>
             </tr>
             <tr>
@@ -1032,7 +1103,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A downwarped area containing stratified rocks, either sedimentary or volcanic or both, that extends into a terrain of other rocks. (Neuendorf et al., 2011)
+                    <p>A downwarped area containing stratified rocks, either sedimentary or volcanic or both, that extends into a terrain of other rocks. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1043,8 +1114,8 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="cuesta">
-        <h3>cuesta<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="escarpment">
+        <h3>escarpment<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -1059,7 +1130,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    (a) A long, more or less continuous cliff or relatively steep slope facing in one general direction, breaking the continuity of the land by separating two levels of gently sloping surfaces, and produced by erosion or faulting. The term is often used synonymously with scarp, although escarpment is more often applied to a cliff formed by differential erosion;  (b) A steep, abrupt face of rock, often presented by the highest strata in a line of cliffs, and generally marking the outcrop of a resistant layer occurring in a series of gently dipping softer strata, specifically the steep face of a cuesta; (c) A term used loosely in Great Britain as a synonym of cuesta. (Neuendorf et al., 2011)
+                    <p>(a) A long, more or less continuous cliff or relatively steep slope facing in one general direction, breaking the continuity of the land by separating two levels of gently sloping surfaces, and produced by erosion or faulting. The term is often used synonymously with scarp, although escarpment is more often applied to a cliff formed by differential erosion;  (b) A steep, abrupt face of rock, often presented by the highest strata in a line of cliffs, and generally marking the outcrop of a resistant layer occurring in a series of gently dipping softer strata, specifically the steep face of a cuesta; (c) A term used loosely in Great Britain as a synonym of cuesta. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1086,7 +1157,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico.
+                    <p>A province of thinned crust (&gt;50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico.</p>
                 </td>
             </tr>
             <tr>
@@ -1098,7 +1169,7 @@ code {
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1119,7 +1190,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A discrete surface or zone of discrete surfaces separating two rock masses across which one mass has slid past the other. (Neuendorf et al., 2011)
+                    <p>A discrete surface or zone of discrete surfaces separating two rock masses across which one mass has slid past the other. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1146,7 +1217,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    (a) A steep slope or cliff formed directly by movement along a fault and representing the exposed surface of the fault before modification by erosion and weathering. It is an initial landform; (b) A term used loosely in England for any scarp that is due to the presence of a fault, even though the relief may be erosional. (Neuendorf et al., 2011)
+                    <p>(a) A steep slope or cliff formed directly by movement along a fault and representing the exposed surface of the fault before modification by erosion and weathering. It is an initial landform; (b) A term used loosely in England for any scarp that is due to the presence of a fault, even though the relief may be erosional. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1173,7 +1244,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A group of faults that are parallel or nearly so, and that are related to a particular deformational episode. (Neuendorf et al., 2011)
+                    <p>A group of faults that are parallel or nearly so, and that are related to a particular deformational episode. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1200,7 +1271,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    (a) An array of interconnected and kinematically related faults; (b) Two or more geometrically related fault sets, e.g., a conjugate fault system. (Neuendorf et al., 2011)
+                    <p>(a) An array of interconnected and kinematically related faults; (b) Two or more geometrically related fault sets, e.g., a conjugate fault system. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1227,7 +1298,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A fault that is expressed as a zone of numerous small fractures, breccia, and/or fault gouge. A fault zone may be as wide as hundreds of meters. (Neuendorf et al., 2011)
+                    <p>A fault that is expressed as a zone of numerous small fractures, breccia, and/or fault gouge. A fault zone may be as wide as hundreds of meters. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1254,7 +1325,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A discrete extrusive volcanic body distinguishable by texture, composition, or other objective criteria. (ICS, Online, December 2019)
+                    <p>A discrete extrusive volcanic body distinguishable by texture, composition, or other objective criteria. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1281,7 +1352,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A curve or bend of a planar structure, such as rock strata, bedding planes, foliation or cleavage. A fold is usually the product of deformation, involving the compression of strata, but may include primary structures, as its definition is descriptive, not genetic. (Neuendorf et al., 2011)
+                    <p>A curve or bend of a planar structure, such as rock strata, bedding planes, foliation or cleavage. A fold is usually the product of deformation, involving the compression of strata, but may include primary structures, as its definition is descriptive, not genetic. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1308,7 +1379,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A region in Earth’s lithosphere characterised by compressional tectonics, involving folding (usually parellel) and thrusting (both causing crustal shortening). Fold belts generally develop in the foreland bordering an ogogenic zone that was initiated by convergence between two tectonic plates or major crustal blocks. (Modified from: Neuendorf et al., 2011; Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))
+                    <p>A region in Earth’s lithosphere characterised by compressional tectonics, involving folding (usually parellel) and thrusting (both causing crustal shortening). Fold belts generally develop in the foreland bordering an ogogenic zone that was initiated by convergence between two tectonic plates or major crustal blocks. (Modified from: Neuendorf et al., 2011; Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))</p>
                 </td>
             </tr>
             <tr>
@@ -1335,7 +1406,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The primary formal unit of lithostratigraphic classification. Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere should be divided completely on the basis of lithology. (ICS, Online, December 2019)
+                    <p>The primary formal unit of lithostratigraphic classification. Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere should be divided completely on the basis of lithology. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1356,7 +1427,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater.
+                    <p>Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater.</p>
                 </td>
             </tr>
             <tr>
@@ -1383,7 +1454,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Geological Heritage Sites (formerly known as Geological Monuments) display geological features that are so outstanding or so rare that they form part of our natural heritage, requiring recognition, description and protection, for education, research and their geotourism potential. They show evidence of the geological processes that have occurred on Earth, and of the plants and animals that have lived on it. These sites include landforms, rock outcrops, river banks, sea cliffs and shore platforms, and are, in part, represented in road cuttings, mines, quarries and other excavations. (Geological Society of Australia)
+                    <p>Geological Heritage Sites (formerly known as Geological Monuments) display geological features that are so outstanding or so rare that they form part of our natural heritage, requiring recognition, description and protection, for education, research and their geotourism potential. They show evidence of the geological processes that have occurred on Earth, and of the plants and animals that have lived on it. These sites include landforms, rock outcrops, river banks, sea cliffs and shore platforms, and are, in part, represented in road cuttings, mines, quarries and other excavations. (Geological Society of Australia)</p>
                 </td>
             </tr>
             <tr>
@@ -1396,10 +1467,6 @@ code {
     </div>
     <div class="entity class" id="geologicallysignificantsite">
         <h3>geologically significant site<sup title="class" class="sup-c">c</sup></h3>
-        <div class="figure">
-            <object type="image/svg+xml" data="images/hierarchy-geologicallysignificantsite.svg"></object>
-            <div class="caption"><strong>Figure 3:</strong> geologically significant site and related classes</div>
-        </div>
         <table>
             <tr>
                 <th>IRI</th>
@@ -1414,22 +1481,22 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Single, unified geographical areas where sites and landscapes of international geological significance are managed with a holistic concept of protection, education and sustainable development
+                    <p>Single, unified geographical areas where sites and landscapes of international geological significance are managed with a holistic concept of protection, education and sustainable development</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
                     <a href="#geologicalheritagesite">geof:GeologicalHeritageSite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geopark">geof:Geopark</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1450,7 +1517,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Geopark is a nationally protected area containing a number of geological heritage sites of particular importance, rarity or aesthetic appeal. These Earth heritage sites are part of an integrated concept of protection, education and sustainable development. (UNESCO; December 2019)
+                    <p>A Geopark is a nationally protected area containing a number of geological heritage sites of particular importance, rarity or aesthetic appeal. These Earth heritage sites are part of an integrated concept of protection, education and sustainable development. (UNESCO; December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1482,13 +1549,13 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://pid.geoscience.gov.au/dataset/ga/14909">http://pid.geoscience.gov.au/dataset/ga/14909</a>
+                    <a href="https://doi.org/10.1016/j.tecto.2012.02.022">https://doi.org/10.1016/j.tecto.2012.02.022</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete "volumes" of middle to lower crust. (Terminology based on usage of Shaw et al., 1996; Korsch et al., 2012)
+                    <p>Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete "volumes" of middle to lower crust. (Terminology based on usage of Shaw et al., 1996; Korsch et al., 2012)</p>
                 </td>
             </tr>
             <tr>
@@ -1522,7 +1589,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A feature associated with, and interpreted from, the physical properties and processes of the Earth, e.g., seismology. (Neuendorf et al., 2011)
+                    <p>A feature associated with, and interpreted from, the physical properties and processes of the Earth, e.g., seismology. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1555,7 +1622,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Geotrails aim to provide a tourism experience linking an area’s geology and landscape (i.e., its geological heritage features, including mining heritage) to its biodiversity and cultural history. (Geological Society of Australia)
+                    <p>Geotrails aim to provide a tourism experience linking an area’s geology and landscape (i.e., its geological heritage features, including mining heritage) to its biodiversity and cultural history. (Geological Society of Australia)</p>
                 </td>
             </tr>
             <tr>
@@ -1582,7 +1649,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley. (Neuendorf et al., 2011)
+                    <p>An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1609,7 +1676,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common. (ICS, Online, December 2019)
+                    <p>A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1636,7 +1703,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An elongate, asymmetric trough or basin bounded on one side by a normal fault. (Neuendorf et al., 2011)
+                    <p>An elongate, asymmetric trough or basin bounded on one side by a normal fault. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1663,7 +1730,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An elongate block that is bounded on both sides by normal faults that dip away from one another. It is a structural form and may or may not be expressed geomorphologically. (Neuendorf et al., 2011)
+                    <p>An elongate block that is bounded on both sides by normal faults that dip away from one another. It is a structural form and may or may not be expressed geomorphologically. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1690,13 +1757,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity. (Neuendorf et al., 2011)
+                    <p>A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1717,7 +1784,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An area or group of rocks surrounded by younger rocks, e.g., an eroded anticlinal crest. (Neuendorf et al., 2011)
+                    <p>An area or group of rocks surrounded by younger rocks, e.g., an eroded anticlinal crest. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1744,7 +1811,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of fossiliferous strata between two specified biohorizons. (ICS, Online, December 2019)
+                    <p>The body of fossiliferous strata between two specified biohorizons. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1771,7 +1838,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An isolated rock unit that is an erosional remnant or outlier of a nappe. Plural: klippen. (Neuendorf et al., 2011)
+                    <p>An isolated rock unit that is an erosional remnant or outlier of a nappe. Plural: klippen. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -1798,13 +1865,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than "normal" seafloor spreading (Coffin & Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong & Java Oceanic Plateaus), and North Atlantic volcanic passive margins. Abbrev: LIP. (Neuendorf et al., 2011)
+                    <p>A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than "normal" seafloor spreading (Coffin &amp; Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong &amp; Java Oceanic Plateaus), and North Atlantic volcanic passive margins. Abbrev: LIP. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1825,7 +1892,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata containing specimens representing a specific segment of an evolutionary lineage. (ICS, Online, December 2019)
+                    <p>The body of strata containing specimens representing a specific segment of an evolutionary lineage. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1852,7 +1919,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A lithodeme is the fundamental formal unit in lithodemic classification and corresponds to formation in lithostratigraphy. A lithodeme may consist of a single rock type, several rock types (if they form a lithologically coherent unit) or several rock types that have become tectonically intermingled to form a lithological unit. A lithodeme may contain informal sub-lithodemes, some of which may be named phase or zone (e.g., mineralized zone, pegmatitic zone). The term complex can be used for a non-ranked lithodemic unit. (Kumpulainen, 2017)
+                    <p>A lithodeme is the fundamental formal unit in lithodemic classification and corresponds to formation in lithostratigraphy. A lithodeme may consist of a single rock type, several rock types (if they form a lithologically coherent unit) or several rock types that have become tectonically intermingled to form a lithological unit. A lithodeme may contain informal sub-lithodemes, some of which may be named phase or zone (e.g., mineralized zone, pegmatitic zone). The term complex can be used for a non-ranked lithodemic unit. (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -1879,7 +1946,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Lithodemic Unit is a defined body of predominantly intrusive, highly metamorphosed, or intensely deformed rock that, because it is intrusive or has lost primary structure through metamorphism or tectonism, generally does not conform to the Law of Superposition. Expressions of age of lithodemic units (because they are non-stratigraphic) should be given in terms of the appropriate geochronologic (geological-time) unit, and thus not by chronstratigraphic (time-rock) terms. (North American Stratigraphic Code, 2005)
+                    <p>A Lithodemic Unit is a defined body of predominantly intrusive, highly metamorphosed, or intensely deformed rock that, because it is intrusive or has lost primary structure through metamorphism or tectonism, generally does not conform to the Law of Superposition. Expressions of age of lithodemic units (because they are non-stratigraphic) should be given in terms of the appropriate geochronologic (geological-time) unit, and thus not by chronstratigraphic (time-rock) terms. (North American Stratigraphic Code, 2005)</p>
                 </td>
             </tr>
             <tr>
@@ -1892,9 +1959,9 @@ code {
                 <th>Sub-classes</th>
                 <td>
                     <a href="#suite">geof:Suite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supersuite">geof:Supersuite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithodeme">geof:Lithodeme</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#complex">geof:Complex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lithodeme">geof:Lithodeme</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supersuite">geof:Supersuite</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1915,7 +1982,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations. Lithostratigraphic units are the basic units of geologic mapping. (ICS, Online, December 2019)
+                    <p>Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations. Lithostratigraphic units are the basic units of geologic mapping. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1927,14 +1994,14 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#group">geof:Group</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#beds">geof:Beds</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#formation">geof:Formation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#member">geof:Member</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#subgroup">geof:Subgroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#group">geof:Group</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#flow">geof:Flow</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#bed">geof:Bed</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supergroup">geof:Supergroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#formation">geof:Formation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#subgroup">geof:Subgroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#beds">geof:Beds</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1955,7 +2022,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Polarity Zones may be subdivided into Polarity Suzones. The corresponding interval of geological time during which the rocks in the Polarity Subzone were deposited is referred to as its associated Polarity Subchron. (Salvador, 2013; ICS, Online, December, 2019)
+                    <p>Polarity Zones may be subdivided into Polarity Suzones. The corresponding interval of geological time during which the rocks in the Polarity Subzone were deposited is referred to as its associated Polarity Subchron. (Salvador, 2013; ICS, Online, December, 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -1982,7 +2049,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Polarity Zones may be grouped into Polarity Superzones (Hyperzones in Russian literature). The corresponding interval of geological time during which the rocks in the Polarity Superzone were deposited is referred to as its associated Polarity Superchron. As an example of the latter, the mid-Carboniferous – Middle Permian Kiaman Superchron is the longest known period of predominantly reversed polarity, which was terminated by the Illawarra Geomagnetic Polarity Reversal near the base of the Capitanian. (Salvador, 2013; ICS, Online, December, 2019; Gradstein et al., 2012)
+                    <p>Polarity Zones may be grouped into Polarity Superzones (Hyperzones in Russian literature). The corresponding interval of geological time during which the rocks in the Polarity Superzone were deposited is referred to as its associated Polarity Superchron. As an example of the latter, the mid-Carboniferous – Middle Permian Kiaman Superchron is the longest known period of predominantly reversed polarity, which was terminated by the Illawarra Geomagnetic Polarity Reversal near the base of the Capitanian. (Salvador, 2013; ICS, Online, December, 2019; Gradstein et al., 2012)</p>
                 </td>
             </tr>
             <tr>
@@ -2009,7 +2076,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The basic formal unit in magnetostratigraphic polarity classification is the Magnetostratigraphic Polarity Zone (or Polarity Zone). The corresponding interval of geological time during which the rocks in the Polarity Zone were deposited is referred to as its associated Polarity Chron. (Salvador, 2013; ICS, Online, December, 2019)
+                    <p>The basic formal unit in magnetostratigraphic polarity classification is the Magnetostratigraphic Polarity Zone (or Polarity Zone). The corresponding interval of geological time during which the rocks in the Polarity Zone were deposited is referred to as its associated Polarity Chron. (Salvador, 2013; ICS, Online, December, 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2036,7 +2103,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Magnetostratigraphic Unit (Magnetozone) is a body of rocks unified by similar magnetic characteristics which allow it to be differentiated from adjacent rock bodies.  The term is collectively applied to the different kinds of stratigraphic units that are identified by their measurable magnetic properties. (Salvador, 2013; ICS, Online, December, 2019)
+                    <p>A Magnetostratigraphic Unit (Magnetozone) is a body of rocks unified by similar magnetic characteristics which allow it to be differentiated from adjacent rock bodies.  The term is collectively applied to the different kinds of stratigraphic units that are identified by their measurable magnetic properties. (Salvador, 2013; ICS, Online, December, 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2049,8 +2116,8 @@ code {
                 <th>Sub-classes</th>
                 <td>
                     <a href="#magnetostratigraphicpolaritysubzone">geof:MagnetostratigraphicPolaritySubzone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#magnetostratigraphicpolarityzone">geof:MagnetostratigraphicPolarityZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#magnetostratigraphicpolaritysuperzone">geof:MagnetostratigraphicPolaritySuperzone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#magnetostratigraphicpolarityzone">geof:MagnetostratigraphicPolarityZone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2071,7 +2138,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The formal lithostratigraphic unit next in rank below a formation. (ICS, Online, December 2019)
+                    <p>The formal lithostratigraphic unit next in rank below a formation. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2098,13 +2165,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)
+                    <p>An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2125,7 +2192,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles. (Allaby, 2013)
+                    <p>A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles. (Allaby, 2013)</p>
                 </td>
             </tr>
             <tr>
@@ -2146,13 +2213,13 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
+                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    Usually found in narrow, planar zones of localised ductile deformation, although kilometre-scale zones exist. Mylonites form in shear zones by mechanical grinding, crushing and recrystallization of rock to produce a metamorphic rock that has foliation and is much finer grained than its precursor. (Modified from: Neuendorf et al., 2011; Allaby, 2013)
+                    <p>Usually found in narrow, planar zones of localised ductile deformation, although kilometre-scale zones exist. Mylonites form in shear zones by mechanical grinding, crushing and recrystallization of rock to produce a metamorphic rock that has foliation and is much finer grained than its precursor. (Modified from: Neuendorf et al., 2011; Allaby, 2013)</p>
                 </td>
             </tr>
             <tr>
@@ -2173,19 +2240,19 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After Neuendorf et al., 2011; Allaby, 2013)
+                    <p>A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After Neuendorf et al., 2011; Allaby, 2013)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonostratigraphicentity">geof:TechtonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonostratigraphicentity">geof:tectonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2206,13 +2273,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)
+                    <p>A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonostratigraphicentity">geof:TechtonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonostratigraphicentity">geof:tectonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2233,13 +2300,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks. (Alt obsolete term: geosyncline). (Modified from Neuendorf et al., 2011; Hoy, pers. comm.)
+                    <p>An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks. (Alt obsolete term: geosyncline). (Modified from Neuendorf et al., 2011; Hoy, pers. comm.)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2260,13 +2327,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)
+                    <p>A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2287,7 +2354,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    An area or group of rocks surrounded by older rocks. (Neuendorf et al., 2011)
+                    <p>An area or group of rocks surrounded by older rocks. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -2314,7 +2381,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A zone where folds in their axial planes are inclined so that the fold limbs dip in the same direction, although not necessarily by the same amount. For each fold, one limb is thus ‘overturned'. (Allaby, 2008)
+                    <p>A zone where folds in their axial planes are inclined so that the fold limbs dip in the same direction, although not necessarily by the same amount. For each fold, one limb is thus ‘overturned'. (Allaby, 2008)</p>
                 </td>
             </tr>
             <tr>
@@ -2335,13 +2402,13 @@ code {
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1306/05230505015">https://doi.org/10.1306/05230505015</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    A buried, traceable, three-dimensional body of rock (or sediment) that consists of one or more differentiated pedologic horizons developed in, and overlain by, one or more formally defined lithostratigraphic or allostratigraphic units. (NACSN, 2005; Neuendorf et al., 2011)
+                    <p>A buried, traceable, three-dimensional body of rock (or sediment) that consists of one or more differentiated pedologic horizons developed in, and overlain by, one or more formally defined lithostratigraphic or allostratigraphic units. (NACSN, 2005; Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -2368,7 +2435,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A low, nearly featureless, gently undulating land surface of considerable area, which has been produced by the processes of prolonged subaerial erosion almost to base level; it is the end product of a cycle of erosion. (Davis, 1889; Neuendorf et al., 2011; Allaby, 2013)
+                    <p>A low, nearly featureless, gently undulating land surface of considerable area, which has been produced by the processes of prolonged subaerial erosion almost to base level; it is the end product of a cycle of erosion. (Davis, 1889; Neuendorf et al., 2011; Allaby, 2013)</p>
                 </td>
             </tr>
             <tr>
@@ -2389,7 +2456,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)
+                    <p>A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke &amp; Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)</p>
                 </td>
             </tr>
             <tr>
@@ -2422,7 +2489,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata representing the known stratigraphic and geographic range of occurrence of a particular taxon or combination of two taxa of any rank. There are two principal types: taxon-range zones and concurrent-range zones. (ICS, Online, December 2019)
+                    <p>The body of strata representing the known stratigraphic and geographic range of occurrence of a particular taxon or combination of two taxa of any rank. There are two principal types: taxon-range zones and concurrent-range zones. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2449,7 +2516,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest for some distance. The sides of the ridge slope away from narrow top on either side. The lines along the crest formed by the highest points, with the terrain dropping down on either sides, are called the ridgelines. Ridges are usually termed hills or mountains as well, depending on size. (Adapted from Wikipedia)
+                    <p>A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest for some distance. The sides of the ridge slope away from narrow top on either side. The lines along the crest formed by the highest points, with the terrain dropping down on either sides, are called the ridgelines. Ridges are usually termed hills or mountains as well, depending on size. (Adapted from Wikipedia)</p>
                 </td>
             </tr>
             <tr>
@@ -2476,21 +2543,21 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)
+                    <p>A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
                     <a href="#subbasin">geof:Subbasin</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#trough">geof:Trough</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#superbasin">geof:Superbasin</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#trough">geof:Trough</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2511,7 +2578,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Representative of a discrete "volume" of middle to lower crust which cannot be traced to the surface, and whose crustal reflectivity is different to that of laterally or vertically adjoining provinces (in differing lithology, geological history, and/or structural architecture). A Seismic Province it is a Geophysical Domain. In North Queensland, the Numil and Abingdon Seismic Provinces are two lower crustal sectors that have been interpreted to represent microcontinents that accreted to the eastern fringe of the North Australian Craton prior to the late Paleoproterozoic (Korsch et al., 2010, Korsch, 2012)
+                    <p>Representative of a discrete "volume" of middle to lower crust which cannot be traced to the surface, and whose crustal reflectivity is different to that of laterally or vertically adjoining provinces (in differing lithology, geological history, and/or structural architecture). A Seismic Province it is a Geophysical Domain. In North Queensland, the Numil and Abingdon Seismic Provinces are two lower crustal sectors that have been interpreted to represent microcontinents that accreted to the eastern fringe of the North Australian Craton prior to the late Paleoproterozoic (Korsch et al., 2010, Korsch, 2012)</p>
                 </td>
             </tr>
             <tr>
@@ -2538,7 +2605,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Sequence Stratigraphic Unit is an extensive, depositional unit that may be bounded by subaerial unconformities and their correlative conformities, by transgressive surfaces or by surfaces of maximum marine flooding. It documents changes in relative sea level, which may have been the result of eustasy, regional or local tectonic movements, compaction, isostasy or the combination of two or more of these factors. (Kumpulainen, 2017; Catuneanu et al., 2011)
+                    <p>A Sequence Stratigraphic Unit is an extensive, depositional unit that may be bounded by subaerial unconformities and their correlative conformities, by transgressive surfaces or by surfaces of maximum marine flooding. It documents changes in relative sea level, which may have been the result of eustasy, regional or local tectonic movements, compaction, isostasy or the combination of two or more of these factors. (Kumpulainen, 2017; Catuneanu et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -2565,7 +2632,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A region, narrow compared to its length, within which rocks have undergone intense deformation: viz. brecciation. There are two end-members: brittle shear zones (faults), marked by a surface of rupture, which are a common feature of higher crustal levels; and ductile shear zones in which deformation is continuous and characterized by high ductile strain due to the rocks having formed under high temperatures and pressures at deeper crustal levels. Both brittle and ductile shear zones may occur as subparallel or conjugate sets. (after Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))
+                    <p>A region, narrow compared to its length, within which rocks have undergone intense deformation: viz. brecciation. There are two end-members: brittle shear zones (faults), marked by a surface of rupture, which are a common feature of higher crustal levels; and ductile shear zones in which deformation is continuous and characterized by high ductile strain due to the rocks having formed under high temperatures and pressures at deeper crustal levels. Both brittle and ductile shear zones may occur as subparallel or conjugate sets. (after Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))</p>
                 </td>
             </tr>
             <tr>
@@ -2592,13 +2659,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian. (Neuendorf et al., 2011)
+                    <p>A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2619,7 +2686,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Stratigraphic Events reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (Kumpulainen, 2017)
+                    <p>Stratigraphic Events reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -2646,7 +2713,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016)
+                    <p>Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016)</p>
                 </td>
             </tr>
             <tr>
@@ -2680,7 +2747,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Stratigraphic Units are units of rock and/or sediment that conform to the Law of Superposition (e.g., lithostratigraphic units, biostratigraphic units, chronostratigraphic units). (Murphy & Salvador, 2000; ICS, Online, December, 2019)
+                    <p>Stratigraphic Units are units of rock and/or sediment that conform to the Law of Superposition (e.g., lithostratigraphic units, biostratigraphic units, chronostratigraphic units). (Murphy &amp; Salvador, 2000; ICS, Online, December, 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2692,12 +2759,12 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#chronostratigraphicunit">geof:ChronostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lithostratigraphicunit">geof:LithostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#magnetostratigraphicunit">geof:MagnetostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#pedostratigraphicunit">geof:PedostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#biostratigraphicunit">geof:BiostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithostratigraphicunit">geof:LithostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2718,7 +2785,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A feature produced by deformation or displacement of rocks, such as a fold or fault. (Neuendorf et al., 2011)
+                    <p>A feature produced by deformation or displacement of rocks, such as a fold or fault. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -2730,35 +2797,35 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#arch">geof:Arch</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#anticlinorium">geof:Anticlinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#cuesta">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#anticline">geof:Anticline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#graben">geof:Graben</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#faultset">geof:FaultSet</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultsystem">geof:FaultSystem</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#anticline">geof:Anticline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#halfgraben">geof:HalfGraben</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#foldbelt">geof:FoldBelt</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultscarp">geof:FaultScarp</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#mylonitezone">geof:MyloniteZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultsystem">geof:FaultSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultscarp">geof:FaultScarp</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#foldbelt">geof:FoldBelt</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#anticlinorium">geof:Anticlinorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#antiformalstack">geof:AntiformalStack</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#escarpment">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#arch">geof:Arch</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#embayment">geof:Embayment</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -2774,7 +2841,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high. (Definition created here: Paul Blake, John McKellar)
+                    <p>A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high. (Definition created here: Paul Blake, John McKellar)</p>
                 </td>
             </tr>
             <tr>
@@ -2795,7 +2862,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)
+                    <p>A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)</p>
                 </td>
             </tr>
             <tr>
@@ -2822,7 +2889,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Suite consists of two or more lithodemes that are genetically associated and have a common geological history. The individual lithodemes need not have identical (crystallization or depositional) ages but they should have similar ages and belong, for example, to the same phase of an orogeny. Also, they must be of the same lithological class, either intrusive or metamorphic. Two or more suites may form a Supersuite. (Kumpulainen, 2017)
+                    <p>A Suite consists of two or more lithodemes that are genetically associated and have a common geological history. The individual lithodemes need not have identical (crystallization or depositional) ages but they should have similar ages and belong, for example, to the same phase of an orogeny. Also, they must be of the same lithological class, either intrusive or metamorphic. Two or more suites may form a Supersuite. (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -2843,7 +2910,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)
+                    <p>A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)</p>
                 </td>
             </tr>
             <tr>
@@ -2870,21 +2937,20 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)
-
-Due to mantle convection and heat anomalies that build up slowly below the mantle-insulating continental lithosphere (relative to the less insulating oceanic lithosphere), continents go through a prolonged cycle (Wilson Cycle) of formation into a supercontinent which subsequently breaks up into continents again. Continents after breakup are generally not the same as those before.
+                    <p>A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)</p>
+<p>Due to mantle convection and heat anomalies that build up slowly below the mantle-insulating continental lithosphere (relative to the less insulating oceanic lithosphere), continents go through a prolonged cycle (Wilson Cycle) of formation into a supercontinent which subsequently breaks up into continents again. Continents after breakup are generally not the same as those before.</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">only</span> <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2905,13 +2971,13 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    A large, ancestral (largely Archean) landmass consisting of two or more cratons. (Blewett, 2012)
+                    <p>A large, ancestral (largely Archean) landmass consisting of two or more cratons. (Blewett, 2012)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2939,7 +3005,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    A lithostratigraphic Supergroup may contain several associated groups or associated groups and formations, all with significant lithologic properties in common. (ICS, Online, December 2019)
+                    <p>A lithostratigraphic Supergroup may contain several associated groups or associated groups and formations, all with significant lithologic properties in common. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -2966,7 +3032,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    A supersuite is composed of two or more suites that are genetically associated, i.e., belong to the same class, and have at least partly a common geological history, e.g., the same orogenic phase. A supersuite is defined according to its lithodemic members and may be named after a type area, its geographical distribution and/or its lithological properties. (Kumpulainen, 2017)
+                    <p>A supersuite is composed of two or more suites that are genetically associated, i.e., belong to the same class, and have at least partly a common geological history, e.g., the same orogenic phase. A supersuite is defined according to its lithodemic members and may be named after a type area, its geographical distribution and/or its lithological properties. (Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -2993,7 +3059,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    A fold of which the core contains the stratigraphically younger rocks; it is generally concave upward. (Neuendorf et al., 2011)
+                    <p>A fold of which the core contains the stratigraphically younger rocks; it is generally concave upward. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -3020,7 +3086,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    A composite synclinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)
+                    <p>A composite synclinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -3047,7 +3113,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    Any fold whose limbs close at the bottom. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically older rock. (Neuendorf et al., 2011)
+                    <p>Any fold whose limbs close at the bottom. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically older rock. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
@@ -3074,7 +3140,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    The body of strata representing the known range of stratigraphic and geographic occurrence of specimens of a particular taxon. (ICS, Online, December 2019)
+                    <p>The body of strata representing the known range of stratigraphic and geographic occurrence of specimens of a particular taxon. (ICS, Online, December 2019)</p>
                 </td>
             </tr>
             <tr>
@@ -3085,43 +3151,8 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             </tr>
         </table>
     </div>
-    <div class="entity class" id="techtonostratigraphicentity">
-        <h3>techtonostratigraphic entity<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TechtonostratigraphicEntity</code></td>
-            </tr>
-            <tr>
-                <th>Source</th>
-                <td>
-                    <a href="https://doi.org/10.1080/11035897.2016.1178666">https://doi.org/10.1080/11035897.2016.1178666</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Tectonostratigraphic Entities/Units, separately distinguished from Tectonic Entities/Units (following Kumpulainen, 2017), encompass generally flat-lying, scale-independent, tectonic units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes, as well as accreted terranes
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#nappe">geof:Nappe</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#nappecomplex">geof:NappeComplex</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#terrane">geof:Terrane</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="techtonicentity">
-        <h3>techtonic entity<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="tectonicentity">
+        <h3>tectonic entity<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3136,7 +3167,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    Tectonic Entitities include the lithosphere, continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins. (Modified from Kumpulainen, 2017)
+                    <p>Tectonic Entitities include the lithosphere, continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins. (Modified from Kumpulainen, 2017)</p>
                 </td>
             </tr>
             <tr>
@@ -3155,25 +3186,25 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
                 <th>Sub-classes</th>
                 <td>
                     <a href="#tectonicplate">geof:TectonicPlate</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#extendedcrustprovince">geof:ExtendedCrustProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#igneousprovince">geof:IgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#extendedcrustprovince">geof:ExtendedCrustProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#largeigneousprovince">geof:LargeIgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#sedimentarybasin">geof:SedimentaryBasin</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#shield">geof:Shield</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supercontinent">geof:Supercontinent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#tectonisedmetomorphosedprovince">geof:TectonisedMetomorphosedProvince</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
     <div class="entity class" id="tectonicfeature">
-        <h3>techtonic feature<sup title="class" class="sup-c">c</sup></h3>
+        <h3>tectonic feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3188,7 +3219,7 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    Tectonic Features include Tectonic Entities and Tectonostratigraphic Entities. The former encompass Geological Provinces (e.g., cratons/shields, orogens, sedimentary basins, igneous/petrographic provinces, etc.), and the latter, tectonostratigraphic units, such as nappes and terranes. (Modified from Kumpulainen, 2017). Collectively, they constitute continents, past and present, and, when previously formed, supercontinents
+                    <p>Tectonic Features include Tectonic Entities and Tectonostratigraphic Entities. The former encompass Geological Provinces (e.g., cratons/shields, orogens, sedimentary basins, igneous/petrographic provinces, etc.), and the latter, tectonostratigraphic units, such as nappes and terranes. (Modified from Kumpulainen, 2017). Collectively, they constitute continents, past and present, and, when previously formed, supercontinents</p>
                 </td>
             </tr>
             <tr>
@@ -3200,8 +3231,8 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#techtonostratigraphicentity">geof:TechtonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonostratigraphicentity">geof:tectonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3222,15 +3253,14 @@ Due to mantle convection and heat anomalies that build up slowly below the mantl
             <tr>
                 <th>Description</th>
                 <td>
-                    The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. 
-
-Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999).
+                    <p>The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. </p>
+<p>Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999).</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3245,13 +3275,13 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Description</th>
                 <td>
-                    A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)
+                    <p>A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3272,13 +3302,13 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Description</th>
                 <td>
-                    A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion. (After  Neuendorf et al., 2011)
+                    <p>A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion. (After  Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="#techtonostratigraphicentity">geof:TechtonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonostratigraphicentity">geof:tectonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3293,7 +3323,7 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Description</th>
                 <td>
-                    A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings. (Definition created here)
+                    <p>A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings. (Definition created here)</p>
                 </td>
             </tr>
             <tr>
@@ -3314,13 +3344,13 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    The surface of contact between rock strata that represents a lack of continuity in deposition, encompassing a period of nondeposition or weathering/erosion prior to the deposition of younger rocks, sometimes, in the case of sedimentary rocks, marked by the absence of conformity between the dip and strike of underlying and overlying strata. (Modified from Neuendorf et al., 2011; Allaby, 2013)
+                    <p>The surface of contact between rock strata that represents a lack of continuity in deposition, encompassing a period of nondeposition or weathering/erosion prior to the deposition of younger rocks, sometimes, in the case of sedimentary rocks, marked by the absence of conformity between the dip and strike of underlying and overlying strata. (Modified from Neuendorf et al., 2011; Allaby, 2013)</p>
                 </td>
             </tr>
             <tr>
@@ -3347,13 +3377,48 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Description</th>
                 <td>
-                    An eroded area of a thrust sheet or nappe that displays the rocks beneath the thrust sheet. (Neuendorf et al., 2011)
+                    <p>An eroded area of a thrust sheet or nappe that displays the rocks beneath the thrust sheet. (Neuendorf et al., 2011)</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
                     <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="tectonostratigraphicentity">
+        <h3>tectonostratigraphic entity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://doi.org/10.1080/11035897.2016.1178666">https://doi.org/10.1080/11035897.2016.1178666</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Tectonostratigraphic Entities/Units, separately distinguished from Tectonic Entities/Units (following Kumpulainen, 2017), encompass generally flat-lying, scale-independent, tectonic units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes, as well as accreted terranes</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#nappe">geof:Nappe</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#nappecomplex">geof:NappeComplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#terrane">geof:Terrane</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3368,7 +3433,7 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Description</th>
                 <td>
-                    A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes
+                    <p>A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes</p>
                 </td>
             </tr>
             <tr>
@@ -3386,51 +3451,51 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#georesourceaccumulation">geof:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithodemicfeature">geof:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geophysicalfeature">geof:GeophysicalFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#stratigraphicfeature">geof:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geophysicalfeature">geof:GeophysicalFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lithodemicfeature">geof:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#georesourceaccumulation">geof:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-</section><section id="namedindividuals">
+</section>
+
+<section id="namedindividuals">
     <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#ADictionaryofGeologyandEarthSciences(FourthEdition)">A Dictionary of Geology and Earth Sciences (Fourth Edition)</a></li>
-        <li><a href="#Alistingofthegeologicprovincesandtheirsubcategories">A listing of the geologic provinces and their subcategories</a></li>
-        <li><a href="#ACTGeoheritage">ACT Geoheritage</a></li>
-        <li><a href="#AustralianCrustalElementsMap.AustralianGeologicalSurveyOrganisation">Australian Crustal Elements Map. Australian Geological Survey Organisation</a></li>
-        <li><a href="#CrustalArchitectureandGeodynamicsofNorthQueensland,Australia:InsightsfromDeepSeismicReflectionProfiling">Crustal Architecture and Geodynamics of North Queensland, Australia: Insights from Deep Seismic Reflection Profiling</a></li>
-        <li><a href="#DerekHoy">Derek Hoy</a></li>
-        <li><a href="#FieldGeologist'sGuidetoLithostratigraphicNomenclatureinAustralia">Field Geologist's Guide to Lithostratigraphic Nomenclature in Australia</a></li>
-        <li><a href="#FromtheTransantarcticBasintotheFerrarLargeIgneousProvinceNewPalynostratigraphicAgeConstraintsforTriassicJurassicSedimentationandMagmatisminEastAntarctica">From the Transantarctic Basin to the Ferrar Large Igneous Province — New Palynostratigraphic Age Constraints for Triassic–Jurassic Sedimentation and Magmatism in East Antarctica</a></li>
-        <li><a href="#GeologicFeaturesOntology">Geologic Features Ontology</a></li>
-        <li><a href="#Geologicprovince">Geologic province</a></li>
-        <li><a href="#GeologicalSurveyofQueensland">Geological Survey of Queensland</a></li>
-        <li><a href="#GeotourismandGeotrails">Geotourism and Geotrails</a></li>
-        <li><a href="#GlossaryofGeology(FifthEditionRevised)">Glossary of Geology (Fifth Edition Revised)</a></li>
-        <li><a href="#GuideforgeologicalnomenclatureinSweden">Guide for geological nomenclature in Sweden</a></li>
-        <li><a href="#Howtousestratigraphicterminologyinpapers">How to use stratigraphic terminology in papers</a></li>
-        <li><a href="#InternationalStratigraphicGuide">International Stratigraphic Guide</a></li>
-        <li><a href="#JohnL.McKellar">John L. McKellar</a></li>
-        <li><a href="#NicholasJ.Car">Nicholas J. Car</a></li>
-        <li><a href="#NorthAmericanCommissiononStratigraphicNomenclature">North American Commission on Stratigraphic Nomenclature</a></li>
-        <li><a href="#PalynologyoftheTriassicJurassictransitioninsoutheasternQueensland,Australia,andcorrelationwithNewZealand">Palynology of the Triassic–Jurassic transition in southeastern Queensland, Australia, and correlation with New Zealand</a></li>
-        <li><a href="#PrinciplesofSedimentaryBasinAnalysis.Third,UpdatedandEnlargedEdition">Principles of Sedimentary Basin Analysis. Third, Updated and Enlarged Edition</a></li>
-        <li><a href="#SequenceStratigraphy:MethodologyandNomenclature">Sequence Stratigraphy: Methodology and Nomenclature</a></li>
-        <li><a href="#ShapingaNation:AGeologyofAustralia">Shaping a Nation: A Geology of Australia</a></li>
-        <li><a href="#SouthAustraliaSeismicandMTWorkshop2010:ExtendedAbstracts">South Australia Seismic and MT Workshop 2010: Extended Abstracts</a></li>
-        <li><a href="#StratigraphicGuide">Stratigraphic Guide</a></li>
-        <li><a href="#TheGeologicTimeScale2012">The Geologic Time Scale 2012</a></li>
-        <li><a href="#TheTasmanides:PhanerozoicTectonicEvolutionofEasternAustralia">The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia</a></li>
-        <li><a href="#Whatisatectonicplate?">What is a tectonic plate?</a></li>
+        <li><a href="#0000-0001-5489-9590">0000-0001-5489-9590</a></li>
+        <li><a href="#0000-0002-8742-7730">0000-0002-8742-7730</a></li>
+        <li><a href="#0011">0011</a></li>
+        <li><a href="#01916122.2012.718609">01916122.2012.718609</a></li>
+        <li><a href="#05230505015">05230505015</a></li>
+        <li><a href="#08120098508729316">08120098508729316</a></li>
+        <li><a href="#11035897.2016.1178666">11035897.2016.1178666</a></li>
+        <li><a href="#14909">14909</a></li>
+        <li><a href="#70149">70149</a></li>
+        <li><a href="#978-0-444-59425-9">978-0-444-59425-9</a></li>
+        <li><a href="#978-3-662-03999-1">978-3-662-03999-1</a></li>
+        <li><a href="#9780199653065.001.0001">9780199653065.001.0001</a></li>
+        <li><a href="#9780813774022">9780813774022</a></li>
+        <li><a href="#Geologic_province">Geologic_province</a></li>
+        <li><a href="#SN.08.2012">SN.08.2012</a></li>
+        <li><a href="#annurev-earth-082517-010146">annurev-earth-082517-010146</a></li>
+        <li><a href="#definitions.html">definitions.html</a></li>
+        <li><a href="#geofeatures">geofeatures</a></li>
+        <li><a href="#gsq">gsq</a></li>
+        <li><a href="#ics-stratigraphicguide">ics-stratigraphicguide</a></li>
+        <li><a href="#j.revpalbo.2014.04.002">j.revpalbo.2014.04.002</a></li>
+        <li><a href="#j.tecto.2012.02.022">j.tecto.2012.02.022</a></li>
+        <li><a href="#ref01">ref01</a></li>
+        <li><a href="#ref02">ref02</a></li>
+        <li><a href="#summary?doi=10.1.1.605.7824">summary?doi=10.1.1.605.7824</a></li>
+        <li><a href="#tectonic.html">tectonic.html</a></li>
     </ul>
-    <div class="entity named_individual" id="ShapingaNation:AGeologyofAustralia">
-        <h3>Shaping a Nation: A Geology of Australia<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="SN.08.2012">
+        <h3>SN.08.2012<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3447,8 +3512,8 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="GeologicFeaturesOntology">
-        <h3>Geologic Features Ontology<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="geofeatures">
+        <h3>geofeatures<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3464,20 +3529,10 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
                 <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a><br/>
                 <a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a><br/>
             </dd>
-            <tr>
-                <th>Description</th>
-                <td>
-                    This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
-
-Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
-
-The core of this ontology is a clacc hierarchy starting with "geologic province", as it is defined in SWEET, and exnteding down into multiple subclasses of it.
-                </td>
-            </tr>
         </table>
     </div>
-    <div class="entity named_individual" id="ACTGeoheritage">
-        <h3>ACT Geoheritage<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="ref01">
+        <h3>ref01<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3494,8 +3549,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="GeotourismandGeotrails">
-        <h3>Geotourism and Geotrails<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="ref02">
+        <h3>ref02<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3512,8 +3567,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="GeologicalSurveyofQueensland">
-        <h3>Geological Survey of Queensland<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="gsq">
+        <h3>gsq<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3530,8 +3585,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="AustralianCrustalElementsMap.AustralianGeologicalSurveyOrganisation">
-        <h3>Australian Crustal Elements Map. Australian Geological Survey Organisation<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="14909">
+        <h3>14909<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3548,8 +3603,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="SouthAustraliaSeismicandMTWorkshop2010:ExtendedAbstracts">
-        <h3>South Australia Seismic and MT Workshop 2010: Extended Abstracts<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="70149">
+        <h3>70149<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3566,8 +3621,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="GlossaryofGeology(FifthEditionRevised)">
-        <h3>Glossary of Geology (Fifth Edition Revised)<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="None">
+        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3584,8 +3639,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="StratigraphicGuide">
-        <h3>Stratigraphic Guide<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="ics-stratigraphicguide">
+        <h3>ics-stratigraphicguide<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3602,8 +3657,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="Howtousestratigraphicterminologyinpapers">
-        <h3>How to use stratigraphic terminology in papers<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="summary?doi=10.1.1.605.7824">
+        <h3>summary?doi=10.1.1.605.7824<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3620,8 +3675,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="PrinciplesofSedimentaryBasinAnalysis.Third,UpdatedandEnlargedEdition">
-        <h3>Principles of Sedimentary Basin Analysis. Third, Updated and Enlarged Edition<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="978-3-662-03999-1">
+        <h3>978-3-662-03999-1<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3638,8 +3693,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="FromtheTransantarcticBasintotheFerrarLargeIgneousProvinceNewPalynostratigraphicAgeConstraintsforTriassicJurassicSedimentationandMagmatisminEastAntarctica">
-        <h3>From the Transantarctic Basin to the Ferrar Large Igneous Province — New Palynostratigraphic Age Constraints for Triassic–Jurassic Sedimentation and Magmatism in East Antarctica<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="j.revpalbo.2014.04.002">
+        <h3>j.revpalbo.2014.04.002<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3656,8 +3711,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="CrustalArchitectureandGeodynamicsofNorthQueensland,Australia:InsightsfromDeepSeismicReflectionProfiling">
-        <h3>Crustal Architecture and Geodynamics of North Queensland, Australia: Insights from Deep Seismic Reflection Profiling<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="j.tecto.2012.02.022">
+        <h3>j.tecto.2012.02.022<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3674,8 +3729,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="PalynologyoftheTriassicJurassictransitioninsoutheasternQueensland,Australia,andcorrelationwithNewZealand">
-        <h3>Palynology of the Triassic–Jurassic transition in southeastern Queensland, Australia, and correlation with New Zealand<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="01916122.2012.718609">
+        <h3>01916122.2012.718609<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3692,8 +3747,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="FieldGeologist'sGuidetoLithostratigraphicNomenclatureinAustralia">
-        <h3>Field Geologist's Guide to Lithostratigraphic Nomenclature in Australia<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="08120098508729316">
+        <h3>08120098508729316<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3710,8 +3765,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="GuideforgeologicalnomenclatureinSweden">
-        <h3>Guide for geological nomenclature in Sweden<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="11035897.2016.1178666">
+        <h3>11035897.2016.1178666<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3728,8 +3783,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="ADictionaryofGeologyandEarthSciences(FourthEdition)">
-        <h3>A Dictionary of Geology and Earth Sciences (Fourth Edition)<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="9780199653065.001.0001">
+        <h3>9780199653065.001.0001<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3744,16 +3799,10 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             <dd>
                 <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
             </dd>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Online version
-                </td>
-            </tr>
         </table>
     </div>
-    <div class="entity named_individual" id="SequenceStratigraphy:MethodologyandNomenclature">
-        <h3>Sequence Stratigraphy: Methodology and Nomenclature<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="0011">
+        <h3>0011<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3770,8 +3819,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="InternationalStratigraphicGuide">
-        <h3>International Stratigraphic Guide<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="9780813774022">
+        <h3>9780813774022<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3788,8 +3837,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="TheTasmanides:PhanerozoicTectonicEvolutionofEasternAustralia">
-        <h3>The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="annurev-earth-082517-010146">
+        <h3>annurev-earth-082517-010146<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3806,8 +3855,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="NorthAmericanCommissiononStratigraphicNomenclature">
-        <h3>North American Commission on Stratigraphic Nomenclature<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="05230505015">
+        <h3>05230505015<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3824,8 +3873,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="Alistingofthegeologicprovincesandtheirsubcategories">
-        <h3>A listing of the geologic provinces and their subcategories<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="definitions.html">
+        <h3>definitions.html<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3848,8 +3897,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </tr>
         </table>
     </div>
-    <div class="entity named_individual" id="Geologicprovince">
-        <h3>Geologic province<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="Geologic_province">
+        <h3>Geologic_province<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3866,8 +3915,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="JohnL.McKellar">
-        <h3>John L. McKellar<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="0000-0001-5489-9590">
+        <h3>0000-0001-5489-9590<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3884,8 +3933,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="NicholasJ.Car">
-        <h3>Nicholas J. Car<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="0000-0002-8742-7730">
+        <h3>0000-0002-8742-7730<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3902,8 +3951,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="Whatisatectonicplate?">
-        <h3>What is a tectonic plate?<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="tectonic.html">
+        <h3>tectonic.html<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3920,8 +3969,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="TheGeologicTimeScale2012">
-        <h3>The Geologic Time Scale 2012<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="978-0-444-59425-9">
+        <h3>978-0-444-59425-9<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3938,8 +3987,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
             </dd>
         </table>
     </div>
-    <div class="entity named_individual" id="DerekHoy">
-        <h3>Derek Hoy<sup title="named individual" class="sup-ni">ni</sup></h3>
+    <div class="entity named_individual" id="None">
+        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -3956,6 +4005,7 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
         </table>
     </div>
 </section>
+
 <section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
@@ -3975,6 +4025,8 @@ The core of this ontology is a clacc hierarchy starting with "geologic province"
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
         <dt>prof</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>
