@@ -7,7 +7,7 @@
     <style>
         #pylode {
             position: fixed;
-            top: 80px;
+            top: 130px;
             left: -60px;
             font-size: small;
             transform: rotate(-90deg);
@@ -179,12 +179,17 @@
             color: darkred;
         }
 
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
     </style>
     
     <script type="application/ld+json">
       [
   {
-    "@id": "http://linked.data.gov.au/def/geofeatures",
+    "@id": "https://linked.data.gov.au/def/geofeatures",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
@@ -208,45 +213,24 @@
     </script>
 </head>
 <body>
-<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
-<img src="images/gsq.jpg" alt="GSQ Logo" />
-<h1>Geologic Features Ontology</h1>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.6</span>
+  </div>
+  <h1>Geologic Features Ontology</h1>
 <section id="metadata">
     <h2 style="display:none;">Metadata</h2>
     <dl>
-        <dt>IRI</dt>
-        <dd><code>http://linked.data.gov.au/def/geofeatures</code></dd>
-        <dt>Publisher(s)</dt>
+        <dt>URI</dt>
+        <dd><code>https://linked.data.gov.au/def/geofeatures</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
         <dd>
             
-    <a href="http://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
+    <a href="https://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
     (<a href="mailto:geological_info@dnrme.qld.gov.au">geological_info@dnrme.qld.gov.au</a>)<br/>
         </dd>
-        <dt>Creator(s)</dt>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
         <dd>
-            
-    <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
-    <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Orcid logo</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
-            <g id="Group-4">
-                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
-                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
-                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
-                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
-                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
-                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg></a>
-    (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
-    <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
             
     <a href="https://orcid.org/0000-0001-5489-9590">John L. McKellar</a>
     <a href="https://orcid.org/0000-0001-5489-9590"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
@@ -270,29 +254,52 @@
 </svg></a>
     (<a href="mailto:john.mckellar@dnrme.qld.gov.au">john.mckellar@dnrme.qld.gov.au</a>) of 
     <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
+            
+    <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+    <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
+    <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
         </dd>
-        <dt>Contributors(s)</dt>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor">Contributor</a>(s)</dt>
         <dd>
+            
+    <a href="https://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
+    (<a href="mailto:geological_info@dnrme.qld.gov.au">geological_info@dnrme.qld.gov.au</a>)<br/>
             
     Derek Hoy
     (<a href="mailto:derek.hoy@dnrme.qld.gov.au">derek.hoy@dnrme.qld.gov.au</a>) of 
     <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">Geological Survey of Queensland</a><br/>
-            
-    <a href="http://linked.data.gov.au/org/gsq">Geological Survey of Queensland</a>
-    (<a href="mailto:geological_info@dnrme.qld.gov.au">geological_info@dnrme.qld.gov.au</a>)<br/>
         </dd>
-        <dt>Created</dt>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
         <dd>2020-01-23</dd>
-        <dt>Modified</dt>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
         <dd>2020-03-10</dd>
         <dt>Version Information</dt>
         <dd>Most ontology content but not complete diagrammatic coverage.</dd>
-        <dt>Version IRI</dt>
-        <dd><a href="http://linked.data.gov.au/def/geofeatures/0.5">geof:0.5</a></dd>
+        <dt>Version URI</dt>
+        <dd><a href="https://linked.data.gov.au/def/geofeatures/0.5">geof:0.5</a></dd>
         <dt>Imports</dt>
         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
             <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a><br/>
         </dd>
         <dt>Ontology RDF</dt>
         <dd><a href="geofeatures.ttl">RDF (turtle)</a></dd>
@@ -310,23 +317,20 @@
     <h2>Table of Contents</h2>
     <ol>
         <li><a href="#classes">Classes</a></li>
-        <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
     </ol>
 </section>
+<!--
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <object type="image/svg+xml" data="images/element-key.svg"></object>
-        <div class="caption"><strong>Figure 1:</strong> Diagramatic elements used in all figures.</div>
-    </div>
-    <div class="figure">
-        <object type="image/svg+xml" data="images/hierarchy-geologicfeature.svg"></object>
-        <div class="caption"><strong>Figure 2:</strong> Ontology main class hierarchy, starting with <a href="#geologicfeature">geologic feature</a>.</div>
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
-<section id="classes">
+-->
+  <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#abundancezone">abundance zone</a></li>
@@ -435,12 +439,53 @@
         <li><a href="#unconformity">unconformity</a></li>
         <li><a href="#window">window</a></li>
     </ul>
+    <div class="entity class" id="geologicfeature">
+        <h3>geologic feature<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://sweetontology.net/realmGeol/GeologicFeature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Usage Note</th>
+                <td>
+                    <p>Geologic Features include sedimentary basins, stratigraphic units, non-stratigraphic (lithodemic) units, stratigraphic event features, provinces, tectonic and structural features, georesource accumulations, and geologically significant sites, among others</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#lithodemicfeature">geof:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geophysicalfeature">geof:GeophysicalFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#stratigraphicfeature">geof:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#georesourceaccumulation">geof:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="abundancezone">
         <h3>abundance zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/AbundanceZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/AbundanceZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -466,13 +511,13 @@
         <h3>ancient continent<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/AncientContinent</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/AncientContinent</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/geofeatures">http://linked.data.gov.au/def/geofeatures</a>
+                    <a href="https://linked.data.gov.au/def/geofeatures">https://linked.data.gov.au/def/geofeatures</a>
                 </td>
             </tr>
             <tr>
@@ -493,8 +538,8 @@
         <h3>anticline<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Anticline</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Anticline</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -520,8 +565,8 @@
         <h3>anticlinorium<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Anticlinorium</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Anticlinorium</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -547,8 +592,8 @@
         <h3>antiform<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Antiform</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Antiform</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -574,8 +619,8 @@
         <h3>antiformal stack<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/AntiformalStack</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/AntiformalStack</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -601,8 +646,8 @@
         <h3>arch<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Arch</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Arch</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -628,8 +673,8 @@
         <h3>assemblage zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/AssemblageZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/AssemblageZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -655,8 +700,8 @@
         <h3>association zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/AssociationZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/AssociationZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -682,13 +727,13 @@
         <h3>bed<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Bed</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Bed</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
+                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
                 </td>
             </tr>
             <tr>
@@ -709,8 +754,8 @@
         <h3>beds<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Beds</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Beds</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -736,8 +781,8 @@
         <h3>biostratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -761,13 +806,13 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="#assemblagezone">geof:AssemblageZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#abundancezone">geof:AbundanceZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#associationzone">geof:AssociationZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#intervalzone">geof:IntervalZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lineagezone">geof:LineageZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#concurrentrangezone">geof:ConcurrentRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#associationzone">geof:AssociationZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#intervalzone">geof:IntervalZone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#taxonrangezone">geof:TaxonRangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#rangezone">geof:RangeZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#abundancezone">geof:AbundanceZone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -776,8 +821,8 @@
         <h3>block<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Block</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Block</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -803,8 +848,8 @@
         <h3>chronostratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -830,8 +875,8 @@
         <h3>complex<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Complex</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Complex</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -857,8 +902,8 @@
         <h3>concurrent range zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -884,8 +929,8 @@
         <h3>continent<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Continent</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Continent</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -918,8 +963,8 @@
         <h3>craton<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Craton</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Craton</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -945,8 +990,8 @@
         <h3>crustal element<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/CrustalElement</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/CrustalElement</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -972,8 +1017,8 @@
         <h3>denudational feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/DenudationalFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/DenudationalFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -997,10 +1042,10 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="#klippe">geof:Klippe</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#unconformity">geof:Unconformity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#window">geof:Window</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#outlier">geof:Outlier</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#unconformity">geof:Unconformity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#inlier">geof:Inlier</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#outlier">geof:Outlier</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#peneplain">geof:Peneplain</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1010,8 +1055,8 @@
         <h3>depression<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Depression</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Depression</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1037,8 +1082,8 @@
         <h3>dome<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Dome</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Dome</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1064,8 +1109,8 @@
         <h3>duplex<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Duplex</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Duplex</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1091,8 +1136,8 @@
         <h3>embayment<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Embayment</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Embayment</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1118,8 +1163,8 @@
         <h3>escarpment<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Escarpment</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Escarpment</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1145,8 +1190,8 @@
         <h3>extended crust province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1163,7 +1208,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)
+                    <p>The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)</p>
                 </td>
             </tr>
             <tr>
@@ -1178,8 +1223,8 @@
         <h3>fault<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Fault</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Fault</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1205,8 +1250,8 @@
         <h3>fault scarp<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/FaultScarp</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/FaultScarp</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1232,8 +1277,8 @@
         <h3>fault set<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/FaultSet</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/FaultSet</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1259,8 +1304,8 @@
         <h3>fault system<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/FaultSystem</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/FaultSystem</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1286,8 +1331,8 @@
         <h3>fault zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/FaultZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/FaultZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1313,8 +1358,8 @@
         <h3>flow<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Flow</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Flow</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1340,8 +1385,8 @@
         <h3>fold<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Fold</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Fold</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1367,13 +1412,13 @@
         <h3>fold belt<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/FoldBelt</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/FoldBelt</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
+                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
                 </td>
             </tr>
             <tr>
@@ -1394,8 +1439,8 @@
         <h3>formation<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Formation</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Formation</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1421,8 +1466,8 @@
         <h3>georesource accumulation<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1442,13 +1487,13 @@
         <h3>geological heritage site<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/GeologicalHeritageSite</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/GeologicalHeritageSite</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/geofeatures/ref01">geof:ref01</a>
+                    <a href="https://linked.data.gov.au/def/geofeatures/ref01">geof:ref01</a>
                 </td>
             </tr>
             <tr>
@@ -1469,8 +1514,8 @@
         <h3>geologically significant site<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/GeologicallySignificantSite</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/GeologicallySignificantSite</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1487,16 +1532,16 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://sweetontology.net/realmGeol/GeologicFeature">soreag:GeologicFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geologicalheritagesite">geof:GeologicalHeritageSite</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geopark">geof:Geopark</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geotrail">geof:Geotrail</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1505,8 +1550,8 @@
         <h3>geopark<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Geopark</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Geopark</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1523,12 +1568,14 @@
             <tr>
                 <th>Example</th>
                 <td>
-                    Four UNESCO-designated Geoparks (from http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/) are: 
+                    <pre>
+Four UNESCO-designated Geoparks (from http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/) are: 
   
   1. Papuk UNESCO Global Geopark in Slavonia, Croatia (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/croatia/papuk/); 
   2. Lesvos Island Global Geopark (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/greece/lesvos-island/); 
   3. Muskauer Faltenboen / Łuk Mużakowa UNESCO Global Geopark, Germany & Poland (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/germanypoland/muskauer-faltenbogenluk-muzakowa/); and 
   4. Alxa Desert UNESCO Global Geopark, China (http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/list-of-unesco-global-geoparks/china/alxa-desert/).
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -1543,13 +1590,13 @@
         <h3>geophysical domain<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/GeophysicalDomain</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/GeophysicalDomain</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1016/j.tecto.2012.02.022">https://doi.org/10.1016/j.tecto.2012.02.022</a>
+                    <a href="http://pid.geoscience.gov.au/dataset/ga/14909">http://pid.geoscience.gov.au/dataset/ga/14909</a>
                 </td>
             </tr>
             <tr>
@@ -1567,8 +1614,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#seismicprovince">geof:SeismicProvince</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#crustalelement">geof:CrustalElement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#seismicprovince">geof:SeismicProvince</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1577,8 +1624,8 @@
         <h3>geophysical feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/GeophysicalFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/GeophysicalFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1610,13 +1657,13 @@
         <h3>geotrail<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Geotrail</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Geotrail</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/geofeatures/ref02">geof:ref02</a>
+                    <a href="https://linked.data.gov.au/def/geofeatures/ref02">geof:ref02</a>
                 </td>
             </tr>
             <tr>
@@ -1637,8 +1684,8 @@
         <h3>graben<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Graben</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Graben</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1664,8 +1711,8 @@
         <h3>group<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Group</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Group</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1691,8 +1738,8 @@
         <h3>half graben<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/HalfGraben</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/HalfGraben</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1718,8 +1765,8 @@
         <h3>horst<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Horst</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Horst</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1745,8 +1792,8 @@
         <h3>igneous province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/IgneousProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/IgneousProvince</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1772,8 +1819,8 @@
         <h3>inlier<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Inlier</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Inlier</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1799,8 +1846,8 @@
         <h3>interval zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/IntervalZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/IntervalZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1826,8 +1873,8 @@
         <h3>klippe<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Klippe</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Klippe</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1853,8 +1900,8 @@
         <h3>large igneous province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/LargeIgneousProvince</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1880,8 +1927,8 @@
         <h3>lineage zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/LineageZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/LineageZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1907,8 +1954,8 @@
         <h3>lithodeme<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Lithodeme</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Lithodeme</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1934,8 +1981,8 @@
         <h3>lithodemic feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/LithodemicFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/LithodemicFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1958,10 +2005,10 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#suite">geof:Suite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#complex">geof:Complex</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lithodeme">geof:Lithodeme</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supersuite">geof:Supersuite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#complex">geof:Complex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#suite">geof:Suite</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1970,8 +2017,8 @@
         <h3>lithostratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -1995,13 +2042,13 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="#member">geof:Member</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#group">geof:Group</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#flow">geof:Flow</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#bed">geof:Bed</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supergroup">geof:Supergroup</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#formation">geof:Formation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#subgroup">geof:Subgroup</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#beds">geof:Beds</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supergroup">geof:Supergroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#group">geof:Group</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#formation">geof:Formation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#flow">geof:Flow</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#bed">geof:Bed</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2010,8 +2057,8 @@
         <h3>magnetostratigraphic polarity subzone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2037,8 +2084,8 @@
         <h3>magnetostratigraphic polarity superzone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2064,13 +2111,13 @@
         <h3>magnetostratigraphic polarity zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1130/9780813774022">https://doi.org/10.1130/9780813774022</a>
+                    <a href="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">http://www.stratigraphy.org/index.php/ics-stratigraphicguide</a>
                 </td>
             </tr>
             <tr>
@@ -2091,8 +2138,8 @@
         <h3>magnetostratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2116,8 +2163,8 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="#magnetostratigraphicpolaritysubzone">geof:MagnetostratigraphicPolaritySubzone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#magnetostratigraphicpolaritysuperzone">geof:MagnetostratigraphicPolaritySuperzone</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#magnetostratigraphicpolarityzone">geof:MagnetostratigraphicPolarityZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#magnetostratigraphicpolaritysuperzone">geof:MagnetostratigraphicPolaritySuperzone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2126,8 +2173,8 @@
         <h3>member<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Member</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Member</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2153,8 +2200,8 @@
         <h3>mineral province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MineralProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MineralProvince</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2180,8 +2227,8 @@
         <h3>monocline<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Monocline</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Monocline</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2207,13 +2254,13 @@
         <h3>mylonite zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/MyloniteZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/MyloniteZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
+                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
                 </td>
             </tr>
             <tr>
@@ -2234,13 +2281,13 @@
         <h3>nappe<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Nappe</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Nappe</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
+                    <a href="https://doi.org/10.1093/acref/9780199653065.001.0001">https://doi.org/10.1093/acref/9780199653065.001.0001</a>
                 </td>
             </tr>
             <tr>
@@ -2261,8 +2308,8 @@
         <h3>nappe complex<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/NappeComplex</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/NappeComplex</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2288,8 +2335,8 @@
         <h3>orogen<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Orogen</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Orogen</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2315,13 +2362,13 @@
         <h3>orogenic collage<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/OrogenicCollage</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/OrogenicCollage</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="http://www.glossaryofgeology.org">http://www.glossaryofgeology.org</a>
+                    <a href="https://doi.org/10.1146/annurev-earth-082517-010146">https://doi.org/10.1146/annurev-earth-082517-010146</a>
                 </td>
             </tr>
             <tr>
@@ -2342,8 +2389,8 @@
         <h3>outlier<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Outlier</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Outlier</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2369,8 +2416,8 @@
         <h3>overturned fold<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/OverturnedFold</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/OverturnedFold</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2396,8 +2443,8 @@
         <h3>pedostratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2423,8 +2470,8 @@
         <h3>peneplain<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Peneplain</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Peneplain</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2450,8 +2497,8 @@
         <h3>present continent<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/PresentContinent</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/PresentContinent</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2462,7 +2509,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust.
+                    <p>One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust.</p>
                 </td>
             </tr>
             <tr>
@@ -2477,8 +2524,8 @@
         <h3>range zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/RangeZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/RangeZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2504,8 +2551,8 @@
         <h3>ridge<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Ridge</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Ridge</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2531,8 +2578,8 @@
         <h3>sedimentary basin<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/SedimentaryBasin</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/SedimentaryBasin</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2555,9 +2602,9 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#subbasin">geof:Subbasin</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#superbasin">geof:Superbasin</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#trough">geof:Trough</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#superbasin">geof:Superbasin</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#subbasin">geof:Subbasin</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2566,13 +2613,13 @@
         <h3>seismic province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/SeismicProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/SeismicProvince</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1016/j.tecto.2012.02.022">https://doi.org/10.1016/j.tecto.2012.02.022</a>
+                    <a href="http://pid.geoscience.gov.au/dataset/ga/70149">http://pid.geoscience.gov.au/dataset/ga/70149</a>
                 </td>
             </tr>
             <tr>
@@ -2593,13 +2640,13 @@
         <h3>sequence stratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
                 <td>
-                    <a href="https://doi.org/10.1127/0078-0421/2011/0011">https://doi.org/10.1127/0078-0421/2011/0011</a>
+                    <a href="https://doi.org/10.1080/11035897.2016.1178666">https://doi.org/10.1080/11035897.2016.1178666</a>
                 </td>
             </tr>
             <tr>
@@ -2620,8 +2667,8 @@
         <h3>shear zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/ShearZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/ShearZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2647,8 +2694,8 @@
         <h3>shield<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Shield</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Shield</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2674,8 +2721,8 @@
         <h3>stratigraphic event<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/StratigraphicEvent</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/StratigraphicEvent</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2701,8 +2748,8 @@
         <h3>stratigraphic feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/StratigraphicFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/StratigraphicFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2735,8 +2782,8 @@
         <h3>stratigraphic unit<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/StratigraphicUnit</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/StratigraphicUnit</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2759,12 +2806,12 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#biostratigraphicunit">geof:BiostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#chronostratigraphicunit">geof:ChronostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#sequencestratigraphicunit">geof:SequenceStratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lithostratigraphicunit">geof:LithostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#magnetostratigraphicunit">geof:MagnetostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#pedostratigraphicunit">geof:PedostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#biostratigraphicunit">geof:BiostratigraphicUnit</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2773,8 +2820,8 @@
         <h3>structural feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/StructuralFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/StructuralFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2797,36 +2844,36 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#anticline">geof:Anticline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#graben">geof:Graben</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#faultset">geof:FaultSet</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#halfgraben">geof:HalfGraben</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#mylonitezone">geof:MyloniteZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#faultsystem">geof:FaultSystem</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#faultscarp">geof:FaultScarp</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synclinorium">geof:Synclinorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#denudationalfeature">geof:DenudationalFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#foldbelt">geof:FoldBelt</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#anticlinorium">geof:Anticlinorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#antiformalstack">geof:AntiformalStack</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#escarpment">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#arch">geof:Arch</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#embayment">geof:Embayment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#syncline">geof:Syncline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ridge">geof:Ridge</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#monocline">geof:Monocline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shearzone">geof:ShearZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#antiform">geof:Antiform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#dome">geof:Dome</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#horst">geof:Horst</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#overturnedfold">geof:OverturnedFold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fold">geof:Fold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#depression">geof:Depression</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultset">geof:FaultSet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#synform">geof:Synform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#arch">geof:Arch</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#block">geof:Block</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#antiformalstack">geof:AntiformalStack</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#anticline">geof:Anticline</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#escarpment">geof:Escarpment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#faultzone">geof:FaultZone</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fault">geof:Fault</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#halfgraben">geof:HalfGraben</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#anticlinorium">geof:Anticlinorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#duplex">geof:Duplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#mylonitezone">geof:MyloniteZone</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2835,8 +2882,8 @@
         <h3>subbasin<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Subbasin</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Subbasin</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2856,8 +2903,8 @@
         <h3>subgroup<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Subgroup</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Subgroup</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2877,8 +2924,8 @@
         <h3>suite<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Suite</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Suite</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2904,8 +2951,8 @@
         <h3>superbasin<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Superbasin</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Superbasin</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2925,8 +2972,8 @@
         <h3>supercontinent<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Supercontinent</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Supercontinent</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2950,7 +2997,7 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">only</span> <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
                 </td>
             </tr>
         </table>
@@ -2959,8 +3006,8 @@
         <h3>supercraton<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Supercraton</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Supercraton</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -2983,7 +3030,7 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">only</span> <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
                     <a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a> <span class="cardinality">min</span> 2<br/>
                 </td>
             </tr>
@@ -2993,8 +3040,8 @@
         <h3>supergroup<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Supergroup</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Supergroup</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3020,8 +3067,8 @@
         <h3>supersuite<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Supersuite</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Supersuite</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3047,8 +3094,8 @@
         <h3>syncline<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Syncline</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Syncline</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3074,8 +3121,8 @@
         <h3>synclinorium<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Synclinorium</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Synclinorium</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3101,8 +3148,8 @@
         <h3>synform<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Synform</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Synform</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3128,8 +3175,8 @@
         <h3>taxon range zone<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TaxonRangeZone</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/TaxonRangeZone</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3155,8 +3202,8 @@
         <h3>tectonic entity<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TectonicEntity</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/TectonicEntity</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3173,7 +3220,7 @@
             <tr>
                 <th>Usage Note</th>
                 <td>
-                    The current definition does not explain what gives rise to a tectonic entity. This should be added.
+                    <p>The current definition does not explain what gives rise to a tectonic entity. This should be added.</p>
                 </td>
             </tr>
             <tr>
@@ -3185,20 +3232,20 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#tectonicplate">geof:TectonicPlate</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#igneousprovince">geof:IgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#continent">geof:Continent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#mineralprovince">geof:MineralProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicplate">geof:TectonicPlate</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#extendedcrustprovince">geof:ExtendedCrustProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#largeigneousprovince">geof:LargeIgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#sedimentarybasin">geof:SedimentaryBasin</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shield">geof:Shield</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#supercontinent">geof:Supercontinent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#supercraton">geof:Supercraton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#sedimentarybasin">geof:SedimentaryBasin</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#igneousprovince">geof:IgneousProvince</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#tectonisedmetomorphosedprovince">geof:TectonisedMetomorphosedProvince</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogen">geof:Orogen</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shield">geof:Shield</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#craton">geof:Craton</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#orogeniccollage">geof:OrogenicCollage</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3207,8 +3254,8 @@
         <h3>tectonic feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TectonicFeature</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/TectonicFeature</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3231,8 +3278,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#tectonostratigraphicentity">geof:tectonostratigraphicEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#tectonicentity">geof:TectonicEntity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3241,8 +3288,8 @@
         <h3>tectonic plate<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TectonicPlate</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/TectonicPlate</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3269,8 +3316,8 @@
         <h3>tectonised metomorphosed province<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -3290,8 +3337,8 @@
         <h3>terrane<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Terrane</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Terrane</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3317,8 +3364,8 @@
         <h3>trough<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Trough</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Trough</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -3338,8 +3385,8 @@
         <h3>unconformity<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Unconformity</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Unconformity</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3365,8 +3412,8 @@
         <h3>window<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/Window</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/Window</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3392,8 +3439,8 @@
         <h3>tectonostratigraphic entity<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity</code></td>
+                <th>URI</th>
+                <td><code>https://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity</code></td>
             </tr>
             <tr>
                 <th>Source</th>
@@ -3416,601 +3463,18 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#nappe">geof:Nappe</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#nappecomplex">geof:NappeComplex</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#nappe">geof:Nappe</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#terrane">geof:Terrane</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="geologicfeature">
-        <h3>geologic feature<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://sweetontology.net/realmGeol/GeologicFeature</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Usage Note</th>
-                <td>
-                    Geologic Features include sedimentary basins, stratigraphic units, non-stratigraphic (lithodemic) units, stratigraphic event features, provinces, tectonic and structural features, georesource accumulations, and geologically significant sites, among others
-                </td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>
-                    Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#structuralfeature">geof:StructuralFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#tectonicfeature">geof:TectonicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#stratigraphicfeature">geof:StratigraphicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geologicallysignificantsite">geof:GeologicallySignificantSite</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#geophysicalfeature">geof:GeophysicalFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithodemicfeature">geof:LithodemicFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#georesourceaccumulation">geof:GeoResourceAccumulation</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
 </section>
-
-<section id="namedindividuals">
-    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#0000-0001-5489-9590">0000-0001-5489-9590</a></li>
-        <li><a href="#0000-0002-8742-7730">0000-0002-8742-7730</a></li>
-        <li><a href="#0011">0011</a></li>
-        <li><a href="#01916122.2012.718609">01916122.2012.718609</a></li>
-        <li><a href="#05230505015">05230505015</a></li>
-        <li><a href="#08120098508729316">08120098508729316</a></li>
-        <li><a href="#11035897.2016.1178666">11035897.2016.1178666</a></li>
-        <li><a href="#14909">14909</a></li>
-        <li><a href="#70149">70149</a></li>
-        <li><a href="#978-0-444-59425-9">978-0-444-59425-9</a></li>
-        <li><a href="#978-3-662-03999-1">978-3-662-03999-1</a></li>
-        <li><a href="#9780199653065.001.0001">9780199653065.001.0001</a></li>
-        <li><a href="#9780813774022">9780813774022</a></li>
-        <li><a href="#Geologic_province">Geologic_province</a></li>
-        <li><a href="#SN.08.2012">SN.08.2012</a></li>
-        <li><a href="#annurev-earth-082517-010146">annurev-earth-082517-010146</a></li>
-        <li><a href="#definitions.html">definitions.html</a></li>
-        <li><a href="#geofeatures">geofeatures</a></li>
-        <li><a href="#gsq">gsq</a></li>
-        <li><a href="#ics-stratigraphicguide">ics-stratigraphicguide</a></li>
-        <li><a href="#j.revpalbo.2014.04.002">j.revpalbo.2014.04.002</a></li>
-        <li><a href="#j.tecto.2012.02.022">j.tecto.2012.02.022</a></li>
-        <li><a href="#ref01">ref01</a></li>
-        <li><a href="#ref02">ref02</a></li>
-        <li><a href="#summary?doi=10.1.1.605.7824">summary?doi=10.1.1.605.7824</a></li>
-        <li><a href="#tectonic.html">tectonic.html</a></li>
-    </ul>
-    <div class="entity named_individual" id="SN.08.2012">
-        <h3>SN.08.2012<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://doi.org/10.22459/SN.08.2012
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="geofeatures">
-        <h3>geofeatures<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://linked.data.gov.au/def/geofeatures
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a><br/>
-                <a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="ref01">
-        <h3>ref01<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://linked.data.gov.au/def/geofeatures/ref01
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="ref02">
-        <h3>ref02<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://linked.data.gov.au/def/geofeatures/ref02
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="gsq">
-        <h3>gsq<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://linked.data.gov.au/org/gsq
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="https://schema.org/Organization">sdo:Organization</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="14909">
-        <h3>14909<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://pid.geoscience.gov.au/dataset/ga/14909
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="70149">
-        <h3>70149<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://pid.geoscience.gov.au/dataset/ga/70149
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="None">
-        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://www.glossaryofgeology.org
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="ics-stratigraphicguide">
-        <h3>ics-stratigraphicguide<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      http://www.stratigraphy.org/index.php/ics-stratigraphicguide
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="summary?doi=10.1.1.605.7824">
-        <h3>summary?doi=10.1.1.605.7824<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="978-3-662-03999-1">
-        <h3>978-3-662-03999-1<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1007/978-3-662-03999-1
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="j.revpalbo.2014.04.002">
-        <h3>j.revpalbo.2014.04.002<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1016/j.revpalbo.2014.04.002
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="j.tecto.2012.02.022">
-        <h3>j.tecto.2012.02.022<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1016/j.tecto.2012.02.022
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="01916122.2012.718609">
-        <h3>01916122.2012.718609<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1080/01916122.2012.718609
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="08120098508729316">
-        <h3>08120098508729316<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1080/08120098508729316
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="11035897.2016.1178666">
-        <h3>11035897.2016.1178666<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1080/11035897.2016.1178666
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="9780199653065.001.0001">
-        <h3>9780199653065.001.0001<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1093/acref/9780199653065.001.0001
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="0011">
-        <h3>0011<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1127/0078-0421/2011/0011
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="9780813774022">
-        <h3>9780813774022<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1130/9780813774022
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="annurev-earth-082517-010146">
-        <h3>annurev-earth-082517-010146<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1146/annurev-earth-082517-010146
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="05230505015">
-        <h3>05230505015<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://doi.org/10.1306/05230505015
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="definitions.html">
-        <h3>definitions.html<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://earthquake.usgs.gov/data/crust/definitions.html
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-            <tr>
-                <th>Source</th>
-                <td>
-                    The Glossary of Geology (1980)
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity named_individual" id="Geologic_province">
-        <h3>Geologic_province<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://en.wikipedia.org/wiki/Geologic_province
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="0000-0001-5489-9590">
-        <h3>0000-0001-5489-9590<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://orcid.org/0000-0001-5489-9590
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="https://schema.org/Person">sdo:Person</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="0000-0002-8742-7730">
-        <h3>0000-0002-8742-7730<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://orcid.org/0000-0002-8742-7730
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="https://schema.org/Person">sdo:Person</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="tectonic.html">
-        <h3>tectonic.html<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://pubs.usgs.gov/gip/dynamic/tectonic.html
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="978-0-444-59425-9">
-        <h3>978-0-444-59425-9<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                      https://www.elsevier.com/books/the-geologic-time-scale-2012/gradstein/978-0-444-59425-9
-                  
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="http://sweetontology.net/humanResearch/Publication">sohur:Publication</a><br/>
-            </dd>
-        </table>
-    </div>
-    <div class="entity named_individual" id="None">
-        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td>
-                  <code>
-                    []
-                  </code>
-                </td>
-            </tr>
-            <dt>Classes(s)</dt>
-            <dd>
-                <a href="https://schema.org/Person">sdo:Person</a><br/>
-            </dd>
-        </table>
-    </div>
-</section>
-
-<section id="namespaces">
+  
+  <section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
-        <dt><em>default (:)</em></dt>
-        <dd><code>http://linked.data.gov.au/def/geofeatures/</code></dd>
         <dt>biblio</dt>
         <dd><code>http://purl.org/net/biblio#</code></dd>
         <dt>dcterms</dt>
@@ -4018,7 +3482,7 @@
         <dt>geo</dt>
         <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
         <dt>geof</dt>
-        <dd><code>http://linked.data.gov.au/def/geofeatures/</code></dd>
+        <dd><code>https://linked.data.gov.au/def/geofeatures/</code></dd>
         <dt>npg</dt>
         <dd><code>http://ns.nature.com/terms/</code></dd>
         <dt>owl</dt>
@@ -4045,23 +3509,21 @@
         <dd><code>http://sweetontology.net/rela/</code></dd>
         <dt>wiki</dt>
         <dd><code>https://www.wikidata.org/wiki/</code></dd>
-        <dt>xml</dt>
-        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
         <dt>xsd</dt>
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
 </section>
-<section id="legend">
-    <h2>Legend</h2>
-    <table class="entity">
-        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
-        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
-        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
-        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
-        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
-        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
-        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
-    </table>
-</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
 </body>
 </html>

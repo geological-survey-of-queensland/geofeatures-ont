@@ -1,6 +1,6 @@
 RewriteEngine on
 
-# http://linked.data.gov.au/def/geofeatures
+# https://linked.data.gov.au/def/geofeatures
 #   Profiles: alt, skos, owl
 #   Media Types: HTML, RDF (turtle)
 

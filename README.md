@@ -11,11 +11,11 @@ The core of this ontology is a class hierarchy starting with \"geologic province
 ## Online
 This ontology is accessible via its persistent URI:
 
-* <http://linked.data.gov.au/def/geofeatures>
+* <https://linked.data.gov.au/def/geofeatures>
 
 This ontology's content may be viewed either as an OWL ontology or as a SKOS vocabulary, using [Content Negotiation by Profile](https://www.w3.org/TR/dx-prof-conneg/). To find the links to the various profiles, visit the *Alternates Profile*: that which lists other profiles:
 
-* <http://linked.data.gov.au/def/geofeatures?_profile=alt>
+* <https://linked.data.gov.au/def/geofeatures?_profile=alt>
 
 
 ## Repository Contents
@@ -32,7 +32,7 @@ The content of this API is licensed for use under the [Creative Commons 4.0 Lice
 ## Citation
 If you wish to cite this profile, please do so like this:
 
-Geological Survey of Queensland (2020) "Geologic Features Ontology". A Web Ontology Language ontology. http://linked.data.gov.au/def/geofeatures
+Geological Survey of Queensland (2020) "Geologic Features Ontology". A Web Ontology Language ontology. https://linked.data.gov.au/def/geofeatures
 
 
 ## Contacts

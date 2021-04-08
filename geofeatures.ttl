@@ -1,11 +1,11 @@
-# baseURI: http://linked.data.gov.au/def/geofeatures
+# baseURI: https://linked.data.gov.au/def/geofeatures
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix biblio: <http://purl.org/net/biblio#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix geof: <http://linked.data.gov.au/def/geofeatures/> .
+@prefix geof: <https://linked.data.gov.au/def/geofeatures/> .
 @prefix npg: <http://ns.nature.com/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -20,15 +20,15 @@
 @prefix wiki: <https://www.wikidata.org/wiki/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/geofeatures>
+<https://linked.data.gov.au/def/geofeatures>
   a owl:NamedIndividual ;
   a owl:Ontology ;
   a prof:Profile ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   dcterms:contributor [
       a owl:NamedIndividual ;
       a sdo:Person ;
-      sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+      sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
       sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
       sdo:name "Derek Hoy" ;
     ] ;
@@ -41,24 +41,24 @@ Elements of this ontology are designed to fit within other, broader, ontologies,
 
 The core of this ontology is a class hierarchy starting with \"geologic province\", as it is defined in SWEET, and extending down into multiple subclasses of it."""@en ;
   dcterms:modified "2020-03-10"^^xsd:date ;
-  dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+  dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
   skos:prefLabel "Geologic Features Ontology"@en ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionIRI <http://linked.data.gov.au/def/geofeatures/0.5> ;
+  owl:versionIRI <https://linked.data.gov.au/def/geofeatures/0.5> ;
   owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
   prof:hasResource [
       dcterms:conformsTo <https://www.w3.org/TR/owl2-overview/> ;
       dcterms:format <https://w3id.org/mediatypes/text/turtle> ;
       skos:prefLabel "Ontology document"@en ;
-      prof:hasArtifact <http://linked.data.gov.au/def/geofeatures.ttl> ;
+      prof:hasArtifact <https://linked.data.gov.au/def/geofeatures.ttl> ;
       prof:hasRole <http://www.w3.org/ns/dx/prof/role/schema> ;
     ] ,
     [
       dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
       dcterms:format <https://w3id.org/mediatypes/text/html> ;
       skos:prefLabel "Ontology documentation"@en ;
-      prof:hasArtifact <http://linked.data.gov.au/def/geofeatures.html> ;
+      prof:hasArtifact <https://linked.data.gov.au/def/geofeatures.html> ;
       prof:hasRole <http://www.w3.org/ns/dx/prof/role/guidance> ;
     ] ;
   prof:isProfileOf <http://sweetontology.net/realmGeol> ;
@@ -74,7 +74,7 @@ geof:AbundanceZone
 .
 geof:AncientContinent
   a owl:Class ;
-  dcterms:source <http://linked.data.gov.au/def/geofeatures> ;
+  dcterms:source <https://linked.data.gov.au/def/geofeatures> ;
   rdfs:subClassOf geof:Continent ;
   skos:definition "A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)"@en ;
   skos:notation "gfanc" ;
@@ -363,7 +363,7 @@ geof:Formation
 .
 geof:GeoResourceAccumulation
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf soreag:GeologicFeature ;
   skos:definition "Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."@en ;
   skos:notation "gfgra" ;
@@ -691,7 +691,7 @@ geof:RangeZone
 .
 geof:Ridge
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   dcterms:source <https://en.wikipedia.org/wiki/Ridge> ;
   rdfs:subClassOf geof:StructuralFeature ;
   skos:definition "A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest for some distance. The sides of the ridge slope away from narrow top on either side. The lines along the crest formed by the highest points, with the terrain dropping down on either sides, are called the ridgelines. Ridges are usually termed hills or mountains as well, depending on size. (Adapted from Wikipedia)"@en ;
@@ -776,7 +776,7 @@ geof:StructuralFeature
 .
 geof:Subbasin
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf geof:SedimentaryBasin ;
   skos:altLabel "Sub-basin"@en ;
   skos:definition "A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high. (Definition created here: Paul Blake, John McKellar)"@en ;
@@ -785,7 +785,7 @@ geof:Subbasin
 .
 geof:Subgroup
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf geof:LithostratigraphicUnit ;
   skos:definition "A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)"@en ;
   skos:notation "gfsbg" ;
@@ -801,7 +801,7 @@ geof:Suite
 .
 geof:Superbasin
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf geof:SedimentaryBasin ;
   skos:definition "A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)"@en ;
   skos:notation "gfspb" ;
@@ -929,7 +929,7 @@ Tectonic plates vary significantly in size and thickness, with boundaries marked
 .
 geof:TectonisedMetomorphosedProvince
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf geof:TectonicEntity ;
   skos:definition "A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)"@en ;
   skos:notation "gftmp" ;
@@ -945,7 +945,7 @@ geof:Terrane
 .
 geof:Trough
   a owl:Class ;
-  dcterms:contributor <http://linked.data.gov.au/org/gsq> ;
+  dcterms:contributor <https://linked.data.gov.au/org/gsq> ;
   rdfs:subClassOf geof:SedimentaryBasin ;
   skos:definition "A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings. (Definition created here)"@en ;
   skos:notation "gftrh" ;
@@ -989,12 +989,12 @@ geof:ref02
   dcterms:type wiki:Q35127 ;
   sdo:url <https://www.gsa.org.au/Public/Geotourism/Geotourism%20and%20Geotrails/Public/Geotourism/Geotourism%20and%20Geotrails.aspx?hkey=f3ee82ea-de9a-44eb-82f7-377d2d28d2ba> ;
 .
-<http://linked.data.gov.au/org/ga>
+<https://linked.data.gov.au/org/ga>
   a sdo:Organization ;
   sdo:name "Geoscience Australia" ;
   sdo:url <https://www.ga.gov.au> ;
 .
-<http://linked.data.gov.au/org/gsq>
+<https://linked.data.gov.au/org/gsq>
   a owl:NamedIndividual ;
   a sdo:Organization ;
   sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
@@ -1025,7 +1025,7 @@ geof:ref02
       "N. Kositcin"
     ) ;
   dcterms:date "2010"^^xsd:gYear ;
-  dcterms:publisher <http://linked.data.gov.au/org/ga> ;
+  dcterms:publisher <https://linked.data.gov.au/org/ga> ;
   dcterms:title "South Australia Seismic and MT Workshop 2010: Extended Abstracts" ;
   dcterms:type biblio:Book ;
   dcterms:type wiki:Q571 ;
@@ -1321,7 +1321,7 @@ soreag:GeologicFeature
 <https://orcid.org/0000-0001-5489-9590>
   a owl:NamedIndividual ;
   a sdo:Person ;
-  sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
+  sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
   sdo:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
   sdo:name "John L. McKellar" ;
 .

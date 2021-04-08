@@ -3,11 +3,11 @@
 
 ## Resource Representations
 * **OWL** (token: *owl*)
-    * HTML (text/html): <http://linked.data.gov.au/def/geofeatures> *- default representation*
-    * RDF (text/turtle): <http://linked.data.gov.au/def/geofeatures?_mediatype=text/turtle>
+    * HTML (text/html): <https://linked.data.gov.au/def/geofeatures> *- default representation*
+    * RDF (text/turtle): <https://linked.data.gov.au/def/geofeatures?_mediatype=text/turtle>
 * **SKOS** (token: *skos*)
-    * HTML (text/html): <http://linked.data.gov.au/def/geofeatures?_profile=skos>
-    * RDF (text/turtle): <http://linked.data.gov.au/def/geofeatures?_profile=skos&_mediatype=text/turtle>
+    * HTML (text/html): <https://linked.data.gov.au/def/geofeatures?_profile=skos>
+    * RDF (text/turtle): <https://linked.data.gov.au/def/geofeatures?_profile=skos&_mediatype=text/turtle>
 
 
 ## Profiles
