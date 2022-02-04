@@ -113,7 +113,7 @@ geof:ChronostratigraphicUnit a skos:Concept ;
         <https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824>,
         <https://doi.org/10.1306/05230505015> ;
     skos:broader geof:StratigraphicUnit ;
-    skos:definition "As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units."@en ;
+    skos:definition """As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfcht" ;
     skos:prefLabel "chronostratigraphic unit"@en .
@@ -905,7 +905,7 @@ geof:StructuralFeature a skos:Concept ;
     dcterms:created "2020-01-23"^^xsd:date ;
     dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
         <https://orcid.org/0000-0002-8742-7730> ;
-    dcterms:modified "2020-03-10"^^xsd:date ;
+    dcterms:modified "2022-02-04"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     owl:imports <http://www.opengis.net/ont/geosparql>,
         <http://www.w3.org/2004/02/skos/core> ;
