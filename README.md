@@ -36,14 +36,21 @@ Geological Survey of Queensland (2020) "Geologic Features Ontology". A Web Ontol
 
 
 ## Contacts
-*owner*:  
-**Geological Survey of Queensland**  
-*Within the Queensland Department of Natural Resources, Mines & Energy*  
-1 William St, Brisbane, Queensland, Australia  
-<https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq>  
-<GSQOpenData@dnrme.qld.gov.au>  
+*System owner*:  
+**Mark Gordon**,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,
+<mark.gordon@resources.qld.gov.au>  
 
-*author*:  
+*Contributors*:  
+**Vance Kelly**,
+Principal Data Manager,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,  
+<vance.kelly@resources.qld.gov.au>
+
 **Nicholas Car**  
 [SURROUND Australia Pty Ltd](https://surroundaustralia.com)  
 <nicholas.car@surroundaustralia.com>  
